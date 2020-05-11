@@ -19,11 +19,9 @@ export const routes = [
             },
             {
                 name: '批量删除',
-                default: true,
-                component: 'BatchEvaluations',
+                component: 'batchEvaluations',//目录名 映射其下的index.jsx
                 path: '/batchEvaluations',
                 icon: 'iconfont-tuikuanguanli',
-
             }
         ],
     }

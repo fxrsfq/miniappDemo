@@ -60,14 +60,13 @@ require('../../components/refundManagement/refundList/index?hash=3d3c07e6370a0ac
 require('../../components/myPagination/index?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../pages/refundManagement/index?hash=21a15d8a6cfbcd58f16c8fc4fd5c8e6d38df4254');
 require('../../pages/batchEvaluations/index?hash=a11fdcdff8ea970c65f185a8731cafe48f67047c');
-require('../../pages/test/index?hash=a11fdcdff8ea970c65f185a8731cafe48f67047c');
 require('../../components/testDialog/index?hash=5e7f8f4b2ec58f467543f991a56ae695799c9e67');
 require('../../components/myDialog/index?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../components/myDialog/confirmDialog?hash=395a7bf4d772b4a41d34f914f75cf6f53d0c325a');
 require('../../components/myDialog/InputDialog?hash=395a7bf4d772b4a41d34f914f75cf6f53d0c325a');
 require('../../components/dialogManager/index?hash=5d42a8715427921ffee642338deb4f4bdb551e34');
 require('../../components/miniapp-router/router-view/router-view?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
-require('../../pages/index/index?hash=11103fe247780e2c9c699ca73e3a8ca7ece51a76');
+require('../../pages/index/index?hash=f266bea851f7caa510eb3daf9f4bbcde1eabdd83');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();
 }

@@ -236,6 +236,7 @@ export default class MyTabs extends Component {
     }
 }
 
+// 组件的默认属性
 MyTabs.defaultProps = {
     isTest: false,
     customStyle: '',
@@ -250,6 +251,7 @@ MyTabs.defaultProps = {
     onClick: () => {},
 };
 
+// 组件 传入的属性 类型检测
 MyTabs.propTypes = {
     customStyle: PropTypes.oneOfType([
         PropTypes.object,

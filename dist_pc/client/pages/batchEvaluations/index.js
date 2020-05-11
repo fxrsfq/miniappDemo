@@ -29,27 +29,27 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * @extends {Component}
  */
 var propsManager = my.propsManager;
-var BatchDelete = (_temp2 = _class = function (_BaseComponent) {
-  _inherits(BatchDelete, _BaseComponent);
+var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(BatchEvaluations, _BaseComponent);
 
-  function BatchDelete() {
+  function BatchEvaluations() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, BatchDelete);
+    _classCallCheck(this, BatchEvaluations);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchDelete.__proto__ || Object.getPrototypeOf(BatchDelete)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = [], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = [], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(BatchDelete, [{
+  _createClass(BatchEvaluations, [{
     key: "_constructor",
     value: function _constructor(props) {
-      _get(BatchDelete.prototype.__proto__ || Object.getPrototypeOf(BatchDelete.prototype), "_constructor", this).call(this, props);
+      _get(BatchEvaluations.prototype.__proto__ || Object.getPrototypeOf(BatchEvaluations.prototype), "_constructor", this).call(this, props);
 
       this.$$refs = [];
     }
@@ -66,8 +66,8 @@ var BatchDelete = (_temp2 = _class = function (_BaseComponent) {
     }
   }]);
 
-  return BatchDelete;
+  return BatchEvaluations;
 }(_index.Component), _class.$$events = [], _class.$$componentPath = "pages/batchEvaluations/index", _temp2);
-exports.default = BatchDelete;
+exports.default = BatchEvaluations;
 
-Component(require('../../npm/_tarojs/taro-alipay/index.js').default.createComponent(BatchDelete));
+Component(require('../../npm/_tarojs/taro-alipay/index.js').default.createComponent(BatchEvaluations));

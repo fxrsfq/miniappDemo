@@ -2,13 +2,18 @@ import Taro, { Component } from '@tarojs/taro';
 import { Button, Text, View } from '@tarojs/components';
 import DialogManager from "pcComponents/dialogManager";
 import { events } from "mapp_common/utils/eventManager";
+
+// 路径指向目录名称即可，默认到处index.jsx 文件的export 结果
 import RefundManagement from "../refundManagement";
 import BatchEvaluations from "../batchEvaluations";
+
 import Marketing from "mapp_common/marketing";
 import { MARKETING_TYPE, PC_COMMON_MARKETING_MASK } from "tradePublic/marketing/constants";
 import { showModalVIP } from "mapp_common/marketing/utils/biz";
+
 import { changeRoute, getCurrentPath, initRouter } from "pcComponents/router";
 import { routes } from "pcComponents/router/routes";
+
 import NoticeBallon from "mapp_common/marketing/notice/pcNoticeBallon";
 import { isEmpty } from "mapp_common/utils";
 import showDialog from "pcComponents/dialogManager/api";
@@ -16,7 +21,10 @@ import { contactCustomerService } from "mapp_common/utils/openChat";
 import { Logger } from "mapp_common/utils/logger";
 import './index.scss';
 import Test from "pcPages/test";
-
+/*
+  用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径 + 文件名 信息。文件名不需要写文件后缀，框架会自动去寻找对应位置的文件进行处理。
+  数组的第一项代表小程序的初始页面（首页）。小程序中新增/减少页面，都需要对 pages 数组进行修改。
+*/
 class Index extends Component {
 
     constructor (props) {
@@ -225,14 +233,14 @@ class Index extends Component {
                                 </View>;
                             })}
                         </View>
-                        {/* 这一部分没有显示在web上 */}
+                        
                         <View className='content'>
                             <router-view>
-                                <View slot='tradeList'>紧张施工中...</View>
+                                {/* <View slot='tradeList'>紧张施工中...</View> */}
                                 <View slot='refundManagement'><RefundManagement /></View>
-                                {/* 在这里添加新的内容组件视图的引用 */}
+                                {/* 在这里添加新的内容组件视图的引用 slot为路由组件视图的path 相当于route的path*/}
                                 <View slot='batchEvaluations'><BatchEvaluations /></View>
-                                <View slot='test'><Test /></View>
+                                {/* <View slot='test'><Test /></View> */}
                             </router-view>
 
                         </View>
