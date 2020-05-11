@@ -37,7 +37,7 @@ class App extends Component {
     config = {
         pages: [
             'pages/index/index',
-            // 'pages/testQn/index',
+            // 'pages/testQn/index', 
 
         ],
         window: {
