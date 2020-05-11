@@ -5,13 +5,13 @@
         </block>
         <block a:else>
             <block a:if="{{type === 'notice'}}">
-                <marketing compid="{{$compid__74}}"></marketing>
+                <marketing compid="{{$compid__118}}"></marketing>
             </block>
             <block a:elif="{{type === 'banner'}}">
-                <marketing compid="{{$compid__75}}"></marketing>
+                <marketing compid="{{$compid__119}}"></marketing>
             </block>
             <block a:else>
-                <marketing a:for="{{loopArray48}}" a:for-item="item" a:for-index="_anonIdx2" compid="{{item.$compid__73}}"></marketing>
+                <marketing a:for="{{loopArray69}}" a:for-item="item" a:for-index="_anonIdx2" compid="{{item.$compid__117}}"></marketing>
             </block>
         </block>
     </block>
@@ -27,7 +27,7 @@
                 <view class="flex-placeholder"></view>
                 <view class="nav-right">
                     <block a:if="{{haveNotice}}">
-                        <notice-ballon compid="{{$compid__76}}"></notice-ballon>
+                        <notice-ballon compid="{{$compid__120}}"></notice-ballon>
                     </block>
                     <view class="vip-flag" onTap="anonymousFunc0"><text class="vio-role">高级版</text>
                         <view class="vip-time-wrapper">剩余
@@ -51,6 +51,9 @@
                         <view slot="tradeList">紧张施工中...</view>
                         <view slot="refundManagement">
                             <refund-management></refund-management>
+                        </view>
+                        <view slot="batchEvaluations">
+                            <batch-evaluations></batch-evaluations>
                         </view>
                         <view slot="test">
                             <test></test>

@@ -21,6 +21,11 @@ import { getSystemInfo } from "mapp_common/utils/systemInfo";
         list: store.refundListReducer.list,
     };
 })
+/**
+ * @description 订单管理link -> 退款处理link  -> 内容组件视图
+ * @class ReturnManagement
+ * @extends {Component}
+ */
 class ReturnManagement extends Component {
 
     constructor (props) {

@@ -3,6 +3,7 @@
     "marketing": "../../public/mapp_common/marketing/index",
     "notice-ballon": "../../public/mapp_common/marketing/notice/pcNoticeBallon",
     "refund-management": "../refundManagement/index",
+    "batch-evaluations": "../batchEvaluations/index",
     "test": "../test/index",
     "dialog-manager": "../../components/dialogManager/index",
     "router-view": "../../components/miniapp-router/router-view/router-view"

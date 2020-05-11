@@ -3,6 +3,7 @@ import { Button, Text, View } from '@tarojs/components';
 import DialogManager from "pcComponents/dialogManager";
 import { events } from "mapp_common/utils/eventManager";
 import RefundManagement from "../refundManagement";
+import BatchEvaluations from "../batchEvaluations";
 import Marketing from "mapp_common/marketing";
 import { MARKETING_TYPE, PC_COMMON_MARKETING_MASK } from "tradePublic/marketing/constants";
 import { showModalVIP } from "mapp_common/marketing/utils/biz";
@@ -153,6 +154,7 @@ class Index extends Component {
         if (currentRoute && currentRoute.children) {
             currentChildren = currentRoute.children.filter(item => !(item.hide == true));
             currentChildren.map(item => item.path = item.path.replace(/\/\:.+$/, ''));
+            console.clear();
             console.log("currentChildren", currentChildren);
         }
         let { haveNotice, showNotice, hadShownNotice, sidebarMini } = this.state;
@@ -184,7 +186,7 @@ class Index extends Component {
                                     /> :
                                     null
                             }
-                            {/* 顶部高级版图标 */}
+                            {/* 顶部 高级版图标 */}
                             <View className='vip-flag' onClick={() => {showModalVIP(783);}}>
                                 <Text className='vio-role'>高级版</Text>
                                 <View className='vip-time-wrapper'>
@@ -228,6 +230,8 @@ class Index extends Component {
                             <router-view>
                                 <View slot='tradeList'>紧张施工中...</View>
                                 <View slot='refundManagement'><RefundManagement /></View>
+                                {/* 在这里添加新的内容组件视图的引用 */}
+                                <View slot='batchEvaluations'><BatchEvaluations /></View>
                                 <View slot='test'><Test /></View>
                             </router-view>
 

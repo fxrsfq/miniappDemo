@@ -7,14 +7,14 @@
                 </button>
             </view>
             <view class="grid-item24 tab-con">
-                <my-tabs compid="{{$compid__21}}"></my-tabs>
+                <my-tabs compid="{{$compid__107}}"></my-tabs>
                 <view class="tab-blank"></view>
             </view>
             <refund-list></refund-list>
         </scroll-view>
         <view class="refund-footer">
             <view></view>
-            <my-pagination compid="{{$compid__22}}"></my-pagination>
+            <my-pagination compid="{{$compid__108}}"></my-pagination>
         </view>
     </view>
 </block>

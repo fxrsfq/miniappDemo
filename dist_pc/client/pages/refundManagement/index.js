@@ -34,6 +34,11 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propsManager = my.propsManager;
 
+/**
+ * @description 订单管理link -> 退款处理link  -> 内容组件视图
+ * @class ReturnManagement
+ * @extends {Component}
+ */
 var ReturnManagement = (_dec = (0, _index3.connect)(function (store) {
   return {
     searchVal: store.refundListReducer.searchVal,
@@ -57,7 +62,7 @@ var ReturnManagement = (_dec = (0, _index3.connect)(function (store) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ReturnManagement.__proto__ || Object.getPrototypeOf(ReturnManagement)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__21", "$compid__22", "scrollHeight", "searchVal", "pageNo", "pageSize", "activeTabKey", "list", "tradeCounts"], _this.onPageChange = function (type, v) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ReturnManagement.__proto__ || Object.getPrototypeOf(ReturnManagement)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__107", "$compid__108", "scrollHeight", "searchVal", "pageNo", "pageSize", "activeTabKey", "list", "tradeCounts"], _this.onPageChange = function (type, v) {
       var _this$props = _this.props,
           activeTabKey = _this$props.activeTabKey,
           pageNo = _this$props.pageNo,
@@ -103,15 +108,15 @@ var ReturnManagement = (_dec = (0, _index3.connect)(function (store) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__21"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__107"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__21 = _genCompid2[0],
-          $compid__21 = _genCompid2[1];
+          $prevCompid__107 = _genCompid2[0],
+          $compid__107 = _genCompid2[1];
 
-      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__22"),
+      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__108"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__22 = _genCompid4[0],
-          $compid__22 = _genCompid4[1];
+          $prevCompid__108 = _genCompid4[0],
+          $compid__108 = _genCompid4[1];
 
       var _props2 = this.__props,
           activeTabKey = _props2.activeTabKey,
@@ -134,7 +139,7 @@ var ReturnManagement = (_dec = (0, _index3.connect)(function (store) {
         "scroll": true,
         "dotNum": tradeCounts,
         "onClick": this.onTabChange
-      }, $compid__21, $prevCompid__21);
+      }, $compid__107, $prevCompid__107);
       propsManager.set({
         "total": tradeCounts,
         "pageNo": this.__props.pageNo,
@@ -143,11 +148,11 @@ var ReturnManagement = (_dec = (0, _index3.connect)(function (store) {
         "pageSizeList": PAGE_SIZE_LIST,
         "onPageSizeChange": this.onPageChange.bind(this, 'pageSize'),
         "onPageNoChange": this.onPageChange.bind(this, 'pageNo')
-      }, $compid__22, $prevCompid__22);
+      }, $compid__108, $prevCompid__108);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        $compid__21: $compid__21,
-        $compid__22: $compid__22,
+        $compid__107: $compid__107,
+        $compid__108: $compid__108,
         searchVal: searchVal
       });
       return this.__state;

@@ -19,6 +19,13 @@ var routes = exports.routes = [{
     path: '/refundManagement',
     icon: 'iconfont-tuikuanguanli'
 
+  }, {
+    name: '批量删除',
+    default: true,
+    component: 'BatchEvaluations',
+    path: '/batchEvaluations',
+    icon: 'iconfont-tuikuanguanli'
+
   }]
 }];
 var defaultPath = exports.defaultPath = '/tradeManagement/refundManagement';

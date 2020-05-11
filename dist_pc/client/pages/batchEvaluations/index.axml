@@ -1,0 +1,3 @@
+<block a:if="{{$taroCompReady}}">
+    <view>12312332123</view>
+</block>
