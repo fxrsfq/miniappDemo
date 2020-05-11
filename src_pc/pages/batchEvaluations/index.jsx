@@ -11,7 +11,7 @@ class BatchEvaluations extends Component{
     render(){
         return (
             <View>
-                
+                <view></view>
             </View>
         );
     }
