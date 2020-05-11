@@ -153,6 +153,7 @@ class Index extends Component {
         if (currentRoute && currentRoute.children) {
             currentChildren = currentRoute.children.filter(item => !(item.hide == true));
             currentChildren.map(item => item.path = item.path.replace(/\/\:.+$/, ''));
+            console.log("currentChildren", currentChildren);
         }
         let { haveNotice, showNotice, hadShownNotice, sidebarMini } = this.state;
 
@@ -183,6 +184,7 @@ class Index extends Component {
                                     /> :
                                     null
                             }
+                            {/* 顶部高级版图标 */}
                             <View className='vip-flag' onClick={() => {showModalVIP(783);}}>
                                 <Text className='vio-role'>高级版</Text>
                                 <View className='vip-time-wrapper'>
@@ -197,13 +199,14 @@ class Index extends Component {
                             </View>
                             <View className='contact-staff' onClick={() => contactCustomerService('联系客服')}>
                                 <Text className='iconfont iconfont-wangwang' />
-
                                 <Text className='text'>联系客服</Text>
                             </View>
                         </View>
 
                     </View>
-                    {/* {this.renderMarketing('notice')} */}
+                    {/* {this.renderMarketing('notice')}
+                        content 主体组件部分：
+                    */}
                     <View className='container'>
                         <View className={`sidebar ${sidebarMini ? "mini" : ""}`}>
                             <View className='item' onClick={this.toggleSideBarMini}>
@@ -220,6 +223,7 @@ class Index extends Component {
                                 </View>;
                             })}
                         </View>
+                        {/* 这一部分没有显示在web上 */}
                         <View className='content'>
                             <router-view>
                                 <View slot='tradeList'>紧张施工中...</View>

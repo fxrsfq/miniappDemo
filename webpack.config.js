@@ -15,7 +15,7 @@ const config = {
             assets: path.resolve(__dirname, 'src_mobile/assets'),
 
             // pc
-
+            // 配置 路径变量
             pcComponents: path.join(__dirname, 'src_pc/components'),
             pcPages: path.join(__dirname, 'src_pc/pages'),
             '@/constants': path.resolve(__dirname, 'src_pc/constants'),

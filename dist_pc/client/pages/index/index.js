@@ -62,7 +62,7 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__3", "currentMain", "routes", "haveNotice", "sidebarMini", "currentSub", "currentRoute", "currentChildren", "anonymousState__temp", "anonymousState__temp2", "showAD", "showNotice", "hadShownNotice"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__76", "currentMain", "routes", "haveNotice", "sidebarMini", "currentSub", "currentRoute", "currentChildren", "anonymousState__temp", "anonymousState__temp2", "showAD", "showNotice", "hadShownNotice"], _this.config = {
       navigationBarTitleText: '首页',
       usingComponents: { 'router-view': '../../components/miniapp-router/router-view/router-view' // 书写第三方组件的相对路径
       }
@@ -171,17 +171,17 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       var _this3 = this;
 
       return function (type) {
-        var _genCompid = (0, _index.genCompid)(_$uid + "$compid__1"),
+        var _genCompid = (0, _index.genCompid)(_$uid + "$compid__74"),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__1 = _genCompid2[0],
-            $compid__1 = _genCompid2[1];
+            $prevCompid__74 = _genCompid2[0],
+            $compid__74 = _genCompid2[1];
 
-        var _genCompid3 = (0, _index.genCompid)(_$uid + "$compid__2"),
+        var _genCompid3 = (0, _index.genCompid)(_$uid + "$compid__75"),
             _genCompid4 = _slicedToArray(_genCompid3, 2),
-            $prevCompid__2 = _genCompid4[0],
-            $compid__2 = _genCompid4[1];
+            $prevCompid__75 = _genCompid4[0],
+            $compid__75 = _genCompid4[1];
 
-        var loopArray0 = void 0;
+        var loopArray48 = void 0;
 
         var showAD = _this3.state.showAD;
 
@@ -194,37 +194,37 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
           propsManager.set({
             "type": _constants.MARKETING_TYPE.notice,
             "from": from
-          }, $compid__1, $prevCompid__1);
+          }, $compid__74, $prevCompid__74);
         } else if (type === 'banner') {
           propsManager.set({
             "type": _constants.MARKETING_TYPE.banner,
             "from": from
-          }, $compid__2, $prevCompid__2);
+          }, $compid__75, $prevCompid__75);
         } else {
-          loopArray0 = [].concat(_toConsumableArray(_constants.PC_COMMON_MARKETING_MASK), [_constants.MARKETING_TYPE.midCard]).map(function (item, _anonIdx) {
+          loopArray48 = [].concat(_toConsumableArray(_constants.PC_COMMON_MARKETING_MASK), [_constants.MARKETING_TYPE.midCard]).map(function (item, _anonIdx) {
             item = {
               $original: (0, _index.internal_get_original)(item)
             };
 
-            var _genCompid5 = (0, _index.genCompid)(_$uid + "czzzzzzzzz" + _anonIdx, true),
+            var _genCompid5 = (0, _index.genCompid)(_$uid + "gazzzzzzzz" + _anonIdx, true),
                 _genCompid6 = _slicedToArray(_genCompid5, 2),
-                $prevCompid__0 = _genCompid6[0],
-                $compid__0 = _genCompid6[1];
+                $prevCompid__73 = _genCompid6[0],
+                $compid__73 = _genCompid6[1];
 
             propsManager.set({
               "type": item.$original,
               "from": from
-            }, $compid__0, $prevCompid__0);
+            }, $compid__73, $prevCompid__73);
             return {
-              $compid__0: $compid__0,
+              $compid__73: $compid__73,
               $original: item.$original
             };
           });
         }
         return {
-          loopArray0: loopArray0,
-          $compid__1: $compid__1,
-          $compid__2: $compid__2,
+          loopArray48: loopArray48,
+          $compid__74: $compid__74,
+          $compid__75: $compid__75,
           showAD: showAD,
           type: type
         };
@@ -239,10 +239,10 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid7 = (0, _index.genCompid)(__prefix + "$compid__3"),
+      var _genCompid7 = (0, _index.genCompid)(__prefix + "$compid__76"),
           _genCompid8 = _slicedToArray(_genCompid7, 2),
-          $prevCompid__3 = _genCompid8[0],
-          $compid__3 = _genCompid8[1];
+          $prevCompid__76 = _genCompid8[0],
+          $compid__76 = _genCompid8[1];
 
       var currentPath = (0, _index3.getCurrentPath)();
       var paths = currentPath.split('/').filter(Boolean);
@@ -262,6 +262,7 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
         currentChildren.map(function (item) {
           return item.path = item.path.replace(/\/\:.+$/, '');
         });
+        console.log("currentChildren", currentChildren);
       }
       var _state = this.__state,
           haveNotice = _state.haveNotice,
@@ -270,9 +271,9 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
           sidebarMini = _state.sidebarMini;
 
 
-      var anonymousState__temp = this._createMarketingData(__prefix + "azzzzzzzzz")('banner');
+      var anonymousState__temp = this._createMarketingData(__prefix + "fizzzzzzzz")('banner');
 
-      var anonymousState__temp2 = this._createMarketingData(__prefix + "bzzzzzzzzz")();
+      var anonymousState__temp2 = this._createMarketingData(__prefix + "fjzzzzzzzz")();
 
       this.anonymousFunc0 = function () {
         (0, _biz.showModalVIP)(783);
@@ -287,9 +288,9 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
         "notice": this.notice,
         "close": this.toggleNoticeBallon,
         "hadShownNotice": hadShownNotice
-      }, $compid__3, $prevCompid__3);
+      }, $compid__76, $prevCompid__76);
       Object.assign(this.__state, {
-        $compid__3: $compid__3,
+        $compid__76: $compid__76,
         currentMain: currentMain,
         routes: _routes.routes,
         currentSub: currentSub,

@@ -1,3 +1,8 @@
+ /*
+    路由导航条的显示信息
+    routes：顶部导航菜单
+    children：单个菜单项的siderBar导航菜单
+ */
 export const routes = [
     {
         name: '订单管理',
