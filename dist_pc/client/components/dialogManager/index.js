@@ -57,7 +57,7 @@ var DialogManager = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DialogManager.__proto__ || Object.getPrototypeOf(DialogManager)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray3", "openDialog"], _this.getDialogProps = function (key) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DialogManager.__proto__ || Object.getPrototypeOf(DialogManager)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray4", "openDialog"], _this.getDialogProps = function (key) {
       return _extends({}, _this.state[key], {
         onClose: function onClose() {
           var props = _extends({}, _this.state[key]);
@@ -135,26 +135,26 @@ var DialogManager = (_temp2 = _class = function (_BaseComponent) {
       openDialog.sort(function (itemA, itemB) {
         return _this3.__state[itemA]._grade - _this3.__state[itemB]._grade;
       });
-      var loopArray3 = openDialog.map(function (key, _anonIdx) {
+      var loopArray4 = openDialog.map(function (key, _anonIdx) {
         key = {
           $original: (0, _index.internal_get_original)(key)
         };
 
-        var _genCompid = (0, _index.genCompid)(__prefix + "gzzzzzzzzz" + _anonIdx, true),
+        var _genCompid = (0, _index.genCompid)(__prefix + "hzzzzzzzzz" + _anonIdx, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
             $prevCompid__23 = _genCompid2[0],
             $compid__23 = _genCompid2[1];
 
         'testDialog' === key.$original && propsManager.set(_extends({}, _this3.getDialogProps('testDialog')), $compid__23, $prevCompid__23);
 
-        var _genCompid3 = (0, _index.genCompid)(__prefix + "hzzzzzzzzz" + _anonIdx, true),
+        var _genCompid3 = (0, _index.genCompid)(__prefix + "izzzzzzzzz" + _anonIdx, true),
             _genCompid4 = _slicedToArray(_genCompid3, 2),
             $prevCompid__24 = _genCompid4[0],
             $compid__24 = _genCompid4[1];
 
         propsManager.set(_extends({}, _this3.getDialogProps('ConfirmDialog')), $compid__24, $prevCompid__24);
 
-        var _genCompid5 = (0, _index.genCompid)(__prefix + "izzzzzzzzz" + _anonIdx, true),
+        var _genCompid5 = (0, _index.genCompid)(__prefix + "jzzzzzzzzz" + _anonIdx, true),
             _genCompid6 = _slicedToArray(_genCompid5, 2),
             $prevCompid__25 = _genCompid6[0],
             $compid__25 = _genCompid6[1];
@@ -168,7 +168,7 @@ var DialogManager = (_temp2 = _class = function (_BaseComponent) {
         };
       });
       Object.assign(this.__state, {
-        loopArray3: loopArray3,
+        loopArray4: loopArray4,
         openDialog: openDialog
       });
       return this.__state;

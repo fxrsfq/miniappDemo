@@ -5,6 +5,6 @@
                 <empty-page compid="{{$compid__35}}"></empty-page>
             </view>
         </block>
-        <refund-card a:for="{{loopArray21}}" a:for-item="trade" a:for-index="_anonIdx2" compid="{{trade.$compid__34}}"></refund-card>
+        <refund-card a:for="{{loopArray22}}" a:for-item="trade" a:for-index="_anonIdx2" compid="{{trade.$compid__34}}"></refund-card>
     </view>
 </block>

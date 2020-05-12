@@ -51,7 +51,7 @@ var MidCard = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MidCard.__proto__ || Object.getPrototypeOf(MidCard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "_$hotSpace", "_$anonymousState__temp", "_$anonymousState__temp2", "_$anonymousState__temp3", "_$anonymousState__temp4", "loopArray15", "isEmpty", "_$anonymousState__temp5", "ad", "pid", "close"], _this.getHotSpace = function (ad) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MidCard.__proto__ || Object.getPrototypeOf(MidCard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "_$hotSpace", "_$anonymousState__temp", "_$anonymousState__temp2", "_$anonymousState__temp3", "_$anonymousState__temp4", "loopArray16", "isEmpty", "_$anonymousState__temp5", "ad", "pid", "close"], _this.getHotSpace = function (ad) {
       var hotData = [];
       if (!(0, _index3.isEmpty)(ad) && !(0, _index3.isEmpty)(ad.adInfo) && !(0, _index3.isEmpty)(ad.adInfo.user_define) && !(0, _index3.isEmpty)(ad.adInfo.user_define.body)) {
         var body = ad.adInfo.user_define.body;
@@ -136,7 +136,7 @@ var MidCard = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var loopArray15 = void 0;
+      var loopArray16 = void 0;
 
       var ad = this.__props.ad;
 
@@ -152,7 +152,7 @@ var MidCard = (_temp2 = _class = function (_BaseComponent) {
         _$anonymousState__temp3 = (0, _userInfoChanger.getUserInfo)().userNick;
         _$anonymousState__temp4 = _env.ENV.appName + "\u9AD8\u7EA7\u7248 \u5269\u4F59" + (0, _userInfoChanger.getUserInfo)().vipRemain + "\u5929\u5230\u671F\uFF0C\u8D2D\u4E70\u540E\u6709\u6548\u671F\u987A\u5EF6";
         _$anonymousState__temp5 = !(0, _index3.isEmpty)(_$hotSpace);
-        loopArray15 = !(0, _index3.isEmpty)(_$hotSpace) ? _$hotSpace.map(function (hotItem, __index0) {
+        loopArray16 = !(0, _index3.isEmpty)(_$hotSpace) ? _$hotSpace.map(function (hotItem, __index0) {
           hotItem = {
             $original: (0, _index.internal_get_original)(hotItem)
           };
@@ -165,7 +165,7 @@ var MidCard = (_temp2 = _class = function (_BaseComponent) {
             width: hotItem.$original.width
           }) : null;
 
-          var _$indexKey = "chzzz" + __index0;
+          var _$indexKey = "cizzz" + __index0;
 
           _this2.anonymousFunc0Map[_$indexKey] = function () {
             _this2.onClickHotSpace(hotItem.$original.url);
@@ -186,7 +186,7 @@ var MidCard = (_temp2 = _class = function (_BaseComponent) {
         _$anonymousState__temp2: _$anonymousState__temp2,
         _$anonymousState__temp3: _$anonymousState__temp3,
         _$anonymousState__temp4: _$anonymousState__temp4,
-        loopArray15: loopArray15,
+        loopArray16: loopArray16,
         isEmpty: _index3.isEmpty,
         _$anonymousState__temp5: _$anonymousState__temp5
       });

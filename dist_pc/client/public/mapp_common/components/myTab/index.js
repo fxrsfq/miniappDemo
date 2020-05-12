@@ -74,7 +74,7 @@ var MyTabs = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MyTabs.__proto__ || Object.getPrototypeOf(MyTabs)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "loopArray20", "tabList", "dotNum", "rootCls", "scroll", "_tabId", "scrollX", "scrollY", "_scrollTop", "_scrollIntoView", "scrollFollow", "swipeable", "tabDirection", "current", "customStyle", "className", "height", "animated", "children"], _this.updateState = function (key) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MyTabs.__proto__ || Object.getPrototypeOf(MyTabs)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "loopArray21", "tabList", "dotNum", "rootCls", "scroll", "_tabId", "scrollX", "scrollY", "_scrollTop", "_scrollIntoView", "scrollFollow", "swipeable", "tabDirection", "current", "customStyle", "className", "height", "animated", "children"], _this.updateState = function (key) {
       if (_this.props.scrollFollow) {
         _this.setState({ _scrollIntoView: "tab" + key });
       }
@@ -242,7 +242,7 @@ var MyTabs = (_temp2 = _class = function (_BaseComponent) {
       var anonymousState__temp2 = scroll ? (0, _index.internal_inline_style)(heightStyle) : null;
       var anonymousState__temp3 = (0, _index.internal_inline_style)(mergeStyle(bodyStyle, heightStyle));
       var anonymousState__temp4 = (0, _index.internal_inline_style)(underlineStyle);
-      var loopArray20 = tabList.map(function (item, _anonIdx) {
+      var loopArray21 = tabList.map(function (item, _anonIdx) {
         item = {
           $original: (0, _index.internal_get_original)(item)
         };
@@ -262,7 +262,7 @@ var MyTabs = (_temp2 = _class = function (_BaseComponent) {
         anonymousState__temp2: anonymousState__temp2,
         anonymousState__temp3: anonymousState__temp3,
         anonymousState__temp4: anonymousState__temp4,
-        loopArray20: loopArray20,
+        loopArray21: loopArray21,
         tabList: tabList,
         dotNum: dotNum,
         rootCls: rootCls,
@@ -277,6 +277,8 @@ var MyTabs = (_temp2 = _class = function (_BaseComponent) {
 
   return MyTabs;
 }(_index.Component), _class.$$events = ["handleClick", "handleTouchStart", "handleTouchEnd", "handleTouchMove"], _class.$$componentPath = "public/mapp_common/components/myTab/index", _temp2);
+
+// 组件的默认属性
 
 
 MyTabs.defaultProps = {
@@ -293,6 +295,7 @@ MyTabs.defaultProps = {
   onClick: function onClick() {}
 };
 
+// 组件 传入的属性 类型检测
 MyTabs.propTypes = {
   customStyle: _index4.default.oneOfType([_index4.default.object, _index4.default.string]),
   className: _index4.default.oneOfType([_index4.default.array, _index4.default.string]),

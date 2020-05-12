@@ -18,7 +18,7 @@
         <block a:elif="{{!hotSpace}}">
             <view></view>
         </block>
-        <block a:for="{{loopArray5}}" a:for-item="item" a:for-index="__index0" a:else>
+        <block a:for="{{loopArray6}}" a:for-item="item" a:for-index="__index0" a:else>
             <block a:if="{{bodyData['hotspace' + item.$original]}}">
                 <view onTap="anonymousFunc0" style="{{item.$loopState__temp2}}" data-e-onTap-so="this" data-e-onTap-a-a="{{item._$indexKey}}"></view>
             </block>

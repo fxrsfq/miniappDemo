@@ -67,7 +67,7 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__168", "currentMain", "routes", "haveNotice", "sidebarMini", "currentSub", "currentRoute", "currentChildren", "anonymousState__temp", "anonymousState__temp2", "showAD", "showNotice", "hadShownNotice"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__3", "currentMain", "routes", "haveNotice", "sidebarMini", "currentSub", "currentRoute", "currentChildren", "anonymousState__temp", "anonymousState__temp2", "showAD", "showNotice", "hadShownNotice"], _this.config = {
       navigationBarTitleText: '首页',
       usingComponents: { 'router-view': '../../components/miniapp-router/router-view/router-view' // 书写第三方组件的相对路径
       }
@@ -176,17 +176,17 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       var _this3 = this;
 
       return function (type) {
-        var _genCompid = (0, _index.genCompid)(_$uid + "$compid__166"),
+        var _genCompid = (0, _index.genCompid)(_$uid + "$compid__1"),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__166 = _genCompid2[0],
-            $compid__166 = _genCompid2[1];
+            $prevCompid__1 = _genCompid2[0],
+            $compid__1 = _genCompid2[1];
 
-        var _genCompid3 = (0, _index.genCompid)(_$uid + "$compid__167"),
+        var _genCompid3 = (0, _index.genCompid)(_$uid + "$compid__2"),
             _genCompid4 = _slicedToArray(_genCompid3, 2),
-            $prevCompid__167 = _genCompid4[0],
-            $compid__167 = _genCompid4[1];
+            $prevCompid__2 = _genCompid4[0],
+            $compid__2 = _genCompid4[1];
 
-        var loopArray105 = void 0;
+        var loopArray0 = void 0;
 
         var showAD = _this3.state.showAD;
 
@@ -199,37 +199,37 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
           propsManager.set({
             "type": _constants.MARKETING_TYPE.notice,
             "from": from
-          }, $compid__166, $prevCompid__166);
+          }, $compid__1, $prevCompid__1);
         } else if (type === 'banner') {
           propsManager.set({
             "type": _constants.MARKETING_TYPE.banner,
             "from": from
-          }, $compid__167, $prevCompid__167);
+          }, $compid__2, $prevCompid__2);
         } else {
-          loopArray105 = [].concat(_toConsumableArray(_constants.PC_COMMON_MARKETING_MASK), [_constants.MARKETING_TYPE.midCard]).map(function (item, _anonIdx) {
+          loopArray0 = [].concat(_toConsumableArray(_constants.PC_COMMON_MARKETING_MASK), [_constants.MARKETING_TYPE.midCard]).map(function (item, _anonIdx) {
             item = {
               $original: (0, _index.internal_get_original)(item)
             };
 
-            var _genCompid5 = (0, _index.genCompid)(_$uid + "bbhzzzzzzz" + _anonIdx, true),
+            var _genCompid5 = (0, _index.genCompid)(_$uid + "czzzzzzzzz" + _anonIdx, true),
                 _genCompid6 = _slicedToArray(_genCompid5, 2),
-                $prevCompid__165 = _genCompid6[0],
-                $compid__165 = _genCompid6[1];
+                $prevCompid__0 = _genCompid6[0],
+                $compid__0 = _genCompid6[1];
 
             propsManager.set({
               "type": item.$original,
               "from": from
-            }, $compid__165, $prevCompid__165);
+            }, $compid__0, $prevCompid__0);
             return {
-              $compid__165: $compid__165,
+              $compid__0: $compid__0,
               $original: item.$original
             };
           });
         }
         return {
-          loopArray105: loopArray105,
-          $compid__166: $compid__166,
-          $compid__167: $compid__167,
+          loopArray0: loopArray0,
+          $compid__1: $compid__1,
+          $compid__2: $compid__2,
           showAD: showAD,
           type: type
         };
@@ -244,10 +244,10 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid7 = (0, _index.genCompid)(__prefix + "$compid__168"),
+      var _genCompid7 = (0, _index.genCompid)(__prefix + "$compid__3"),
           _genCompid8 = _slicedToArray(_genCompid7, 2),
-          $prevCompid__168 = _genCompid8[0],
-          $compid__168 = _genCompid8[1];
+          $prevCompid__3 = _genCompid8[0],
+          $compid__3 = _genCompid8[1];
 
       var currentPath = (0, _index3.getCurrentPath)();
       var paths = currentPath.split('/').filter(Boolean);
@@ -277,9 +277,9 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
           sidebarMini = _state.sidebarMini;
 
 
-      var anonymousState__temp = this._createMarketingData(__prefix + "bbfzzzzzzz")('banner');
+      var anonymousState__temp = this._createMarketingData(__prefix + "azzzzzzzzz")('banner');
 
-      var anonymousState__temp2 = this._createMarketingData(__prefix + "bbgzzzzzzz")();
+      var anonymousState__temp2 = this._createMarketingData(__prefix + "bzzzzzzzzz")();
 
       this.anonymousFunc0 = function () {
         (0, _biz.showModalVIP)(783);
@@ -294,9 +294,9 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
         "notice": this.notice,
         "close": this.toggleNoticeBallon,
         "hadShownNotice": hadShownNotice
-      }, $compid__168, $prevCompid__168);
+      }, $compid__3, $prevCompid__3);
       Object.assign(this.__state, {
-        $compid__168: $compid__168,
+        $compid__3: $compid__3,
         currentMain: currentMain,
         routes: _routes.routes,
         currentSub: currentSub,

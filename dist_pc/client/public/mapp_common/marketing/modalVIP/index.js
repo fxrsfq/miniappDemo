@@ -162,7 +162,7 @@ var ModalVIP = (_dec = (0, _index3.connect)(function (store) {
           return null;
         }
         var body = ad.adInfo[current].adData.user_define.body;
-        var loopArray13 = [2, 3, 4].map(function (item, __index0) {
+        var loopArray14 = [2, 3, 4].map(function (item, __index0) {
           item = {
             $original: (0, _index.internal_get_original)(item)
           };
@@ -180,7 +180,7 @@ var ModalVIP = (_dec = (0, _index3.connect)(function (store) {
           // }
           var $loopState__temp2 = (0, _index.internal_inline_style)(extraClass);
 
-          var _$indexKey = "cfzzz" + __index0;
+          var _$indexKey = "cgzzz" + __index0;
 
           _this2.anonymousFunc0Map[_$indexKey] = function () {
             {
@@ -197,7 +197,7 @@ var ModalVIP = (_dec = (0, _index3.connect)(function (store) {
           };
         });
         return {
-          loopArray13: loopArray13,
+          loopArray14: loopArray14,
           anonymousState__temp5: anonymousState__temp5,
           body: body
         };
@@ -242,7 +242,7 @@ var ModalVIP = (_dec = (0, _index3.connect)(function (store) {
 
         if (showAutoPayDialog) {} else {
           _$_$anonymousState__temp = undefined;
-          _$_$anonymousState__temp = this._createBtnsData(__prefix + "cgzzzzzzzz")(current, ad);
+          _$_$anonymousState__temp = this._createBtnsData(__prefix + "chzzzzzzzz")(current, ad);
 
           this.anonymousFunc1 = function (a) {
             _this3.setState({ current: a.currentTarget.current });

@@ -245,7 +245,7 @@ var Notice = (_temp2 = _class = function (_BaseComponent) {
         _$_$anonymousState__temp = undefined;
 
         this.weakAdBeacon(_constants.MARKET_BEACON_CONST.show);
-        _$_$anonymousState__temp = noticeExpanded ? this._createSeeMoreData(__prefix + "cbzzzzzzzz")(currentNotice) : null;
+        _$_$anonymousState__temp = noticeExpanded ? this._createSeeMoreData(__prefix + "cczzzzzzzz")(currentNotice) : null;
       }
       Object.assign(this.__state, {
         anonymousState__temp3: anonymousState__temp3,

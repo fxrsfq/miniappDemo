@@ -190,13 +190,13 @@ var ModalAD = (_temp2 = _class = function (_BaseComponent) {
         for (var i = 1; i <= hotSpace; i++) {
           hotSpaceNumArr.push(i);
         }
-        var loopArray5 = hotSpaceNumArr.map(function (item, __index0) {
+        var loopArray6 = hotSpaceNumArr.map(function (item, __index0) {
           item = {
             $original: (0, _index.internal_get_original)(item)
           };
           var $loopState__temp2 = null;
 
-          var _$indexKey = "bczzz" + __index0;
+          var _$indexKey = "bdzzz" + __index0;
 
           _this3.anonymousFunc0Map[_$indexKey] = function () {
             _this3.highAdBeacon(_constants.MARKET_BEACON_CONST.click);
@@ -227,7 +227,7 @@ var ModalAD = (_temp2 = _class = function (_BaseComponent) {
           };
         });
         return {
-          loopArray5: loopArray5,
+          loopArray6: loopArray6,
           anonymousState__temp7: anonymousState__temp7,
           hotSpace: hotSpace,
           hotSpaceNumArr: hotSpaceNumArr,
@@ -272,8 +272,8 @@ var ModalAD = (_temp2 = _class = function (_BaseComponent) {
           _$showCount = currentCount;
         }
         this.ad = adInfo;
-        _$_$anonymousState__temp = this._createButsData(__prefix + "bdzzzzzzzz")();
-        _$_$anonymousState__temp2 = this._createCloseBoxData(__prefix + "bezzzzzzzz")(_$showCount);
+        _$_$anonymousState__temp = this._createButsData(__prefix + "bezzzzzzzz")();
+        _$_$anonymousState__temp2 = this._createCloseBoxData(__prefix + "bfzzzzzzzz")(_$showCount);
         _$anonymousState__temp3 = (0, _index.internal_inline_style)({ width: width + "rpx", height: height + "rpx" });
       }
       Object.assign(this.__state, {

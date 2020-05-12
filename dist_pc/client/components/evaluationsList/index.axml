@@ -1,0 +1,32 @@
+<block a:if="{{$taroCompReady}}">
+    <view class="evaluationslist-table">
+        <view class="table-thead">
+            <view a:key="key" class="{{'table-header-tr-th w-' + cur.key}}" a:for="{{headerArr}}" a:for-item="cur" a:for-index="_anonIdx2"><text>{{cur.words}}</text>
+            </view>
+        </view>
+        <view class="table-tbody">
+            <view class="table-tbody-tr" a:key="orderCode" a:for="{{bodyArr}}" a:for-item="cur" a:for-index="_anonIdx4">
+                <view class="td1">
+                    <checkbox></checkbox>
+                </view>
+                <view class="td2">
+                    <image src="{{cur.imgSrc}}"></image>
+                </view>
+                <view class="td3"><text>{{cur.goodsInformation}}</text>
+                </view>
+                <view class="td4"><text>{{cur.orderCode}}</text>
+                </view>
+                <view class="td5"><text>{{cur.confirmNumber}}</text>
+                </view>
+                <view class="td6"><text>共{{cur.quantity}}笔</text><text>{{cur.amount}}</text>
+                </view>
+                <view class="td7">
+                    <view></view><text>{{cur.nickName}}</text>
+                </view>
+                <view class="td8">
+                    <button>评价</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>

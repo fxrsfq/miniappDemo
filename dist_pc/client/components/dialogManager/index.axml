@@ -1,6 +1,6 @@
 <block a:if="{{$taroCompReady}}">
     <view class="{{'dialog-manager ' + openDialog.length == 0 ? 'opened' : ''}}">
-        <block a:for="{{loopArray3}}" a:for-item="key" a:for-index="_anonIdx2">
+        <block a:for="{{loopArray4}}" a:for-item="key" a:for-index="_anonIdx2">
             <block a:if="{{'testDialog' === key.$original}}">
                 <test-dialog compid="{{key.$compid__23}}"></test-dialog>
             </block>

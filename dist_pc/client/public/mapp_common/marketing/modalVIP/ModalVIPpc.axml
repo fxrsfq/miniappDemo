@@ -1,6 +1,6 @@
 <template name="renderBtns">
     <block>
-        <block a:if="{{!item.$loopState__temp10}}" a:for="{{loopArray11}}" a:for-item="item" a:for-index="__index0">
+        <block a:if="{{!item.$loopState__temp10}}" a:for="{{loopArray12}}" a:for-item="item" a:for-index="__index0">
             <view class="ad-buy-btn" style="{{item.$loopState__temp2}}" onTap="anonymousFunc0" size="mini" type="default" data-e-onTap-so="this" data-e-onTap-a-a="{{item._$indexKey}}">{{body['btn' + item.$original + '-text']}}</view>
         </block>
     </block>
@@ -23,7 +23,7 @@
                     </view>
                     <view class="content">
                         <view class="menu">
-                            <view class="menu-btn" onTap="changeAd" a:for="{{loopArray12}}" a:for-item="item" a:for-index="index" data-e-onTap-so="this" data-e-onTap-a-a="{{index}}" data-e-onTap-a-b="{{item.$original.pid}}">
+                            <view class="menu-btn" onTap="changeAd" a:for="{{loopArray13}}" a:for-item="item" a:for-index="index" data-e-onTap-so="this" data-e-onTap-a-a="{{index}}" data-e-onTap-a-b="{{item.$original.pid}}">
                                 <image class="menu-icon" src="{{item.$original.pid == ad.currentPid ? item.$original.imgPath_high : item.$original.imgPath}}"></image><text class="menu-text" style="{{item.$loopState__temp8}}">{{item.$original.title}}</text>
                             </view>
                         </view>

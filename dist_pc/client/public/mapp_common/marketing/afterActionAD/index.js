@@ -170,12 +170,12 @@ var AfterActionAD = (_temp2 = _class = function (_BaseComponent) {
             url: btn1_url
           }];
         }
-        var loopArray9 = btnArr.map(function (item, __index0) {
+        var loopArray10 = btnArr.map(function (item, __index0) {
           item = {
             $original: (0, _index.internal_get_original)(item)
           };
 
-          var _$indexKey = "bizzz" + __index0;
+          var _$indexKey = "bjzzz" + __index0;
 
           _this3.anonymousFunc0Map[_$indexKey] = function () {
             return _this3.goLink(item.$original.url);
@@ -187,7 +187,7 @@ var AfterActionAD = (_temp2 = _class = function (_BaseComponent) {
           };
         });
         return {
-          loopArray9: loopArray9,
+          loopArray10: loopArray10,
           btnArr: btnArr
         };
       };
@@ -248,8 +248,8 @@ var AfterActionAD = (_temp2 = _class = function (_BaseComponent) {
       var anonymousState__temp3 = !(0, _index3.isEmpty)(flag_image);
       if (anonymousState__temp3) {}
       this.shouldRenderLongBtn = !(0, _index3.isEmpty)(long_btn_text);
-      var anonymousState__temp = isModal ? this._createMiddleImgData(__prefix + "bjzzzzzzzz")() : null;
-      var anonymousState__temp2 = isModal ? this._createModalBtnsData(__prefix + "cazzzzzzzz")() : null;
+      var anonymousState__temp = isModal ? this._createMiddleImgData(__prefix + "cazzzzzzzz")() : null;
+      var anonymousState__temp2 = isModal ? this._createModalBtnsData(__prefix + "cbzzzzzzzz")() : null;
       var anonymousState__temp4 = isModal ? !(0, _index3.isEmpty)(suggest) && !this.shouldRenderLongBtn ? suggest : null : null;
       Object.assign(this.__state, {
         anonymousState__temp3: anonymousState__temp3,

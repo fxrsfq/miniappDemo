@@ -48,7 +48,7 @@ var RefundList = (_dec = (0, _index3.connect)(function (store) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = RefundList.__proto__ || Object.getPrototypeOf(RefundList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray21", "$compid__35", "list", "isLoading", "activeTabKey"], _this.customComponents = ["EmptyPage", "RefundCard"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = RefundList.__proto__ || Object.getPrototypeOf(RefundList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray22", "$compid__35", "list", "isLoading", "activeTabKey"], _this.customComponents = ["EmptyPage", "RefundCard"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(RefundList, [{
@@ -84,12 +84,12 @@ var RefundList = (_dec = (0, _index3.connect)(function (store) {
           activeTabKey = _props.activeTabKey,
           isLoading = _props.isLoading;
 
-      var loopArray21 = list.map(function (trade, _anonIdx) {
+      var loopArray22 = list.map(function (trade, _anonIdx) {
         trade = {
           $original: (0, _index.internal_get_original)(trade)
         };
 
-        var _genCompid3 = (0, _index.genCompid)(__prefix + "dazzzzzzzz" + _anonIdx, true),
+        var _genCompid3 = (0, _index.genCompid)(__prefix + "dbzzzzzzzz" + _anonIdx, true),
             _genCompid4 = _slicedToArray(_genCompid3, 2),
             $prevCompid__34 = _genCompid4[0],
             $compid__34 = _genCompid4[1];
@@ -107,7 +107,7 @@ var RefundList = (_dec = (0, _index3.connect)(function (store) {
         "text": "\u5F53\u524D\u6CA1\u6709\u4EFB\u4F55\u8BA2\u5355"
       }, $compid__35, $prevCompid__35);
       Object.assign(this.__state, {
-        loopArray21: loopArray21,
+        loopArray22: loopArray22,
         $compid__35: $compid__35,
         list: list,
         isLoading: isLoading

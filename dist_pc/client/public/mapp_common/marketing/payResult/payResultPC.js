@@ -106,7 +106,7 @@ var PayResultPC = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PayResultPC.__proto__ || Object.getPrototypeOf(PayResultPC)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "_$content", "_$btns", "_$btnText", "_$successType", "_$anonymousState__temp", "_$anonymousState__temp2", "loopArray17", "$compid__30", "$compid__31", "contentType", "pid", "payResultInfo"], _this.onClose = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PayResultPC.__proto__ || Object.getPrototypeOf(PayResultPC)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "_$content", "_$btns", "_$btnText", "_$successType", "_$anonymousState__temp", "_$anonymousState__temp2", "loopArray18", "$compid__30", "$compid__31", "contentType", "pid", "payResultInfo"], _this.onClose = function () {
       var pid = _this.props.pid;
 
       (0, _action.togglePayResult)({ pid: pid, state: _constants.AD_STATE.NOT_SHOW });
@@ -223,7 +223,7 @@ var PayResultPC = (_temp2 = _class = function (_BaseComponent) {
           $prevCompid__31 = _genCompid4[0],
           $compid__31 = _genCompid4[1];
 
-      var loopArray17 = void 0;
+      var loopArray18 = void 0;
 
       var payResultInfo = this.__props.payResultInfo;
 
@@ -254,12 +254,12 @@ var PayResultPC = (_temp2 = _class = function (_BaseComponent) {
         });
         _$anonymousState__temp = contentType + "-header";
         _$anonymousState__temp2 = this.filterText(_$content.header);
-        loopArray17 = _$btns.map(function (item, __index0) {
+        loopArray18 = _$btns.map(function (item, __index0) {
           item = {
             $original: (0, _index.internal_get_original)(item)
           };
 
-          var _$indexKey = "cizzz" + __index0;
+          var _$indexKey = "cjzzz" + __index0;
 
           _this2.anonymousFunc0Map[_$indexKey] = item.$original.action;
           return {
@@ -284,7 +284,7 @@ var PayResultPC = (_temp2 = _class = function (_BaseComponent) {
         _$successType: _$successType,
         _$anonymousState__temp: _$anonymousState__temp,
         _$anonymousState__temp2: _$anonymousState__temp2,
-        loopArray17: loopArray17,
+        loopArray18: loopArray18,
         $compid__30: $compid__30,
         $compid__31: $compid__31
       });

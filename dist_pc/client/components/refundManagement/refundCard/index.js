@@ -51,7 +51,7 @@ var RefundCard = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = RefundCard.__proto__ || Object.getPrototypeOf(RefundCard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp2", "anonymousState__temp3", "loopArray22", "anonymousState__temp4", "anonymousState__temp5", "trade", "anonymousState__temp", "REFUND_TABS", "$anonymousCallee__0", "activeTabKey"], _this.goRefundDetail = function (refund) {}, _this.customComponents = ["OrderCard"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = RefundCard.__proto__ || Object.getPrototypeOf(RefundCard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp2", "anonymousState__temp3", "loopArray25", "anonymousState__temp4", "anonymousState__temp5", "trade", "anonymousState__temp", "REFUND_TABS", "$anonymousCallee__0", "activeTabKey"], _this.goRefundDetail = function (refund) {}, _this.customComponents = ["OrderCard"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(RefundCard, [{
@@ -93,18 +93,18 @@ var RefundCard = (_temp2 = _class = function (_BaseComponent) {
       var trade = this.__props.trade;
       var activeTabKey = this.__props.activeTabKey;
 
-      var anonymousState__temp = trade.refund.refund_remind_timeout ? this._createcountDownData(__prefix + "dbzzzzzzzz")(trade.refund.refund_remind_timeout.timeout) : null;
+      var anonymousState__temp = trade.refund.refund_remind_timeout ? this._createcountDownData(__prefix + "dczzzzzzzz")(trade.refund.refund_remind_timeout.timeout) : null;
       var anonymousState__temp2 = Number(trade.payment).toFixed(2);
       var anonymousState__temp3 = (0, _resolveTrade.getTradeAddress)(trade, { needContact: true });
       var $anonymousCallee__0 = (0, _resolveTopResponse.getOrders)(trade);
       var anonymousState__temp4 = { text: trade.buyer_nick, msg: '复制成功' };
       var anonymousState__temp5 = { text: trade.refund.refund_id, msg: '复制成功' };
-      var loopArray22 = (0, _resolveTopResponse.getOrders)(trade).map(function (order, _anonIdx) {
+      var loopArray25 = (0, _resolveTopResponse.getOrders)(trade).map(function (order, _anonIdx) {
         order = {
           $original: (0, _index.internal_get_original)(order)
         };
 
-        var _genCompid = (0, _index.genCompid)(__prefix + "dczzzzzzzz" + _anonIdx, true),
+        var _genCompid = (0, _index.genCompid)(__prefix + "ddzzzzzzzz" + _anonIdx, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
             $prevCompid__40 = _genCompid2[0],
             $compid__40 = _genCompid2[1];
@@ -121,7 +121,7 @@ var RefundCard = (_temp2 = _class = function (_BaseComponent) {
       Object.assign(this.__state, {
         anonymousState__temp2: anonymousState__temp2,
         anonymousState__temp3: anonymousState__temp3,
-        loopArray22: loopArray22,
+        loopArray25: loopArray25,
         anonymousState__temp4: anonymousState__temp4,
         anonymousState__temp5: anonymousState__temp5,
         trade: trade,

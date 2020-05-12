@@ -106,7 +106,7 @@ var PayResult = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PayResult.__proto__ || Object.getPrototypeOf(PayResult)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "_$content", "_$btns", "_$btnText", "_$successType", "_$anonymousState__temp", "_$anonymousState__temp2", "loopArray19", "$compid__32", "$compid__33", "contentType", "pid", "payResultInfo"], _this.onClose = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PayResult.__proto__ || Object.getPrototypeOf(PayResult)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "_$content", "_$btns", "_$btnText", "_$successType", "_$anonymousState__temp", "_$anonymousState__temp2", "loopArray20", "$compid__32", "$compid__33", "contentType", "pid", "payResultInfo"], _this.onClose = function () {
       var pid = _this.props.pid;
 
       (0, _index3.showTabBar)();
@@ -224,7 +224,7 @@ var PayResult = (_temp2 = _class = function (_BaseComponent) {
           $prevCompid__33 = _genCompid4[0],
           $compid__33 = _genCompid4[1];
 
-      var loopArray19 = void 0;
+      var loopArray20 = void 0;
 
       var payResultInfo = this.__props.payResultInfo;
 
@@ -256,12 +256,12 @@ var PayResult = (_temp2 = _class = function (_BaseComponent) {
         });
         _$anonymousState__temp = contentType + "-header";
         _$anonymousState__temp2 = this.filterText(_$content.header);
-        loopArray19 = _$btns.map(function (item, __index0) {
+        loopArray20 = _$btns.map(function (item, __index0) {
           item = {
             $original: (0, _index.internal_get_original)(item)
           };
 
-          var _$indexKey = "cjzzz" + __index0;
+          var _$indexKey = "dazzz" + __index0;
 
           _this2.anonymousFunc0Map[_$indexKey] = item.$original.action;
           return {
@@ -286,7 +286,7 @@ var PayResult = (_temp2 = _class = function (_BaseComponent) {
         _$successType: _$successType,
         _$anonymousState__temp: _$anonymousState__temp,
         _$anonymousState__temp2: _$anonymousState__temp2,
-        loopArray19: loopArray19,
+        loopArray20: loopArray20,
         $compid__32: $compid__32,
         $compid__33: $compid__33
       });

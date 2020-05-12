@@ -3,7 +3,7 @@
         <block a:if="{{anonymousState__temp5}}">
             <view></view>
         </block>
-        <button style="{{item.$loopState__temp2}}" onTap="anonymousFunc0" size="mini" type="default" a:for="{{loopArray13}}" a:for-item="item" a:for-index="__index0" a:else data-e-onTap-so="this" data-e-onTap-a-a="{{item._$indexKey}}">{{body['btn' + item.$original + '-text']}}</button>
+        <button style="{{item.$loopState__temp2}}" onTap="anonymousFunc0" size="mini" type="default" a:for="{{loopArray14}}" a:for-item="item" a:for-index="__index0" a:else data-e-onTap-so="this" data-e-onTap-a-a="{{item._$indexKey}}">{{body['btn' + item.$original + '-text']}}</button>
     </block>
 </template>
 <block a:if="{{$taroCompReady}}">

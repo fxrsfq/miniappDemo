@@ -1,0 +1,35 @@
+
+.evaluationslist-table{
+    width: 100%;
+    font-size: 14px;
+}
+.table-thead{
+    width: 100%;
+    height: 40px;
+    background:rgba(250,250,250,1);
+
+    display: flex;
+    justify-content: flex-start;
+  
+}
+
+.table-header-tr-th{
+    height: 40px;
+    box-sizing: border-box;
+    line-height: 40px;
+    vertical-align: middle;
+    font-size:14px;
+    font-family:PingFangSC-Semibold,PingFang SC;
+    font-weight:600;
+    color:rgba(140,140,140,1);
+}
+.table-header-tr-th:nth-of-type(1), .table-header-tr-th:nth-of-type(2){
+    font-size: 15px;
+}
+.table-tbody{
+    width: 100%;
+}
+.table-tbody-tr{
+    width: 100%;
+    display: flex;
+}

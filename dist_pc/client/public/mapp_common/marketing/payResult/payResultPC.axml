@@ -15,7 +15,7 @@
                     </block>
                 </at-modal-content>
                 <at-modal-action>
-                    <button class="{{'' + item.$original.name}}" onTap="anonymousFunc0" a:for="{{loopArray17}}" a:for-item="item" a:for-index="__index0" data-e-onTap-so="this" data-e-onTap-a-a="{{item._$indexKey}}">{{_$content[item.$original.name]}}</button>
+                    <button class="{{'' + item.$original.name}}" onTap="anonymousFunc0" a:for="{{loopArray18}}" a:for-item="item" a:for-index="__index0" data-e-onTap-so="this" data-e-onTap-a-a="{{item._$indexKey}}">{{_$content[item.$original.name]}}</button>
                 </at-modal-action>
             </at-modal>
         </block>

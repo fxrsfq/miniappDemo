@@ -23,7 +23,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /**
- * @description 批量评价组件 
+ * @description 批量评价根 组件 
  * @author fuQiang
  * @class BatchDelete
  * @extends {Component}
@@ -43,31 +43,71 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = [], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray3", "tabTitle"], _this.tabClick = function (title) {
+      _this.setState({ tabTitle: title });
+    }, _this.anonymousFunc0Map = {}, _this.customComponents = ["EvaluationsList"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(BatchEvaluations, [{
     key: "_constructor",
     value: function _constructor(props) {
       _get(BatchEvaluations.prototype.__proto__ || Object.getPrototypeOf(BatchEvaluations.prototype), "_constructor", this).call(this, props);
-
+      this.state = {
+        tabTitle: "全部" //选项卡样式 关键字
+      };
+      this.tabClick = this.tabClick.bind(this);
       this.$$refs = [];
     }
   }, {
     key: "_createData",
     value: function _createData() {
+      var _this2 = this;
+
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      Object.assign(this.__state, {});
+
+      // 选项卡列表
+      var loopArray3 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
+        cur = {
+          $original: (0, _index.internal_get_original)(cur)
+        };
+
+        var _$indexKey = "gzzzz" + __index0;
+
+        _this2.anonymousFunc0Map[_$indexKey] = function () {
+          _this2.tabClick(cur.$original.title);
+        };
+
+        return {
+          _$indexKey: _$indexKey,
+          $original: cur.$original
+        };
+      });
+      Object.assign(this.__state, {
+        loopArray3: loopArray3
+      });
       return this.__state;
+    }
+  }, {
+    key: "anonymousFunc0",
+    value: function anonymousFunc0(_$indexKey) {
+      var _anonymousFunc0Map;
+
+      ;
+
+      for (var _len2 = arguments.length, e = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+        e[_key2 - 1] = arguments[_key2];
+      }
+
+      return this.anonymousFunc0Map[_$indexKey] && (_anonymousFunc0Map = this.anonymousFunc0Map)[_$indexKey].apply(_anonymousFunc0Map, e);
     }
   }]);
 
   return BatchEvaluations;
-}(_index.Component), _class.$$events = [], _class.$$componentPath = "pages/batchEvaluations/index", _temp2);
+}(_index.Component), _class.$$events = ["anonymousFunc0"], _class.$$componentPath = "pages/batchEvaluations/index", _temp2);
 exports.default = BatchEvaluations;
 
 Component(require('../../npm/_tarojs/taro-alipay/index.js').default.createComponent(BatchEvaluations));

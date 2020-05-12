@@ -58,7 +58,7 @@ var ModalVIPpc = (_dec = (0, _index3.connect)(function (store) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ModalVIPpc.__proto__ || Object.getPrototypeOf(ModalVIPpc)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp6", "loopArray12", "titleContent", "ENV", "tradePcVipList", "ad", "_$_$anonymousState__temp", "_$_$anonymousState__temp2"], _this.componentWillMount = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ModalVIPpc.__proto__ || Object.getPrototypeOf(ModalVIPpc)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp6", "loopArray13", "titleContent", "ENV", "tradePcVipList", "ad", "_$_$anonymousState__temp", "_$_$anonymousState__temp2"], _this.componentWillMount = function () {
       _this.updateModalVipState(_this.props);
     }, _this.updateModalVipState = function (props) {
       var ad = props[_constants.MARKETING_TYPE.modalVip];
@@ -126,7 +126,7 @@ var ModalVIPpc = (_dec = (0, _index3.connect)(function (store) {
 
       return function (adInfo) {
         var body = adInfo.adData.user_define.body;
-        var loopArray11 = [2, 3, 4].map(function (item, __index0) {
+        var loopArray12 = [2, 3, 4].map(function (item, __index0) {
           item = {
             $original: (0, _index.internal_get_original)(item)
           };
@@ -142,7 +142,7 @@ var ModalVIPpc = (_dec = (0, _index3.connect)(function (store) {
 
           var $loopState__temp2 = (0, _index.internal_inline_style)(extraClass);
 
-          var _$indexKey = "cczzz" + __index0;
+          var _$indexKey = "cdzzz" + __index0;
 
           _this2.anonymousFunc0Map[_$indexKey] = function () {
             _this2.onClickBtn(body["btn" + item.$original + "-url"]);
@@ -158,7 +158,7 @@ var ModalVIPpc = (_dec = (0, _index3.connect)(function (store) {
           };
         });
         return {
-          loopArray11: loopArray11,
+          loopArray12: loopArray12,
           body: body
         };
       };
@@ -208,7 +208,7 @@ var ModalVIPpc = (_dec = (0, _index3.connect)(function (store) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var loopArray12 = void 0;
+      var loopArray13 = void 0;
 
       var ad = this.__props[_constants.MARKETING_TYPE.modalVip];
 
@@ -217,9 +217,9 @@ var ModalVIPpc = (_dec = (0, _index3.connect)(function (store) {
       if (anonymousState__temp6) {
         _$_$anonymousState__temp2 = undefined;
         _$_$adInfo = ad.adInfo[0];
-        _$_$anonymousState__temp = this._createAdImgData(__prefix + "cdzzzzzzzz")(_$_$adInfo);
-        _$_$anonymousState__temp2 = this._createBtnsData(__prefix + "cezzzzzzzz")(_$_$adInfo);
-        loopArray12 = _constants.tradePcVipList.map(function (item, index) {
+        _$_$anonymousState__temp = this._createAdImgData(__prefix + "cezzzzzzzz")(_$_$adInfo);
+        _$_$anonymousState__temp2 = this._createBtnsData(__prefix + "cfzzzzzzzz")(_$_$adInfo);
+        loopArray13 = _constants.tradePcVipList.map(function (item, index) {
           item = {
             $original: (0, _index.internal_get_original)(item)
           };
@@ -235,7 +235,7 @@ var ModalVIPpc = (_dec = (0, _index3.connect)(function (store) {
       }
       Object.assign(this.__state, {
         anonymousState__temp6: anonymousState__temp6,
-        loopArray12: loopArray12,
+        loopArray13: loopArray13,
         titleContent: titleContent,
         ENV: _env.ENV,
         tradePcVipList: _constants.tradePcVipList,
