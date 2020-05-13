@@ -28,10 +28,12 @@ class BatchEvaluations extends Component {
     tabClick = (title) => {
         this.setState({ tabTitle: title });
     }
-    // 弹出框弹出状态 控制
-    evaluateBtuClick =()=>{
-        this.state.promptStatus = true;
+    // 弹出框弹出状态 显示或取消
+    promptStatusControl =(arg)=>{ 
+        this.setState({promptStatus:arg});
     }
+   
+
     render() {
         const {tabTitle, promptStatus} = this.state;
         // 选项卡列表
@@ -63,7 +65,7 @@ class BatchEvaluations extends Component {
                                 <Text className="check-all-quantity">1</Text>
                             </View>
                         </View>
-                        <Button className="batch-evaluate-btu" onClick={this.evaluateBtuClick}>批量评价</Button>
+                        <Button className="batch-evaluate-btu" onClick={()=>{this.promptStatusControl(true)}}>批量评价</Button>
                     </View>
                     {/*  分页按钮 list */}
                     <View>
@@ -72,7 +74,7 @@ class BatchEvaluations extends Component {
                 </View>
                 {/* 批量评价 || 单宝贝评价 弹出框 */}
                 <View>
-                    {promptStatus && <MyDialog hasFooter="true" title="评价" className="mydialog-cite" style={{display:"none"}}>
+                    {promptStatus && <MyDialog onCancel={()=>{this.promptStatusControl(false)}} hasFooter="true" title="评价" className="mydialog-cite">
                         <Prompt></Prompt>
                     </MyDialog>}
                 </View>

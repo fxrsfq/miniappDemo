@@ -45,10 +45,10 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray36", "$compid__76", "$compid__77", "tabTitle", "promptStatus"], _this.tabClick = function (title) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray42", "$compid__88", "$compid__89", "tabTitle", "promptStatus"], _this.tabClick = function (title) {
       _this.setState({ tabTitle: title });
-    }, _this.evaluateBtuClick = function () {
-      _this.state.promptStatus = true;
+    }, _this.promptStatusControl = function (arg) {
+      _this.setState({ promptStatus: arg });
     }, _this.anonymousFunc0Map = {}, _this.customComponents = ["EvaluationsList", "MyPagination", "MyDialog", "Prompt"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -66,7 +66,7 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
     }
     // 选项卡样式 切换
 
-    // 弹出框弹出状态 控制
+    // 弹出框弹出状态 显示或取消
 
   }, {
     key: "_createData",
@@ -79,28 +79,35 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__76"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__88"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__76 = _genCompid2[0],
-          $compid__76 = _genCompid2[1];
+          $prevCompid__88 = _genCompid2[0],
+          $compid__88 = _genCompid2[1];
 
-      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__77"),
+      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__89"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__77 = _genCompid4[0],
-          $compid__77 = _genCompid4[1];
+          $prevCompid__89 = _genCompid4[0],
+          $compid__89 = _genCompid4[1];
 
       var _state = this.__state,
           tabTitle = _state.tabTitle,
           promptStatus = _state.promptStatus;
       // 选项卡列表
 
-      var anonymousState__temp = promptStatus ? { display: "none" } : null;
-      var loopArray36 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
+      this.anonymousFunc1 = function () {
+        _this2.promptStatusControl(true);
+      };
+
+      this.anonymousFunc2 = function () {
+        _this2.promptStatusControl(false);
+      };
+
+      var loopArray42 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
         cur = {
           $original: (0, _index.internal_get_original)(cur)
         };
 
-        var _$indexKey = "efzzz" + __index0;
+        var _$indexKey = "fbzzz" + __index0;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           _this2.tabClick(cur.$original.title);
@@ -116,18 +123,17 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
         "pageSize": "8",
         "shape": "normal",
         "current": "1"
-      }, $compid__76, $prevCompid__76);
+      }, $compid__88, $prevCompid__88);
       promptStatus && propsManager.set({
+        "onCancel": this.anonymousFunc2,
         "hasFooter": "true",
         "title": "\u8BC4\u4EF7",
-        "className": "mydialog-cite",
-        "style": anonymousState__temp
-      }, $compid__77, $prevCompid__77);
+        "className": "mydialog-cite"
+      }, $compid__89, $prevCompid__89);
       Object.assign(this.__state, {
-        anonymousState__temp: anonymousState__temp,
-        loopArray36: loopArray36,
-        $compid__76: $compid__76,
-        $compid__77: $compid__77
+        loopArray42: loopArray42,
+        $compid__88: $compid__88,
+        $compid__89: $compid__89
       });
       return this.__state;
     }
@@ -144,10 +150,20 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
 
       return this.anonymousFunc0Map[_$indexKey] && (_anonymousFunc0Map = this.anonymousFunc0Map)[_$indexKey].apply(_anonymousFunc0Map, e);
     }
+  }, {
+    key: "anonymousFunc1",
+    value: function anonymousFunc1(e) {
+      ;
+    }
+  }, {
+    key: "anonymousFunc2",
+    value: function anonymousFunc2(e) {
+      ;
+    }
   }]);
 
   return BatchEvaluations;
-}(_index.Component), _class.$$events = ["anonymousFunc0", "evaluateBtuClick"], _class.$$componentPath = "pages/batchEvaluations/index", _temp2);
+}(_index.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1"], _class.$$componentPath = "pages/batchEvaluations/index", _temp2);
 exports.default = BatchEvaluations;
 
 Component(require('../../npm/_tarojs/taro-alipay/index.js').default.createComponent(BatchEvaluations));
