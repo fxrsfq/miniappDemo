@@ -43,7 +43,7 @@ var EvaluationsList = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = EvaluationsList.__proto__ || Object.getPrototypeOf(EvaluationsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["bodyArr"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = EvaluationsList.__proto__ || Object.getPrototypeOf(EvaluationsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray43", "bodyArr", "promptStatusControl"], _this.anonymousFunc0Map = {}, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(EvaluationsList, [{
@@ -65,18 +65,54 @@ var EvaluationsList = (_temp2 = _class = function (_BaseComponent) {
   }, {
     key: "_createData",
     value: function _createData() {
+      var _this2 = this;
+
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      Object.assign(this.__state, {});
+
+      //订单列表
+      var loopArray43 = this.__state.bodyArr.map(function (cur, __index0) {
+        cur = {
+          $original: (0, _index.internal_get_original)(cur)
+        };
+
+        var _$indexKey = "fczzz" + __index0;
+
+        _this2.anonymousFunc0Map[_$indexKey] = function () {
+          _this2.__props.promptStatusControl(true);
+        };
+
+        return {
+          _$indexKey: _$indexKey,
+          $original: cur.$original
+        };
+      });
+
+      Object.assign(this.__state, {
+        loopArray43: loopArray43
+      });
       return this.__state;
+    }
+  }, {
+    key: "anonymousFunc0",
+    value: function anonymousFunc0(_$indexKey) {
+      var _anonymousFunc0Map;
+
+      ;
+
+      for (var _len2 = arguments.length, e = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+        e[_key2 - 1] = arguments[_key2];
+      }
+
+      return this.anonymousFunc0Map[_$indexKey] && (_anonymousFunc0Map = this.anonymousFunc0Map)[_$indexKey].apply(_anonymousFunc0Map, e);
     }
   }]);
 
   return EvaluationsList;
-}(_index.Component), _class.$$events = [], _class.$$componentPath = "components/evaluationsList/index", _temp2);
+}(_index.Component), _class.$$events = ["anonymousFunc0"], _class.$$componentPath = "components/evaluationsList/index", _temp2);
 exports.default = EvaluationsList;
 
 Component(require('../../npm/_tarojs/taro-alipay/index.js').default.createComponent(EvaluationsList));

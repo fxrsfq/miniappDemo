@@ -45,7 +45,7 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray42", "$compid__88", "$compid__89", "tabTitle", "promptStatus"], _this.tabClick = function (title) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray44", "$compid__90", "$compid__91", "$compid__92", "tabTitle", "promptStatus"], _this.tabClick = function (title) {
       _this.setState({ tabTitle: title });
     }, _this.promptStatusControl = function (arg) {
       _this.setState({ promptStatus: arg });
@@ -79,15 +79,20 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__88"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__90"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__88 = _genCompid2[0],
-          $compid__88 = _genCompid2[1];
+          $prevCompid__90 = _genCompid2[0],
+          $compid__90 = _genCompid2[1];
 
-      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__89"),
+      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__91"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__89 = _genCompid4[0],
-          $compid__89 = _genCompid4[1];
+          $prevCompid__91 = _genCompid4[0],
+          $compid__91 = _genCompid4[1];
+
+      var _genCompid5 = (0, _index.genCompid)(__prefix + "$compid__92"),
+          _genCompid6 = _slicedToArray(_genCompid5, 2),
+          $prevCompid__92 = _genCompid6[0],
+          $compid__92 = _genCompid6[1];
 
       var _state = this.__state,
           tabTitle = _state.tabTitle,
@@ -102,12 +107,12 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
         _this2.promptStatusControl(false);
       };
 
-      var loopArray42 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
+      var loopArray44 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
         cur = {
           $original: (0, _index.internal_get_original)(cur)
         };
 
-        var _$indexKey = "fbzzz" + __index0;
+        var _$indexKey = "fdzzz" + __index0;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           _this2.tabClick(cur.$original.title);
@@ -119,21 +124,25 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
         };
       });
       propsManager.set({
+        "promptStatusControl": this.promptStatusControl
+      }, $compid__90, $prevCompid__90);
+      propsManager.set({
         "total": "5",
         "pageSize": "8",
         "shape": "normal",
         "current": "1"
-      }, $compid__88, $prevCompid__88);
+      }, $compid__91, $prevCompid__91);
       promptStatus && propsManager.set({
         "onCancel": this.anonymousFunc2,
         "hasFooter": "true",
         "title": "\u8BC4\u4EF7",
         "className": "mydialog-cite"
-      }, $compid__89, $prevCompid__89);
+      }, $compid__92, $prevCompid__92);
       Object.assign(this.__state, {
-        loopArray42: loopArray42,
-        $compid__88: $compid__88,
-        $compid__89: $compid__89
+        loopArray44: loopArray44,
+        $compid__90: $compid__90,
+        $compid__91: $compid__91,
+        $compid__92: $compid__92
       });
       return this.__state;
     }

@@ -49,7 +49,7 @@ class EvaluationsList extends Component {
                     <Text>{cur.nickName}</Text>
                 </View>
                 <View className="cell6 cells">
-                    <Button className="evaluation-btu">评价</Button>
+                    <Button className="evaluation-btu" onClick={()=>{this.props.promptStatusControl(true)}}>评价</Button>
                 </View>
             </View>
         });

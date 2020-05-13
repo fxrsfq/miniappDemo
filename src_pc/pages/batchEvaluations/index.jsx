@@ -53,7 +53,7 @@ class BatchEvaluations extends Component {
                     </ScrollView>
 
                     {/* 评价列表 列表渲染*/}
-                    <EvaluationsList></EvaluationsList>
+                    <EvaluationsList promptStatusControl={this.promptStatusControl}></EvaluationsList>
                 </View>
                 <View className="batch-evaluations-footer">
                     {/* 全选 表单*/}
