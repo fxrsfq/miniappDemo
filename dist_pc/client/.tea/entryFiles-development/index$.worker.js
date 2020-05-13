@@ -60,14 +60,16 @@ require('../../components/refundManagement/refundList/index?hash=3d3c07e6370a0ac
 require('../../components/myPagination/index?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../pages/refundManagement/index?hash=21a15d8a6cfbcd58f16c8fc4fd5c8e6d38df4254');
 require('../../components/evaluationsList/index?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
-require('../../pages/batchEvaluations/index?hash=c8c3aad2711a237141009aeb00e70b60a6acd91d');
-require('../../components/testDialog/index?hash=5e7f8f4b2ec58f467543f991a56ae695799c9e67');
 require('../../components/myDialog/index?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
+require('../../components/mySelect/index?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
+require('../../components/mydialogChildren/index?hash=285de49aaeb0bd9d5b11dee26968b1991b4340e1');
+require('../../pages/batchEvaluations/index?hash=5e4fe9cfe71a54fb4c7b7e713ce0564e519dc620');
+require('../../components/testDialog/index?hash=5e7f8f4b2ec58f467543f991a56ae695799c9e67');
 require('../../components/myDialog/confirmDialog?hash=395a7bf4d772b4a41d34f914f75cf6f53d0c325a');
 require('../../components/myDialog/InputDialog?hash=395a7bf4d772b4a41d34f914f75cf6f53d0c325a');
 require('../../components/dialogManager/index?hash=5d42a8715427921ffee642338deb4f4bdb551e34');
 require('../../components/miniapp-router/router-view/router-view?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
-require('../../pages/index/index?hash=da0259591eb9dac4a5419e405e9f01d59a0d9ee3');
+require('../../pages/index/index?hash=1e54972a2673b0c660e56b6edcf56487bbfa0a44');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();
 }

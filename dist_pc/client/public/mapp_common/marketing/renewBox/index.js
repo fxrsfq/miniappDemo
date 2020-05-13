@@ -55,7 +55,7 @@ var RenewBox = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = RenewBox.__proto__ || Object.getPrototypeOf(RenewBox)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__27", "anonymousState__temp", "closeNow", "midModalState", "ENV", "box_content", "box_span", "pid", "ad", "close"], _this.dealBoxContent = function (adInfo) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = RenewBox.__proto__ || Object.getPrototypeOf(RenewBox)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__29", "anonymousState__temp", "closeNow", "midModalState", "ENV", "box_content", "box_span", "pid", "ad", "close"], _this.dealBoxContent = function (adInfo) {
       if (!(0, _index3.isEmpty)(_this.bocContentInfo)) {
         return _this.bocContentInfo;
       }
@@ -174,10 +174,10 @@ var RenewBox = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__27"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__29"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__27 = _genCompid2[0],
-          $compid__27 = _genCompid2[1];
+          $prevCompid__29 = _genCompid2[0],
+          $compid__29 = _genCompid2[1];
 
       var _props = this.__props,
           pid = _props.pid,
@@ -207,9 +207,9 @@ var RenewBox = (_temp2 = _class = function (_BaseComponent) {
         "type": _constants.MARKETING_TYPE.commonModal,
         "pid": pid,
         "close": this.closeModal
-      }, $compid__27, $prevCompid__27);
+      }, $compid__29, $prevCompid__29);
       Object.assign(this.__state, {
-        $compid__27: $compid__27,
+        $compid__29: $compid__29,
         anonymousState__temp: anonymousState__temp,
         ENV: _env.ENV,
         box_content: box_content,

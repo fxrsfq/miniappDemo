@@ -42,7 +42,7 @@ var InputDialog = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = InputDialog.__proto__ || Object.getPrototypeOf(InputDialog)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__38", "placeholder", "value", "labelName", "cancelText", "confirmText", "title", "width"], _this.state = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = InputDialog.__proto__ || Object.getPrototypeOf(InputDialog)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__40", "placeholder", "value", "labelName", "cancelText", "confirmText", "title", "width"], _this.state = {
       value: ''
     }, _this.onchangeInput = function (e) {
       _this.setState({ value: e.detail.value });
@@ -72,10 +72,10 @@ var InputDialog = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__38"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__40"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__38 = _genCompid2[0],
-          $compid__38 = _genCompid2[1];
+          $prevCompid__40 = _genCompid2[0],
+          $compid__40 = _genCompid2[1];
 
       var value = this.__state.value;
       var _props = this.__props,
@@ -91,10 +91,10 @@ var InputDialog = (_temp2 = _class = function (_BaseComponent) {
         "className": "input-dialog",
         "title": title,
         "onClose": this.__props.onClose
-      }, $compid__38, $prevCompid__38);
+      }, $compid__40, $prevCompid__40);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        $compid__38: $compid__38,
+        $compid__40: $compid__40,
         placeholder: placeholder,
         labelName: labelName,
         cancelText: cancelText,

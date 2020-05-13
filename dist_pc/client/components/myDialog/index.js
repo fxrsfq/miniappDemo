@@ -67,6 +67,15 @@ var MyDialog = (_temp2 = _class = function (_BaseComponent) {
       _get(MyDialog.prototype.__proto__ || Object.getPrototypeOf(MyDialog.prototype), "_constructor", this).call(this, props);
       this.$$refs = [];
     }
+
+    // 点 x
+
+
+    //  点 确认
+
+
+    // 点 取消
+
   }, {
     key: "_createData",
     value: function _createData() {
@@ -89,30 +98,9 @@ var MyDialog = (_temp2 = _class = function (_BaseComponent) {
           hasCancel = _props.hasCancel,
           wrapperStyle = _props.wrapperStyle;
 
+      console.log("\n", "children 部分：", children, "\n");
       var anonymousState__temp = (0, _index3.classNames)('at-modal--active my-dialog-wrapper', wrapperClassName);
       var anonymousState__temp2 = (0, _index.internal_inline_style)(wrapperStyle);
-
-      // return (
-      //
-      //     <AtModal isOpened className={'my-dialog ' + wrapperClassName} onClose={onClose} closeOnClickOverlay={closeOnClickOverlay}>
-      //         <View className={className}>
-      //             {
-      //                 title &&
-      //                 <View className='dialog-title'><Text className='dialog-title-text'>{ title }</Text></View>
-      //             }
-      //             <View className='dialog-content'>
-      //                 { children }
-      //             </View>
-      //             {
-      //                 hasFooter &&
-      //                 <View className='dialog-bottom'>
-      //                     {locale.ok && <Button className='btn-cancel' onClick={this.onOk}>{locale.ok}</Button>}
-      //                     {locale.cancel && <Button type='primary' onClick={this.onCancel}>{locale.cancel}</Button>}
-      //                 </View>
-      //             }
-      //         </View>
-      //     </AtModal>
-      // );
       var anonymousState__temp3 = (0, _index3.classNames)('at-modal__container', className, { hidden: !this.__props.visible });
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
@@ -135,19 +123,19 @@ var MyDialog = (_temp2 = _class = function (_BaseComponent) {
 
 
 MyDialog.defaultProps = {
-  visible: true,
-  wrapperClassName: '',
-  content: null,
+  visible: true, //控制  content 部分的可见性
+  wrapperClassName: '', //没用
+  content: null, //弹出内容
   closeOnClickOverlay: false,
   cancelText: '取消',
   confirmText: '确认',
   className: '',
   title: null,
-  children: null,
-  hasFooter: false,
+  children: null, //元素  and 组件
+  hasFooter: false, //footer显示
   onClose: _index3.NOOP,
   onCancel: _index3.NOOP,
-  onOk: _index3.NOOP,
+  onOk: _index3.NOOP, //点击确定的回调函数 
   hasCancel: true,
   closeable: true,
   onCancelClose: true,

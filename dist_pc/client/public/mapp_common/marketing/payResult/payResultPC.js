@@ -106,7 +106,7 @@ var PayResultPC = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PayResultPC.__proto__ || Object.getPrototypeOf(PayResultPC)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "_$content", "_$btns", "_$btnText", "_$successType", "_$anonymousState__temp", "_$anonymousState__temp2", "loopArray18", "$compid__30", "$compid__31", "contentType", "pid", "payResultInfo"], _this.onClose = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PayResultPC.__proto__ || Object.getPrototypeOf(PayResultPC)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "_$content", "_$btns", "_$btnText", "_$successType", "_$anonymousState__temp", "_$anonymousState__temp2", "loopArray18", "$compid__32", "$compid__33", "contentType", "pid", "payResultInfo"], _this.onClose = function () {
       var pid = _this.props.pid;
 
       (0, _action.togglePayResult)({ pid: pid, state: _constants.AD_STATE.NOT_SHOW });
@@ -213,15 +213,15 @@ var PayResultPC = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__30"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__32"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__30 = _genCompid2[0],
-          $compid__30 = _genCompid2[1];
+          $prevCompid__32 = _genCompid2[0],
+          $compid__32 = _genCompid2[1];
 
-      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__31"),
+      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__33"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__31 = _genCompid4[0],
-          $compid__31 = _genCompid4[1];
+          $prevCompid__33 = _genCompid4[0],
+          $compid__33 = _genCompid4[1];
 
       var loopArray18 = void 0;
 
@@ -271,10 +271,10 @@ var PayResultPC = (_temp2 = _class = function (_BaseComponent) {
           "isOpened": true,
           "closeOnClickOverlay": false,
           "className": "pc-pay-result-wrapper"
-        }, $compid__30, $prevCompid__30);
+        }, $compid__32, $prevCompid__32);
         propsManager.set({
           "className": _$anonymousState__temp
-        }, $compid__31, $prevCompid__31);
+        }, $compid__33, $prevCompid__33);
       }
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
@@ -285,8 +285,8 @@ var PayResultPC = (_temp2 = _class = function (_BaseComponent) {
         _$anonymousState__temp: _$anonymousState__temp,
         _$anonymousState__temp2: _$anonymousState__temp2,
         loopArray18: loopArray18,
-        $compid__30: $compid__30,
-        $compid__31: $compid__31
+        $compid__32: $compid__32,
+        $compid__33: $compid__33
       });
       return this.__state;
     }

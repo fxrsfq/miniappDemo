@@ -25,129 +25,65 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /**
- * @description 批量评价根 组件 
+ * @description 弹出框 myDialog 的 children 部分
  * @author fuQiang
- * @class BatchDelete
+ * @class Prompt
  * @extends {Component}
  */
 var propsManager = my.propsManager;
-var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
-  _inherits(BatchEvaluations, _BaseComponent);
+var Prompt = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(Prompt, _BaseComponent);
 
-  function BatchEvaluations() {
+  function Prompt() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, BatchEvaluations);
+    _classCallCheck(this, Prompt);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray36", "$compid__76", "$compid__77", "tabTitle", "promptStatus"], _this.tabClick = function (title) {
-      _this.setState({ tabTitle: title });
-    }, _this.evaluateBtuClick = function () {
-      _this.state.promptStatus = true;
-    }, _this.anonymousFunc0Map = {}, _this.customComponents = ["EvaluationsList", "MyPagination", "MyDialog", "Prompt"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Prompt.__proto__ || Object.getPrototypeOf(Prompt)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__56"], _this.customComponents = ["Select"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(BatchEvaluations, [{
+  _createClass(Prompt, [{
     key: "_constructor",
     value: function _constructor(props) {
-      _get(BatchEvaluations.prototype.__proto__ || Object.getPrototypeOf(BatchEvaluations.prototype), "_constructor", this).call(this, props);
-      this.state = {
-        tabTitle: "全部", //选项卡样式 关键字,
-        promptStatus: fasle //弹框状态
-      };
-      this.tabClick = this.tabClick.bind(this);
-      this.evaluateBtuClick = this.evaluateBtuClick.bind(this);
+      _get(Prompt.prototype.__proto__ || Object.getPrototypeOf(Prompt.prototype), "_constructor", this).call(this, props);
+
       this.$$refs = [];
     }
-    // 选项卡样式 切换
-
-    // 弹出框弹出状态 控制
-
   }, {
     key: "_createData",
     value: function _createData() {
-      var _this2 = this;
-
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__76"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__56"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__76 = _genCompid2[0],
-          $compid__76 = _genCompid2[1];
+          $prevCompid__56 = _genCompid2[0],
+          $compid__56 = _genCompid2[1];
 
-      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__77"),
-          _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__77 = _genCompid4[0],
-          $compid__77 = _genCompid4[1];
-
-      var _state = this.__state,
-          tabTitle = _state.tabTitle,
-          promptStatus = _state.promptStatus;
-      // 选项卡列表
-
-      var anonymousState__temp = promptStatus ? { display: "none" } : null;
-      var loopArray36 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
-        cur = {
-          $original: (0, _index.internal_get_original)(cur)
-        };
-
-        var _$indexKey = "efzzz" + __index0;
-
-        _this2.anonymousFunc0Map[_$indexKey] = function () {
-          _this2.tabClick(cur.$original.title);
-        };
-
-        return {
-          _$indexKey: _$indexKey,
-          $original: cur.$original
-        };
-      });
+      var anonymousState__temp = ["好", "很好", "非常好", "棒"];
       propsManager.set({
-        "total": "5",
-        "pageSize": "8",
-        "shape": "normal",
-        "current": "1"
-      }, $compid__76, $prevCompid__76);
-      promptStatus && propsManager.set({
-        "hasFooter": "true",
-        "title": "\u8BC4\u4EF7",
-        "className": "mydialog-cite",
-        "style": anonymousState__temp
-      }, $compid__77, $prevCompid__77);
+        "className": "evaluation-phrases-select",
+        "dataSource": anonymousState__temp
+      }, $compid__56, $prevCompid__56);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        loopArray36: loopArray36,
-        $compid__76: $compid__76,
-        $compid__77: $compid__77
+        $compid__56: $compid__56
       });
       return this.__state;
     }
-  }, {
-    key: "anonymousFunc0",
-    value: function anonymousFunc0(_$indexKey) {
-      var _anonymousFunc0Map;
-
-      ;
-
-      for (var _len2 = arguments.length, e = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-        e[_key2 - 1] = arguments[_key2];
-      }
-
-      return this.anonymousFunc0Map[_$indexKey] && (_anonymousFunc0Map = this.anonymousFunc0Map)[_$indexKey].apply(_anonymousFunc0Map, e);
-    }
   }]);
 
-  return BatchEvaluations;
-}(_index.Component), _class.$$events = ["anonymousFunc0", "evaluateBtuClick"], _class.$$componentPath = "pages/batchEvaluations/index", _temp2);
-exports.default = BatchEvaluations;
+  return Prompt;
+}(_index.Component), _class.$$events = [], _class.$$componentPath = "pages/batchEvaluations/prompt", _temp2);
+exports.default = Prompt;
 
-Component(require('../../npm/_tarojs/taro-alipay/index.js').default.createComponent(BatchEvaluations));
+Component(require('../../npm/_tarojs/taro-alipay/index.js').default.createComponent(Prompt));

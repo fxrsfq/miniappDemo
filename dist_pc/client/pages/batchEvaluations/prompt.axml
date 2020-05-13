@@ -1,0 +1,40 @@
+<block a:if="{{$taroCompReady}}">
+    <view class="prompt-container">
+        <view class="prompt-main">
+            <view class="order-detail">
+                <image src="" class="order-detail-photo"></image>
+                <view class="order-detail-words"><text class="order-detail-words-name mar-bottom">人气WIKEA/维佳框业现代中式异形不规则特价组合相框片墙…</text>
+                    <view class="order-detail-merchantcode mar-bottom">商家编码&nbsp;{{2348972816378}}</view>
+                    <view class="order-detail-goods-attributes mar-bottom">
+                        <view class="order-detail-goods-attributes-a"><text class="order-detail-goods-attributes-text">紫色</text><text class="order-detail-goods-attributes-text">140CM，尺寸偏小，建议多拍大一号，胖子建议选大一码，切记</text>
+                        </view><text class="order-detail-goods-attributes-b order-detail-goods-attributes-text">这是第三属性，如果有的话就显示粗来</text>
+                    </view>
+                    <view class="order-detail-amount-information mar-bottom">
+                        <view><text class="order-detail-amount-aboriginal mar-right">¥109.00</text><text class="order-detail-order-quantity">x2</text>
+                        </view>
+                        <view><text class="order-detail-preferential mar-right">惠</text><text class="order-detail-preferential-value mar-right">-¥98.99</text><text class="order-detail-preferential-change mar-right">改</text><text class="order-detail-preferential-change-value">+¥8.99</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="evaluation-input">
+                <view class="evaluation-result evaluation-input-child"><text class="evaluatioon-label">评价结果</text>
+                    <view>
+                        <radio-group>
+                            <radio></radio>
+                            <radio></radio>
+                            <radio></radio>
+                        </radio-group>
+                        <radio></radio>
+                    </view>
+                </view>
+                <view class="evaluation-phrases evaluation-input-child"><text class="evaluatioon-label">选择短语</text>
+                    <select compid="{{$compid__56}}"></select><text class="evaluation-phrases-options-text">设置评价短语</text>
+                </view>
+                <view class="evaluation-content evaluation-input-child"><text class="evaluatioon-label evaluation-content-label">评价内容</text>
+                    <textarea class="evaluation-content-textarea" placeholder="请输入评价内容"></textarea>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>

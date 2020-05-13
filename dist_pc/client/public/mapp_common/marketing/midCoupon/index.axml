@@ -16,7 +16,7 @@
             </view>
         </block>
         <block a:else>
-            <marketing compid="{{$compid__29}}"></marketing>
+            <marketing compid="{{$compid__31}}"></marketing>
         </block>
     </block>
 </block>

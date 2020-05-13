@@ -55,7 +55,7 @@ var MidCoupon = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MidCoupon.__proto__ || Object.getPrototypeOf(MidCoupon)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__29", "anonymousState__temp", "num", "adState", "tip_image", "pid", "ad", "close"], _this.clickCoupon = function (content) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MidCoupon.__proto__ || Object.getPrototypeOf(MidCoupon)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__31", "anonymousState__temp", "num", "adState", "tip_image", "pid", "ad", "close"], _this.clickCoupon = function (content) {
       var afterFunc = function afterFunc() {
         // 关闭定时器
         clearInterval(_this.timer);
@@ -170,10 +170,10 @@ var MidCoupon = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__29"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__31"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__29 = _genCompid2[0],
-          $compid__29 = _genCompid2[1];
+          $prevCompid__31 = _genCompid2[0],
+          $compid__31 = _genCompid2[1];
 
       var adState = this.__state.adState;
       var _props = this.__props,
@@ -203,9 +203,9 @@ var MidCoupon = (_temp2 = _class = function (_BaseComponent) {
       !(adState === 'coupon') && propsManager.set({
         "type": _constants.MARKETING_TYPE.commonModal,
         "pid": pid
-      }, $compid__29, $prevCompid__29);
+      }, $compid__31, $prevCompid__31);
       Object.assign(this.__state, {
-        $compid__29: $compid__29,
+        $compid__31: $compid__31,
         anonymousState__temp: anonymousState__temp,
         num: num,
         tip_image: tip_image

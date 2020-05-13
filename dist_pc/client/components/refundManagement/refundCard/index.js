@@ -106,15 +106,15 @@ var RefundCard = (_temp2 = _class = function (_BaseComponent) {
 
         var _genCompid = (0, _index.genCompid)(__prefix + "ddzzzzzzzz" + _anonIdx, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__40 = _genCompid2[0],
-            $compid__40 = _genCompid2[1];
+            $prevCompid__42 = _genCompid2[0],
+            $compid__42 = _genCompid2[1];
 
         propsManager.set({
           "trade": trade,
           "order": order.$original
-        }, $compid__40, $prevCompid__40);
+        }, $compid__42, $prevCompid__42);
         return {
-          $compid__40: $compid__40,
+          $compid__42: $compid__42,
           $original: order.$original
         };
       });

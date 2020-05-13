@@ -242,13 +242,13 @@ class Index extends Component {
                                 <View slot='batchEvaluations'><BatchEvaluations /></View>
                                 {/* <View slot='test'><Test /></View> */}
                             </router-view>
-
                         </View>
                     </View>
                     {this.renderMarketing('banner')}
                 </View>
                 <DialogManager></DialogManager>
                 {this.renderMarketing()}
+
             </View>
         );
     }

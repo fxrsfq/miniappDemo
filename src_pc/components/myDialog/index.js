@@ -9,15 +9,19 @@ class MyDialog extends Component {
         super(props);
     }
 
+    // 点 x
     onCloseClick = () => {
         this.props.onClose();
     };
+
     onCancel = () => {
         isFunction(this.props.onCancel) && this.props.onCancel();
         if (this.props.onCancelClose) {
             this.onClose();
         }
     };
+
+    //  点 确认
     onOk = () => {
         isFunction(this.props.onOk) && this.props.onOk();
         if (this.props.onOkClose) {
@@ -25,9 +29,11 @@ class MyDialog extends Component {
         }
     };
 
+    // 点 取消
     onClose = () => {
         this.props.onClose();
     };
+
     handleClickOverlay = () => {
         if (this.props.closeOnClickOverlay) {
             this.onClose();
@@ -35,23 +41,29 @@ class MyDialog extends Component {
     };
 
     render () {
+
         const { wrapperClassName, hasFooter, className, title, children, content, closeable, cancelText, confirmText, hasCancel, wrapperStyle } = this.props;
+        console.log("\n", "children 部分：", children, "\n");
         return <View className={classNames('at-modal--active my-dialog-wrapper', wrapperClassName)} style={wrapperStyle}>
             <View className='at-modal__overlay' onClick={this.handleClickOverlay} />
             <View className={classNames('at-modal__container', className, { hidden:!this.props.visible })}>
                 {title && (
+                    // 标题 和 关闭X
                     <View className='dialog-title'>
                         <Text className='dialog-title-text'>{title}</Text>
                         {closeable && <Text className='iconfont iconfont-guanbi' onClick={this.onCloseClick} />}
                     </View>
                 )}
 
+                {/* 主体content */}
                 <View className='my-dialog-content'>
                     {content && <View className='content-simple'>
                         {content}
                     </View>}
                     {children}
                 </View>
+
+                {/* 底部  footer */}
                 {hasFooter && <View className='dialog-bottom'>
 
                     {cancelText && hasCancel && (
@@ -65,50 +77,28 @@ class MyDialog extends Component {
 
             </View>
         </View>;
-
-        // return (
-        //
-        //     <AtModal isOpened className={'my-dialog ' + wrapperClassName} onClose={onClose} closeOnClickOverlay={closeOnClickOverlay}>
-        //         <View className={className}>
-        //             {
-        //                 title &&
-        //                 <View className='dialog-title'><Text className='dialog-title-text'>{ title }</Text></View>
-        //             }
-        //             <View className='dialog-content'>
-        //                 { children }
-        //             </View>
-        //             {
-        //                 hasFooter &&
-        //                 <View className='dialog-bottom'>
-        //                     {locale.ok && <Button className='btn-cancel' onClick={this.onOk}>{locale.ok}</Button>}
-        //                     {locale.cancel && <Button type='primary' onClick={this.onCancel}>{locale.cancel}</Button>}
-        //                 </View>
-        //             }
-        //         </View>
-        //     </AtModal>
-        // );
+       
     }
 }
 
 MyDialog.defaultProps = {
-    visible: true,
-    wrapperClassName: '',
-    content: null,
+    visible: true,//控制  content 部分的可见性
+    wrapperClassName: '',//没用
+    content: null,//弹出内容
     closeOnClickOverlay: false,
     cancelText: '取消',
     confirmText: '确认',
     className: '',
     title: null,
-    children: null,
-    hasFooter: false,
+    children: null,//元素  and 组件
+    hasFooter: false,//footer显示
     onClose: NOOP,
     onCancel: NOOP,
-    onOk: NOOP,
+    onOk: NOOP,//点击确定的回调函数 
     hasCancel: true,
     closeable: true,
     onCancelClose: true,
     onOkClose: true,
-
 
 };
 

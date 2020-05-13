@@ -56,7 +56,7 @@ var MidCouponPC = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MidCouponPC.__proto__ || Object.getPrototypeOf(MidCouponPC)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__28", "anonymousState__temp2", "num", "adState", "ad", "pid", "close"], _this.clickCoupon = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MidCouponPC.__proto__ || Object.getPrototypeOf(MidCouponPC)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__30", "anonymousState__temp2", "num", "adState", "ad", "pid", "close"], _this.clickCoupon = function () {
       var ad = _this.props.ad;
 
       if (ad.adInfo.user_define && ad.adInfo.user_define.body.add == '有') {
@@ -166,10 +166,10 @@ var MidCouponPC = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__28"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__30"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__28 = _genCompid2[0],
-          $compid__28 = _genCompid2[1];
+          $prevCompid__30 = _genCompid2[0],
+          $compid__30 = _genCompid2[1];
 
       var _props = this.__props,
           ad = _props.ad,
@@ -193,10 +193,10 @@ var MidCouponPC = (_temp2 = _class = function (_BaseComponent) {
       !(adState == 'coupon') && propsManager.set({
         "type": _constants.MARKETING_TYPE.commonModal,
         "pid": pid
-      }, $compid__28, $prevCompid__28);
+      }, $compid__30, $prevCompid__30);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        $compid__28: $compid__28,
+        $compid__30: $compid__30,
         anonymousState__temp2: anonymousState__temp2,
         num: num
       });
