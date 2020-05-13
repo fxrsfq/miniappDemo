@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "evaluations-list": "../../components/evaluationsList/index"
+    "evaluations-list": "../../components/evaluationsList/index",
+    "my-pagination": "../../components/myPagination/index"
   }
 }

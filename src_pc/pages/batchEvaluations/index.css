@@ -1,7 +1,10 @@
-.batch-evaluations-container {
-    width: 1180px;
+.batch-evaluations-main {
+    /* width: 1180px; */
+    width: 100%;
     border-radius: 4px 4px 0px 0px;
-    margin: 20px;
+    /* margin: 20px 20px 0px 20px; */
+    padding:20px 20px 0px 20px;
+    box-sizing: border-box;
 }
 
 /* 
@@ -60,3 +63,66 @@
     导航条 结束
     ========
 */
+/* footer 开始*/
+.batch-evaluations-footer{
+    width: 100%;
+    background:rgba(255,255,255,1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.batch-operation{
+    width: 220px;
+    height: 71px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.check-all{
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+.check-all-checkbox{
+    width:18px;
+    height:18px;
+    background:rgba(24,144,255,1);
+    border-radius:2px;
+}
+.check-all-information{
+    width:76px;
+    height:20px;
+    font-size:14px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(89,89,89,1);
+    line-height:20px;
+
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+}
+.check-all-keys{
+    width: 76px;
+    height: 20px;
+}
+.check-all-quantity{
+    color: rgba(24,144,255,1);;
+}
+.batch-evaluate-btu{
+    width:92px;
+    height:32px;
+    background:rgba(24,144,255,1);
+    border-radius: 3px;
+    font-size:14px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:22px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* footer 结束*/

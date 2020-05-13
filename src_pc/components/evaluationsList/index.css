@@ -1,34 +1,147 @@
-.evaluationslist-table{
+.evaluationslist-table {
     width: 100%;
     font-size: 14px;
 }
-.table-thead{
+
+.table-thead {
     width: 100%;
     height: 40px;
-    background:rgba(250,250,250,1);
+    background: rgba(250, 250, 250, 1);
 
     display: flex;
     justify-content: flex-start;
-  
 }
 
-.table-header-tr-th{
+.table-header-tr-th {
     height: 40px;
     box-sizing: border-box;
+    text-align: left;
     line-height: 40px;
     vertical-align: middle;
-    font-size:14px;
-    font-family:PingFangSC-Semibold,PingFang SC;
-    font-weight:600;
-    color:rgba(140,140,140,1);
+    font-size: 14px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: rgba(140, 140, 140, 1);
+
+    /* padding-left: 10px; */
+
 }
-.table-header-tr-th:nth-of-type(1), .table-header-tr-th:nth-of-type(2){
+
+.table-header-tr-th:nth-of-type(1),
+.table-header-tr-th:nth-of-type(2) {
     font-size: 15px;
 }
-.table-tbody{
+
+.table-header-tr-th:nth-of-type(1),
+.table-header-tr-th:nth-of-type(7) {
+    text-align: center;
+}
+
+/* .cell-text{
+    font-size: 14px; 
+} */
+.table-tbody {
     width: 100%;
 }
-.table-tbody-tr{
+
+.table-tbody-tr {
     width: 100%;
+    height: 76px;
+    background: rgba(255, 255, 255, 1);
     display: flex;
+
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(35, 36, 36, 1);
+    box-sizing: border-box;
+    padding: 8px 0px;
+
 }
+
+.cells {
+    /* padding:0px 10px; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cell0 {
+    /* flex:1; */
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-box {
+    width: 18px;
+    height: 18px;
+}
+
+.cell1 {
+    flex: 7;
+    align-items: center;
+}
+
+.photo {
+    width: 60px;
+    height: 60px;
+    margin: 0px 8px 0px 0px;
+    background-color: lightgray;
+    box-sizing: border-box;
+}
+
+.evaluation-customer {
+    /* width: 253px; */
+    flex: 1;
+    max-height: 40px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cell2 {
+    flex: 5;
+}
+
+.cell3 {
+    flex: 5;
+}
+
+.cell4 {
+    flex: 4;
+    justify-content: flex-start;
+}
+
+.cell5 {
+    flex: 4;
+    justify-content: flex-start;
+}
+
+.cell6 {
+    flex: 2;
+}
+
+.account {
+    color: rgba(255, 67, 67, 1);
+}
+
+.blue-box {
+    width: 20px;
+    height: 20px;
+    background: rgba(48, 137, 220, 1);
+}
+
+.evaluation-btu {
+    width: 64px;
+    height: 32px;
+    border: 1px solid rgba(24, 144, 255, 1);
+    color:rgba(24,144,255,1);
+    font-size: 14px;
+    text-align:center;
+    vertical-align: middle;
+    line-height: 32px;
+}
+
+

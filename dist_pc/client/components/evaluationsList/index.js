@@ -23,7 +23,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /**
- * @description 评价列表
+ * @description 评价列表 List
  * @author fuQiang
  * @class EvaluationsList
  * @extends {Component}
@@ -43,7 +43,7 @@ var EvaluationsList = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = EvaluationsList.__proto__ || Object.getPrototypeOf(EvaluationsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["headerArr", "bodyArr"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = EvaluationsList.__proto__ || Object.getPrototypeOf(EvaluationsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["bodyArr"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(EvaluationsList, [{
@@ -51,11 +51,12 @@ var EvaluationsList = (_temp2 = _class = function (_BaseComponent) {
     value: function _constructor(props) {
       _get(EvaluationsList.prototype.__proto__ || Object.getPrototypeOf(EvaluationsList.prototype), "_constructor", this).call(this, props);
       this.state = {
-        headerArr: [{ words: "选择", key: 0 }, { words: "选择宝贝信息", key: 1 }, { words: "订单号", key: 2 }, { words: "确认时间", key: 3 }, { words: "数量/实收款", key: 4 }, { words: "卖家旺旺", key: 5 }, { words: "卖家操作旺旺", key: 6 }], //表头关键字
+        // headerArr: [{ words: "选择", key: 0 }, { words: "选择宝贝信息", key: 1 }, { words: "订单号", key: 2 }, { words: "确认时间", key: 3 },
+        // { words: "数量/实收款", key: 4 }, { words: "卖家旺旺", key: 5 }, { words: "操作 ", key: 6 }],//表头关键字
 
         bodyArr: [{
-          imgSrc: "", goodsInformation: "", orderCode: 1234567890, confirmNumber: "2020-5-12 18:22:22", quantity: 123, amount: 12312323,
-          nickName: "effa"
+          imgSrc: "", goodsInformation: "这个是一个新的宝贝这个是一个新的宝贝这个是一个新的宝贝这个是一个搜索场这个是一个新的宝贝这个是一个新的宝贝", orderCode: 1234567890, confirmNumber: "2020-5-12 18:22:22", quantity: 123, amount: 12312323,
+          nickName: "马小跳的爷爷"
         }] // 订单数组 
 
       };
@@ -69,14 +70,6 @@ var EvaluationsList = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-
-      var _state = this.__state,
-          headerArr = _state.headerArr,
-          bodyArr = _state.bodyArr;
-      // 表头项
-
-      //订单列表
-
       Object.assign(this.__state, {});
       return this.__state;
     }

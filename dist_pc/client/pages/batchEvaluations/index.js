@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
@@ -43,9 +45,9 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray3", "tabTitle"], _this.tabClick = function (title) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray34", "$compid__44", "tabTitle"], _this.tabClick = function (title) {
       _this.setState({ tabTitle: title });
-    }, _this.anonymousFunc0Map = {}, _this.customComponents = ["EvaluationsList"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.anonymousFunc0Map = {}, _this.customComponents = ["EvaluationsList", "MyPagination"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(BatchEvaluations, [{
@@ -69,13 +71,20 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__44"),
+          _genCompid2 = _slicedToArray(_genCompid, 2),
+          $prevCompid__44 = _genCompid2[0],
+          $compid__44 = _genCompid2[1];
+
       // 选项卡列表
-      var loopArray3 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
+
+
+      var loopArray34 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
         cur = {
           $original: (0, _index.internal_get_original)(cur)
         };
 
-        var _$indexKey = "gzzzz" + __index0;
+        var _$indexKey = "edzzz" + __index0;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           _this2.tabClick(cur.$original.title);
@@ -86,8 +95,15 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
           $original: cur.$original
         };
       });
+      propsManager.set({
+        "total": "5",
+        "pageSize": "8",
+        "shape": "normal",
+        "current": "1"
+      }, $compid__44, $prevCompid__44);
       Object.assign(this.__state, {
-        loopArray3: loopArray3
+        loopArray34: loopArray34,
+        $compid__44: $compid__44
       });
       return this.__state;
     }
