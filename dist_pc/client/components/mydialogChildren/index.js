@@ -45,7 +45,7 @@ var Prompt = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Prompt.__proto__ || Object.getPrototypeOf(Prompt)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__39"], _this.customComponents = ["Select"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Prompt.__proto__ || Object.getPrototypeOf(Prompt)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__40"], _this.customComponents = ["Select"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Prompt, [{
@@ -64,19 +64,19 @@ var Prompt = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__39"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__40"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__39 = _genCompid2[0],
-          $compid__39 = _genCompid2[1];
+          $prevCompid__40 = _genCompid2[0],
+          $compid__40 = _genCompid2[1];
 
       var anonymousState__temp = ["好", "很好", "非常好", "棒"];
       propsManager.set({
         "className": "evaluation-phrases-select",
         "dataSource": anonymousState__temp
-      }, $compid__39, $prevCompid__39);
+      }, $compid__40, $prevCompid__40);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        $compid__39: $compid__39
+        $compid__40: $compid__40
       });
       return this.__state;
     }

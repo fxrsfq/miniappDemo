@@ -45,7 +45,7 @@ var EvaluationsList = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = EvaluationsList.__proto__ || Object.getPrototypeOf(EvaluationsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray47", "bodyArr"], _this.customComponents = ["Tbody"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = EvaluationsList.__proto__ || Object.getPrototypeOf(EvaluationsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray23", "bodyArr"], _this.customComponents = ["Tbody"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(EvaluationsList, [{
@@ -61,7 +61,6 @@ var EvaluationsList = (_temp2 = _class = function (_BaseComponent) {
           nickName: "马小跳的爷爷"
         }] // 订单数组 
       };
-      this.toSelect = this.toSelect.bind(this);
       this.$$refs = [];
     }
   }, {
@@ -75,27 +74,27 @@ var EvaluationsList = (_temp2 = _class = function (_BaseComponent) {
 
       console.clear();
 
-      var loopArray47 = this.__state.bodyArr.map(function (cur, _anonIdx) {
+      var loopArray23 = this.__state.bodyArr.map(function (cur, _anonIdx) {
         cur = {
           $original: (0, _index.internal_get_original)(cur)
         };
 
-        var _genCompid = (0, _index.genCompid)(__prefix + "fhzzzzzzzz" + _anonIdx, true),
+        var _genCompid = (0, _index.genCompid)(__prefix + "dczzzzzzzz" + _anonIdx, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__68 = _genCompid2[0],
-            $compid__68 = _genCompid2[1];
+            $prevCompid__39 = _genCompid2[0],
+            $compid__39 = _genCompid2[1];
 
         propsManager.set({
           "currentOrder": cur.$original
-        }, $compid__68, $prevCompid__68);
+        }, $compid__39, $prevCompid__39);
         return {
-          $compid__68: $compid__68,
+          $compid__39: $compid__39,
           $original: cur.$original
         };
       });
 
       Object.assign(this.__state, {
-        loopArray47: loopArray47
+        loopArray23: loopArray23
       });
       return this.__state;
     }

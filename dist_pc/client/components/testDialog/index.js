@@ -43,7 +43,7 @@ var TestDialog = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = TestDialog.__proto__ || Object.getPrototypeOf(TestDialog)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__40", "text"], _this.onClose = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = TestDialog.__proto__ || Object.getPrototypeOf(TestDialog)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__41", "text"], _this.onClose = function () {
       _this.props.onClose();
     }, _this.customComponents = ["AtModal", "AtModalHeader", "AtModalContent", "AtModalAction"], _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -82,16 +82,16 @@ var TestDialog = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__40"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__41"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__40 = _genCompid2[0],
-          $compid__40 = _genCompid2[1];
+          $prevCompid__41 = _genCompid2[0],
+          $compid__41 = _genCompid2[1];
 
       propsManager.set({
         "isOpened": true
-      }, $compid__40, $prevCompid__40);
+      }, $compid__41, $prevCompid__41);
       Object.assign(this.__state, {
-        $compid__40: $compid__40
+        $compid__41: $compid__41
       });
       return this.__state;
     }

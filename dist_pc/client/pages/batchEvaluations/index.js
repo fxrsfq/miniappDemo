@@ -16,6 +16,8 @@ var _index = require("../../npm/_tarojs/taro-alipay/index.js");
 
 var _index2 = _interopRequireDefault(_index);
 
+var _soldGet = require("../../public/tradePublic/tradeDataCenter/api/soldGet.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23,6 +25,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// @connect((store) => {
+//     return {};
+// })
 
 /**
  * @description 批量评价根 组件 父
@@ -45,11 +51,11 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray48", "$compid__69", "$compid__70", "$compid__71", "tabTitle", "promptStatus"], _this.tabClick = function (title) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray35", "$compid__73", "$compid__74", "$compid__75", "tabTitle", "promptStatus"], _this.tabClick = function (title) {
       _this.setState({ tabTitle: title });
     }, _this.promptStatusControl = function (arg) {
       _this.setState({ promptStatus: arg });
-    }, _this.toSelect = function () {}, _this.anonymousFunc0Map = {}, _this.customComponents = ["EvaluationsList", "MyPagination", "MyDialog", "Prompt"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.anonymousFunc0Map = {}, _this.customComponents = ["EvaluationsList", "MyPagination", "MyDialog", "Prompt"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(BatchEvaluations, [{
@@ -66,15 +72,36 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
     }
   }, {
     key: "componentDidMount",
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      console.log(123);
+      //挂载请求订单列表数据  
+      //    soldGet({
+      //         // result   {trades,totalResults,has_next}
+      //         callback:(result) => {
+      //            console.log("获取到的订单列表为123：", result);
+      //            //getDataToStore
+      //        },
+      //        errCallback:(err)=>{
+      //            console.error("拉取订单列表异常");
+      //        }
+      //    });
+      (0, _soldGet.soldGet)().then(function (result) {
+        console.log("获取到的数据为123：", result);
+      }, function (err) {
+        console.error("获取订单评价列表失败，异常如下：", err);
+      });
+    }
     // 选项卡样式 切换
 
     // 弹出框弹出状态 显示或取消
 
-    // 全选 反选
-
   }, {
     key: "_createData",
+
+    // 全选 反选
+    // toSelect = ()=>{
+    // }
+
     value: function _createData() {
       var _this2 = this;
 
@@ -84,21 +111,22 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__69"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__73"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__69 = _genCompid2[0],
-          $compid__69 = _genCompid2[1];
+          $prevCompid__73 = _genCompid2[0],
+          $compid__73 = _genCompid2[1];
 
-      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__70"),
+      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__74"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__70 = _genCompid4[0],
-          $compid__70 = _genCompid4[1];
+          $prevCompid__74 = _genCompid4[0],
+          $compid__74 = _genCompid4[1];
 
-      var _genCompid5 = (0, _index.genCompid)(__prefix + "$compid__71"),
+      var _genCompid5 = (0, _index.genCompid)(__prefix + "$compid__75"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__71 = _genCompid6[0],
-          $compid__71 = _genCompid6[1];
+          $prevCompid__75 = _genCompid6[0],
+          $compid__75 = _genCompid6[1];
 
+      console.log(123);
       var _state = this.__state,
           tabTitle = _state.tabTitle,
           promptStatus = _state.promptStatus;
@@ -112,12 +140,12 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
         _this2.promptStatusControl(false);
       };
 
-      var loopArray48 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
+      var loopArray35 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
         cur = {
           $original: (0, _index.internal_get_original)(cur)
         };
 
-        var _$indexKey = "fizzz" + __index0;
+        var _$indexKey = "efzzz" + __index0;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           _this2.tabClick(cur.$original.title);
@@ -130,24 +158,24 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       });
       propsManager.set({
         "promptStatusControl": this.promptStatusControl
-      }, $compid__69, $prevCompid__69);
+      }, $compid__73, $prevCompid__73);
       propsManager.set({
         "total": "5",
         "pageSize": "8",
         "shape": "normal",
         "current": "1"
-      }, $compid__70, $prevCompid__70);
+      }, $compid__74, $prevCompid__74);
       promptStatus && propsManager.set({
         "onClose": this.anonymousFunc2,
         "hasFooter": "true",
         "title": "\u8BC4\u4EF7",
         "className": "mydialog-cite"
-      }, $compid__71, $prevCompid__71);
+      }, $compid__75, $prevCompid__75);
       Object.assign(this.__state, {
-        loopArray48: loopArray48,
-        $compid__69: $compid__69,
-        $compid__70: $compid__70,
-        $compid__71: $compid__71
+        loopArray35: loopArray35,
+        $compid__73: $compid__73,
+        $compid__74: $compid__74,
+        $compid__75: $compid__75
       });
       return this.__state;
     }

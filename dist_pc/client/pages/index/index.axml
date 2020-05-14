@@ -5,13 +5,13 @@
         </block>
         <block a:else>
             <block a:if="{{type === 'notice'}}">
-                <marketing compid="{{$compid__50}}"></marketing>
+                <marketing compid="{{$compid__1}}"></marketing>
             </block>
             <block a:elif="{{type === 'banner'}}">
-                <marketing compid="{{$compid__51}}"></marketing>
+                <marketing compid="{{$compid__2}}"></marketing>
             </block>
             <block a:else>
-                <marketing a:for="{{loopArray29}}" a:for-item="item" a:for-index="_anonIdx2" compid="{{item.$compid__49}}"></marketing>
+                <marketing a:for="{{loopArray0}}" a:for-item="item" a:for-index="_anonIdx2" compid="{{item.$compid__0}}"></marketing>
             </block>
         </block>
     </block>
@@ -27,7 +27,7 @@
                 <view class="flex-placeholder"></view>
                 <view class="nav-right">
                     <block a:if="{{haveNotice}}">
-                        <notice-ballon compid="{{$compid__52}}"></notice-ballon>
+                        <notice-ballon compid="{{$compid__3}}"></notice-ballon>
                     </block>
                     <view class="vip-flag" onTap="anonymousFunc0"><text class="vio-role">高级版</text>
                         <view class="vip-time-wrapper">剩余

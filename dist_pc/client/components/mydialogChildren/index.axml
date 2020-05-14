@@ -29,7 +29,7 @@
                     </view>
                 </view>
                 <view class="evaluation-phrases evaluation-input-child"><text class="evaluatioon-label">选择短语</text>
-                    <select compid="{{$compid__39}}"></select><text class="evaluation-phrases-options-text">设置评价短语</text>
+                    <select compid="{{$compid__40}}"></select><text class="evaluation-phrases-options-text">设置评价短语</text>
                 </view>
                 <view class="evaluation-content evaluation-input-child"><text class="evaluatioon-label evaluation-content-label">评价内容</text>
                     <textarea class="evaluation-content-textarea" placeholder="请输入评价内容"></textarea>

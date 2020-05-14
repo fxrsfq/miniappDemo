@@ -1,13 +1,18 @@
-import { Component } from '@tarojs/taro';
+import Taro, { Component } from '@tarojs/taro';
 import { View, Text, ScrollView, Checkbox, Button } from '@tarojs/components';
 import "taro-ui/dist/style/components/tabs.scss";
 import "./index.css";
-
 import EvaluationsList from "pcComponents/evaluationsList";
 import MyPagination from "pcComponents/myPagination";
-
 import MyDialog from "pcComponents/myDialog";
 import Prompt from "pcComponents/mydialogChildren";
+import {getDataToStore} from "./action";
+import {soldGet} from "tradePublic/tradeDataCenter/api/soldGet";
+
+// @connect((store) => {
+//     return {};
+// })
+
 /**
  * @description 批量评价根 组件 父
  * @author fuQiang
@@ -25,7 +30,23 @@ class BatchEvaluations extends Component {
         this.promptStatusControl = this.promptStatusControl.bind(this);
     }
     componentDidMount(){
-        
+        console.log(123);
+        //挂载请求订单列表数据  
+    //    soldGet({
+    //         // result   {trades,totalResults,has_next}
+    //         callback:(result) => {
+    //            console.log("获取到的订单列表为123：", result);
+    //            //getDataToStore
+    //        },
+    //        errCallback:(err)=>{
+    //            console.error("拉取订单列表异常");
+    //        }
+    //    });
+    soldGet().then((result)=>{
+        console.log("获取到的数据为123：", result);
+    }, (err)=>{
+        console.error("获取订单评价列表失败，异常如下：", err);
+    });
     }
     // 选项卡样式 切换
     tabClick = (title) => {
@@ -36,11 +57,11 @@ class BatchEvaluations extends Component {
         this.setState({ promptStatus: arg });
     }
     // 全选 反选
-    toSelect = ()=>{
-        
-    }
+    // toSelect = ()=>{
+    // }
 
     render() {
+        console.log(123);
         const { tabTitle, promptStatus } = this.state;
         // 选项卡列表
         const tabList = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map((cur) => {
@@ -50,7 +71,7 @@ class BatchEvaluations extends Component {
                 </Text>
             </View>;
         });
-        return (
+        return ( 
             <View>
                 <View className="batch-evaluations-main">
                     {/* 顶部导航条 */}

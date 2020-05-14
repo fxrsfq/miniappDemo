@@ -20,7 +20,6 @@ class EvaluationsList extends Component {
                 nickName: "马小跳的爷爷"
             }],// 订单数组 
         }
-        this.toSelect = this.toSelect.bind(this);
     }
 
     render() { 

@@ -42,7 +42,7 @@ var ConfirmDialog = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ConfirmDialog.__proto__ || Object.getPrototypeOf(ConfirmDialog)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__41", "content", "cancelText", "confirmText", "className", "title", "showCancel"], _this.onCancel = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ConfirmDialog.__proto__ || Object.getPrototypeOf(ConfirmDialog)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__42", "content", "cancelText", "confirmText", "className", "title", "showCancel"], _this.onCancel = function () {
       (0, _index3.isFunction)(_this.props.onCancel) && _this.props.onCancel();
       _this.props.onClose();
     }, _this.onOk = function () {
@@ -66,10 +66,10 @@ var ConfirmDialog = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__41"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__42"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__41 = _genCompid2[0],
-          $compid__41 = _genCompid2[1];
+          $prevCompid__42 = _genCompid2[0],
+          $compid__42 = _genCompid2[1];
 
       var _props = this.__props,
           content = _props.content,
@@ -93,10 +93,10 @@ var ConfirmDialog = (_temp2 = _class = function (_BaseComponent) {
         "onCancel": this.onCancel,
         "onOk": this.onOk,
         "hasFooter": true
-      }, $compid__41, $prevCompid__41);
+      }, $compid__42, $prevCompid__42);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        $compid__41: $compid__41
+        $compid__42: $compid__42
       });
       return this.__state;
     }
