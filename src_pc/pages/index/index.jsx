@@ -20,7 +20,7 @@ import showDialog from "pcComponents/dialogManager/api";
 import { contactCustomerService } from "mapp_common/utils/openChat";
 import { Logger } from "mapp_common/utils/logger";
 import './index.scss';
-import Test from "pcPages/test";
+// import Test from "pcPages/test";
 /*
   用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径 + 文件名 信息。文件名不需要写文件后缀，框架会自动去寻找对应位置的文件进行处理。
   数组的第一项代表小程序的初始页面（首页）。小程序中新增/减少页面，都需要对 pages 数组进行修改。
@@ -162,8 +162,6 @@ class Index extends Component {
         if (currentRoute && currentRoute.children) {
             currentChildren = currentRoute.children.filter(item => !(item.hide == true));
             currentChildren.map(item => item.path = item.path.replace(/\/\:.+$/, ''));
-            console.clear();
-            console.log("currentChildren", currentChildren);
         }
         let { haveNotice, showNotice, hadShownNotice, sidebarMini } = this.state;
 

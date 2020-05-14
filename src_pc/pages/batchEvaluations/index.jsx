@@ -9,7 +9,7 @@ import MyPagination from "pcComponents/myPagination";
 import MyDialog from "pcComponents/myDialog";
 import Prompt from "pcComponents/mydialogChildren";
 /**
- * @description 批量评价根 组件 
+ * @description 批量评价根 组件 父
  * @author fuQiang
  * @class BatchDelete
  * @extends {Component}
@@ -19,23 +19,29 @@ class BatchEvaluations extends Component {
         super(props);
         this.state = {
             tabTitle: "全部",//选项卡样式 关键字,
-            promptStatus:fasle,//弹框状态
+            promptStatus: false,//弹框状态 true：显示 false：取消
         }
         this.tabClick = this.tabClick.bind(this);
-        this.evaluateBtuClick = this.evaluateBtuClick.bind(this);
+        this.promptStatusControl = this.promptStatusControl.bind(this);
+    }
+    componentDidMount(){
+        
     }
     // 选项卡样式 切换
     tabClick = (title) => {
         this.setState({ tabTitle: title });
     }
     // 弹出框弹出状态 显示或取消
-    promptStatusControl =(arg)=>{ 
-        this.setState({promptStatus:arg});
+    promptStatusControl = (arg) => {
+        this.setState({ promptStatus: arg });
     }
-   
+    // 全选 反选
+    toSelect = ()=>{
+        
+    }
 
     render() {
-        const {tabTitle, promptStatus} = this.state;
+        const { tabTitle, promptStatus } = this.state;
         // 选项卡列表
         const tabList = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map((cur) => {
             return <View className="tab" onClick={() => { this.tabClick(cur.title) }} key={cur.title}>
@@ -65,7 +71,7 @@ class BatchEvaluations extends Component {
                                 <Text className="check-all-quantity">1</Text>
                             </View>
                         </View>
-                        <Button className="batch-evaluate-btu" onClick={()=>{this.promptStatusControl(true)}}>批量评价</Button>
+                        <Button className="batch-evaluate-btu" onClick={() => { this.promptStatusControl(true) }}>批量评价</Button>
                     </View>
                     {/*  分页按钮 list */}
                     <View>
@@ -74,7 +80,7 @@ class BatchEvaluations extends Component {
                 </View>
                 {/* 批量评价 || 单宝贝评价 弹出框 */}
                 <View>
-                    {promptStatus && <MyDialog onCancel={()=>{this.promptStatusControl(false)}} hasFooter="true" title="评价" className="mydialog-cite">
+                    {promptStatus && <MyDialog onClose={() => { this.promptStatusControl(false) }} hasFooter="true" title="评价" className="mydialog-cite">
                         <Prompt></Prompt>
                     </MyDialog>}
                 </View>

@@ -6,6 +6,7 @@ import {getTrades,resolveTopResponse} from "tradePublic/tradeDataCenter/common/r
 import qnRouter from "tradePublic/qnRouter";
 import {resolveTrade} from 'tradePublic/tradeDataCenter/biz/resolveTrade'
 
+// 拉取后台订单数据  不需要传递参数
 export function soldGet(
     {
         fields = soldget_all_fields,

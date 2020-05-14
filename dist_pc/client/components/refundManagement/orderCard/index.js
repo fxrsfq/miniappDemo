@@ -87,7 +87,7 @@ var OrderCard = (_temp2 = _class = function (_BaseComponent) {
       var order = this.__props.order;
 
 
-      var anonymousState__temp3 = this._createDiscountMsgData(__prefix + "dezzzzzzzz")();
+      var anonymousState__temp3 = this._createDiscountMsgData(__prefix + "dfzzzzzzzz")();
 
       var anonymousState__temp5 = !(0, _index3.isEmpty)(order.outer_sku_id);
       var anonymousState__temp6 = !(0, _index3.isEmpty)(order.outer_iid);

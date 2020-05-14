@@ -93,7 +93,7 @@ var RefundCard = (_temp2 = _class = function (_BaseComponent) {
       var trade = this.__props.trade;
       var activeTabKey = this.__props.activeTabKey;
 
-      var anonymousState__temp = trade.refund.refund_remind_timeout ? this._createcountDownData(__prefix + "dczzzzzzzz")(trade.refund.refund_remind_timeout.timeout) : null;
+      var anonymousState__temp = trade.refund.refund_remind_timeout ? this._createcountDownData(__prefix + "ddzzzzzzzz")(trade.refund.refund_remind_timeout.timeout) : null;
       var anonymousState__temp2 = Number(trade.payment).toFixed(2);
       var anonymousState__temp3 = (0, _resolveTrade.getTradeAddress)(trade, { needContact: true });
       var $anonymousCallee__0 = (0, _resolveTopResponse.getOrders)(trade);
@@ -104,17 +104,17 @@ var RefundCard = (_temp2 = _class = function (_BaseComponent) {
           $original: (0, _index.internal_get_original)(order)
         };
 
-        var _genCompid = (0, _index.genCompid)(__prefix + "ddzzzzzzzz" + _anonIdx, true),
+        var _genCompid = (0, _index.genCompid)(__prefix + "dezzzzzzzz" + _anonIdx, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__42 = _genCompid2[0],
-            $compid__42 = _genCompid2[1];
+            $prevCompid__44 = _genCompid2[0],
+            $compid__44 = _genCompid2[1];
 
         propsManager.set({
           "trade": trade,
           "order": order.$original
-        }, $compid__42, $prevCompid__42);
+        }, $compid__44, $prevCompid__44);
         return {
-          $compid__42: $compid__42,
+          $compid__44: $compid__44,
           $original: order.$original
         };
       });

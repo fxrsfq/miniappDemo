@@ -43,6 +43,8 @@
 } */
 .table-tbody {
     width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 .table-tbody-tr {

@@ -17,26 +17,7 @@
             </view>
         </view>
         <view class="table-tbody">
-            <view class="table-tbody-tr" a:key="$original.orderCode" a:for="{{loopArray43}}" a:for-item="cur" a:for-index="__index0">
-                <view class="cell0 cells">
-                    <checkbox class="check-box"></checkbox>
-                </view>
-                <view class="cell1 cells">
-                    <image src="{{cur.$original.imgSrc}}" class="photo"></image><text class="evaluation-customer">{{cur.$original.goodsInformation}}</text>
-                </view>
-                <view class="cell2 cells"><text>{{cur.$original.orderCode}}</text>
-                </view>
-                <view class="cell3 cells"><text>{{cur.$original.confirmNumber}}</text>
-                </view>
-                <view class="cell4 cells"><text>共{{cur.$original.quantity}}笔</text><text class="account">{{cur.$original.amount}}</text>
-                </view>
-                <view class="cell5 cells">
-                    <view class="blue-box"></view><text>{{cur.$original.nickName}}</text>
-                </view>
-                <view class="cell6 cells">
-                    <button class="evaluation-btu" onTap="anonymousFunc0" data-e-onTap-so="this" data-e-onTap-a-a="{{cur._$indexKey}}">评价</button>
-                </view>
-            </view>
+            <tbody a:for="{{loopArray47}}" a:for-item="cur" a:for-index="_anonIdx2" compid="{{cur.$compid__68}}"></tbody>
         </view>
     </view>
 </block>

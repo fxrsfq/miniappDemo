@@ -2,9 +2,9 @@
     <view class="refund-list">
         <block a:if="{{list.length == 0 && !isLoading}}">
             <view class="refund-empty">
-                <empty-page compid="{{$compid__37}}"></empty-page>
+                <empty-page compid="{{$compid__38}}"></empty-page>
             </view>
         </block>
-        <refund-card a:for="{{loopArray22}}" a:for-item="trade" a:for-index="_anonIdx2" compid="{{trade.$compid__36}}"></refund-card>
+        <refund-card a:for="{{loopArray22}}" a:for-item="trade" a:for-index="_anonIdx2" compid="{{trade.$compid__37}}"></refund-card>
     </view>
 </block>

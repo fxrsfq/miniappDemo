@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
@@ -23,7 +25,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /**
- * @description 评价列表 List
+ * @description 评价列表 List 子
  * @author fuQiang
  * @class EvaluationsList
  * @extends {Component}
@@ -43,7 +45,7 @@ var EvaluationsList = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = EvaluationsList.__proto__ || Object.getPrototypeOf(EvaluationsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray43", "bodyArr", "promptStatusControl"], _this.anonymousFunc0Map = {}, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = EvaluationsList.__proto__ || Object.getPrototypeOf(EvaluationsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray47", "bodyArr"], _this.customComponents = ["Tbody"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(EvaluationsList, [{
@@ -51,68 +53,56 @@ var EvaluationsList = (_temp2 = _class = function (_BaseComponent) {
     value: function _constructor(props) {
       _get(EvaluationsList.prototype.__proto__ || Object.getPrototypeOf(EvaluationsList.prototype), "_constructor", this).call(this, props);
       this.state = {
-        // headerArr: [{ words: "选择", key: 0 }, { words: "选择宝贝信息", key: 1 }, { words: "订单号", key: 2 }, { words: "确认时间", key: 3 },
-        // { words: "数量/实收款", key: 4 }, { words: "卖家旺旺", key: 5 }, { words: "操作 ", key: 6 }],//表头关键字
-
         bodyArr: [{
           imgSrc: "", goodsInformation: "这个是一个新的宝贝这个是一个新的宝贝这个是一个新的宝贝这个是一个搜索场这个是一个新的宝贝这个是一个新的宝贝", orderCode: 1234567890, confirmNumber: "2020-5-12 18:22:22", quantity: 123, amount: 12312323,
           nickName: "马小跳的爷爷"
+        }, {
+          imgSrc: "", goodsInformation: "这个是一个新的宝贝这个是一个新的宝贝这个是一个新的宝贝这个是一个搜索场这个是一个新的宝贝这个是一个新的宝贝", orderCode: 9876543210, confirmNumber: "2020-5-12 18:22:22", quantity: 123, amount: 12312323,
+          nickName: "马小跳的爷爷"
         }] // 订单数组 
-
       };
+      this.toSelect = this.toSelect.bind(this);
       this.$$refs = [];
     }
   }, {
     key: "_createData",
     value: function _createData() {
-      var _this2 = this;
-
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
 
-      //订单列表
-      var loopArray43 = this.__state.bodyArr.map(function (cur, __index0) {
+      console.clear();
+
+      var loopArray47 = this.__state.bodyArr.map(function (cur, _anonIdx) {
         cur = {
           $original: (0, _index.internal_get_original)(cur)
         };
 
-        var _$indexKey = "fczzz" + __index0;
+        var _genCompid = (0, _index.genCompid)(__prefix + "fhzzzzzzzz" + _anonIdx, true),
+            _genCompid2 = _slicedToArray(_genCompid, 2),
+            $prevCompid__68 = _genCompid2[0],
+            $compid__68 = _genCompid2[1];
 
-        _this2.anonymousFunc0Map[_$indexKey] = function () {
-          _this2.__props.promptStatusControl(true);
-        };
-
+        propsManager.set({
+          "currentOrder": cur.$original
+        }, $compid__68, $prevCompid__68);
         return {
-          _$indexKey: _$indexKey,
+          $compid__68: $compid__68,
           $original: cur.$original
         };
       });
 
       Object.assign(this.__state, {
-        loopArray43: loopArray43
+        loopArray47: loopArray47
       });
       return this.__state;
-    }
-  }, {
-    key: "anonymousFunc0",
-    value: function anonymousFunc0(_$indexKey) {
-      var _anonymousFunc0Map;
-
-      ;
-
-      for (var _len2 = arguments.length, e = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-        e[_key2 - 1] = arguments[_key2];
-      }
-
-      return this.anonymousFunc0Map[_$indexKey] && (_anonymousFunc0Map = this.anonymousFunc0Map)[_$indexKey].apply(_anonymousFunc0Map, e);
     }
   }]);
 
   return EvaluationsList;
-}(_index.Component), _class.$$events = ["anonymousFunc0"], _class.$$componentPath = "components/evaluationsList/index", _temp2);
+}(_index.Component), _class.$$events = [], _class.$$componentPath = "components/evaluationsList/index", _temp2);
 exports.default = EvaluationsList;
 
 Component(require('../../npm/_tarojs/taro-alipay/index.js').default.createComponent(EvaluationsList));

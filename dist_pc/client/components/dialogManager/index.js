@@ -142,28 +142,28 @@ var DialogManager = (_temp2 = _class = function (_BaseComponent) {
 
         var _genCompid = (0, _index.genCompid)(__prefix + "hzzzzzzzzz" + _anonIdx, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__25 = _genCompid2[0],
-            $compid__25 = _genCompid2[1];
+            $prevCompid__26 = _genCompid2[0],
+            $compid__26 = _genCompid2[1];
 
-        'testDialog' === key.$original && propsManager.set(_extends({}, _this3.getDialogProps('testDialog')), $compid__25, $prevCompid__25);
+        'testDialog' === key.$original && propsManager.set(_extends({}, _this3.getDialogProps('testDialog')), $compid__26, $prevCompid__26);
 
         var _genCompid3 = (0, _index.genCompid)(__prefix + "izzzzzzzzz" + _anonIdx, true),
             _genCompid4 = _slicedToArray(_genCompid3, 2),
-            $prevCompid__26 = _genCompid4[0],
-            $compid__26 = _genCompid4[1];
+            $prevCompid__27 = _genCompid4[0],
+            $compid__27 = _genCompid4[1];
 
-        propsManager.set(_extends({}, _this3.getDialogProps('ConfirmDialog')), $compid__26, $prevCompid__26);
+        propsManager.set(_extends({}, _this3.getDialogProps('ConfirmDialog')), $compid__27, $prevCompid__27);
 
         var _genCompid5 = (0, _index.genCompid)(__prefix + "jzzzzzzzzz" + _anonIdx, true),
             _genCompid6 = _slicedToArray(_genCompid5, 2),
-            $prevCompid__27 = _genCompid6[0],
-            $compid__27 = _genCompid6[1];
+            $prevCompid__28 = _genCompid6[0],
+            $compid__28 = _genCompid6[1];
 
-        propsManager.set(_extends({}, _this3.getDialogProps('InputDialog')), $compid__27, $prevCompid__27);
+        propsManager.set(_extends({}, _this3.getDialogProps('InputDialog')), $compid__28, $prevCompid__28);
         return {
-          $compid__25: $compid__25,
           $compid__26: $compid__26,
           $compid__27: $compid__27,
+          $compid__28: $compid__28,
           $original: key.$original
         };
       });

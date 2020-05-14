@@ -1,8 +1,8 @@
 <block a:if="{{$taroCompReady}}">
     <block>
         <block a:if="{{anonymousState__temp}}">
-            <at-modal compid="{{$compid__34}}">
-                <at-modal-header compid="{{$compid__35}}">
+            <at-modal compid="{{$compid__35}}">
+                <at-modal-header compid="{{$compid__36}}">
                     <view class="header-title">{{_$anonymousState__temp2}}</view>
                     <block a:if="{{!_$successType}}">
                         <view class="closer" onTap="onClose">X</view>

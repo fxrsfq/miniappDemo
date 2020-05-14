@@ -48,7 +48,7 @@ var RefundList = (_dec = (0, _index3.connect)(function (store) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = RefundList.__proto__ || Object.getPrototypeOf(RefundList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray22", "$compid__37", "list", "isLoading", "activeTabKey"], _this.customComponents = ["EmptyPage", "RefundCard"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = RefundList.__proto__ || Object.getPrototypeOf(RefundList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray22", "$compid__38", "list", "isLoading", "activeTabKey"], _this.customComponents = ["EmptyPage", "RefundCard"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(RefundList, [{
@@ -74,10 +74,10 @@ var RefundList = (_dec = (0, _index3.connect)(function (store) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__37"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__38"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__37 = _genCompid2[0],
-          $compid__37 = _genCompid2[1];
+          $prevCompid__38 = _genCompid2[0],
+          $compid__38 = _genCompid2[1];
 
       var _props = this.__props,
           list = _props.list,
@@ -91,24 +91,24 @@ var RefundList = (_dec = (0, _index3.connect)(function (store) {
 
         var _genCompid3 = (0, _index.genCompid)(__prefix + "dbzzzzzzzz" + _anonIdx, true),
             _genCompid4 = _slicedToArray(_genCompid3, 2),
-            $prevCompid__36 = _genCompid4[0],
-            $compid__36 = _genCompid4[1];
+            $prevCompid__37 = _genCompid4[0],
+            $compid__37 = _genCompid4[1];
 
         propsManager.set({
           "trade": trade.$original,
           "activeTabKey": activeTabKey
-        }, $compid__36, $prevCompid__36);
+        }, $compid__37, $prevCompid__37);
         return {
-          $compid__36: $compid__36,
+          $compid__37: $compid__37,
           $original: trade.$original
         };
       });
       list.length == 0 && !isLoading && propsManager.set({
         "text": "\u5F53\u524D\u6CA1\u6709\u4EFB\u4F55\u8BA2\u5355"
-      }, $compid__37, $prevCompid__37);
+      }, $compid__38, $prevCompid__38);
       Object.assign(this.__state, {
         loopArray22: loopArray22,
-        $compid__37: $compid__37,
+        $compid__38: $compid__38,
         list: list,
         isLoading: isLoading
       });
