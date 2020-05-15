@@ -19,6 +19,8 @@ export const getState = () => {
 
 //写了以上的东西，直接调用dispatch()即可
 
+// 在 action  中抽取数据，然后传给store .store再传给组件
+
 /**
  * @description 请求数据，初始化store
  * @author fuQiang

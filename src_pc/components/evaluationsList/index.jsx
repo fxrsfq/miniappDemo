@@ -27,7 +27,12 @@ class EvaluationsList extends Component {
     showList = (data) => {
         console.clear();
         console.log("组件拿到了数据！", data);
+        // 在这里遍历trades ，把要传递的数据封装好再传给子组件 forEach套map， return子组件 
+        let arr = [];
         // return <Tbody currentTrade={cur}></Tbody>;
+        data.forEach((cur)=>{
+            
+        });
     }
     
     render() { 
