@@ -43,7 +43,7 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tbody.__proto__ || Object.getPrototypeOf(Tbody)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["cur", "currentOrder", "promptStatusControl"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tbody.__proto__ || Object.getPrototypeOf(Tbody)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["orderCode", "imgSrc", "promptStatusControl"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Tbody, [{
@@ -64,14 +64,17 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
-      var cur = this.__props.currentOrder;
-
       this.anonymousFunc0 = function () {
         _this2.__props.promptStatusControl(true);
       };
+      //trades：一次交易 对应一个买家  orders：一次交易的订单数
+
+      // const {imgSrc, goodsInformation, orderCode, confirmNumber, quantity, amount, nickName} = {this.props.currentOrder.};
+
 
       Object.assign(this.__state, {
-        cur: cur
+        orderCode: orderCode,
+        imgSrc: imgSrc
       });
       return this.__state;
     }

@@ -43,7 +43,6 @@ class MyDialog extends Component {
     render () {
 
         const { wrapperClassName, hasFooter, className, title, children, content, closeable, cancelText, confirmText, hasCancel, wrapperStyle } = this.props;
-        console.log("\n", "children 部分：", children, "\n");
         return <View className={classNames('at-modal--active my-dialog-wrapper', wrapperClassName)} style={wrapperStyle}>
             <View className='at-modal__overlay' onClick={this.handleClickOverlay} />
             <View className={classNames('at-modal__container', className, { hidden:!this.props.visible })}>

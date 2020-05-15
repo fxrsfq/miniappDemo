@@ -2,6 +2,19 @@ import { Component } from '@tarojs/taro';
 import { View, Text, Checkbox, Image, Button } from '@tarojs/components';
 import Tbody from "./tBody";
 import "./index.css";
+import { connect } from '@tarojs/redux';
+@connect((store) => {
+    return {
+        // searchVal: store.refundListReducer.searchVal,
+        // activeTabKey: store.refundListReducer.activeTabKey,
+        // pageNo: store.refundListReducer.pageNo,
+        // pageSize: store.refundListReducer.pageSize,
+        // tradeCounts: store.refundListReducer.tradeCounts,
+        // list: store.refundListReducer.list,
+        evaluationsListData:store.evaluationsListData
+    };
+})
+
 /**
  * @description 评价列表 List 子
  * @author fuQiang
@@ -9,22 +22,17 @@ import "./index.css";
  * @extends {Component}
  */
 class EvaluationsList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            bodyArr: [{
-                imgSrc: "", goodsInformation: "这个是一个新的宝贝这个是一个新的宝贝这个是一个新的宝贝这个是一个搜索场这个是一个新的宝贝这个是一个新的宝贝", orderCode: 1234567890, confirmNumber: "2020-5-12 18:22:22", quantity: 123, amount: 12312323,
-                nickName: "马小跳的爷爷"
-            },{
-                imgSrc: "", goodsInformation: "这个是一个新的宝贝这个是一个新的宝贝这个是一个新的宝贝这个是一个搜索场这个是一个新的宝贝这个是一个新的宝贝", orderCode: 9876543210, confirmNumber: "2020-5-12 18:22:22", quantity: 123, amount: 12312323,
-                nickName: "马小跳的爷爷"
-            }],// 订单数组 
-        }
-    }
-
-    render() { 
-       
+ 
+    // 评价列表渲染
+    showList = (data) => {
         console.clear();
+        console.log("组件拿到了数据！", data);
+        // return <Tbody currentTrade={cur}></Tbody>;
+    }
+    
+    render() { 
+        
+        let tbody = showList(this.props.evaluationsListData);
         return (
             <View className="evaluationslist-table">
                 <View className="table-thead">
@@ -52,15 +60,12 @@ class EvaluationsList extends Component {
                     </View>
                 </View>
                 <View className="table-tbody">
-                    {
-                        this.state.bodyArr.map((cur) => {
-                            return <Tbody currentOrder={cur}></Tbody>
-                        })
-                    }
+                    {/* 你需要在这里传靠椅信息和订单信息  */}
+                    {/* {tbody} */}
                 </View>
             </View>
         );
     }
 }
 
-export default EvaluationsList;
+export default EvaluationsList; 

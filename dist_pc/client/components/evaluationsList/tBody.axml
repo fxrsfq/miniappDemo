@@ -4,16 +4,16 @@
             <checkbox class="check-box"></checkbox>
         </view>
         <view class="cell1 cells">
-            <image src="{{cur.imgSrc}}" class="photo"></image><text class="evaluation-customer">{{cur.goodsInformation}}</text>
+            <image src="{{imgSrc}}" class="photo"></image><text class="evaluation-customer">{{goodsInformation}}</text>
         </view>
-        <view class="cell2 cells"><text>{{cur.orderCode}}</text>
+        <view class="cell2 cells"><text>{{orderCode}}</text>
         </view>
-        <view class="cell3 cells"><text>{{cur.confirmNumber}}</text>
+        <view class="cell3 cells"><text>{{confirmNumber}}</text>
         </view>
-        <view class="cell4 cells"><text>共{{cur.quantity}}笔</text><text class="account">{{cur.amount}}</text>
+        <view class="cell4 cells"><text>共{{quantity}}笔</text><text class="account">{{amount}}</text>
         </view>
         <view class="cell5 cells">
-            <view class="blue-box"></view><text>{{cur.nickName}}</text>
+            <view class="blue-box"></view><text>{{nickName}}</text>
         </view>
         <view class="cell6 cells">
             <button class="evaluation-btu" onTap="anonymousFunc0">评价</button>

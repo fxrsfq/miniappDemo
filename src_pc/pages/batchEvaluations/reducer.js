@@ -3,11 +3,13 @@
 //在store.dispatch(action)时，action便与 reducer 关联了 
 
 let store = {
-    evaluationsData:[]
+    evaluationsListData:{}
 };
 
 function ToEvaulateReducer(state = store, action){
-    return null;
+    return {
+        evaluationsListData:action.tostore
+    };
 }
 
-export default ToEvaulateReducer;
+export default ToEvaulateReducer; 

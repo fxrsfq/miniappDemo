@@ -98,7 +98,6 @@ var MyDialog = (_temp2 = _class = function (_BaseComponent) {
           hasCancel = _props.hasCancel,
           wrapperStyle = _props.wrapperStyle;
 
-      console.log("\n", "children 部分：", children, "\n");
       var anonymousState__temp = (0, _index3.classNames)('at-modal--active my-dialog-wrapper', wrapperClassName);
       var anonymousState__temp2 = (0, _index.internal_inline_style)(wrapperStyle);
       var anonymousState__temp3 = (0, _index3.classNames)('at-modal__container', className, { hidden: !this.__props.visible });
