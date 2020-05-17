@@ -11,7 +11,7 @@ import { connect } from '@tarojs/redux';
         // pageSize: store.refundListReducer.pageSize,
         // tradeCounts: store.refundListReducer.tradeCounts,
         // list: store.refundListReducer.list,
-        evaluationsListData:store.evaluationsListData
+        evaluationsListData: store.toEvaulateReducer.evaluationsListData
     };
 })
 
@@ -22,26 +22,39 @@ import { connect } from '@tarojs/redux';
  * @extends {Component}
  */
 class EvaluationsList extends Component {
- 
-    // 评价列表渲染
+
+
+    // 筛选 评价列表数据
     showList = (data) => {
         console.clear();
         console.log("组件拿到了数据！", data);
-        // 在这里遍历trades ，把要传递的数据封装好再传给子组件 forEach套map， return子组件 
-        let arr = [];
-        // return <Tbody currentTrade={cur}></Tbody>;
-        data.forEach((cur)=>{
+        var arr = [];                                                 //所有订单数据
+        for (var i =0; i < data.totalResults; i++) {
+            for(var j =0; j < data.trades[i].orders.length; j++){
+                var obj = {
+                    buyer_nick:data.trades[i].buyer_nick,               //买家昵称
+                    pic_path:data.trades[i].orders[j].pic_path,         //图像路径
+                    title:data.trades[i].orders[j].title,               //订单标题
+                    oid:data.trades[i].orders[j].oid,                   //订单号
+                    consign_time:data.trades[i].orders[j].consign_time,  //确认时间
+                    num:data.trades[i].orders[j].num,                  //数量
+                    payment: data.trades[i].orders[j].payment,                  //实收款
+                    promptStatusControl:this.props.promptStatusControl, //弹框函数
+                };
+                arr.push(obj);
+            }
             
-        });
+        }
+        return arr;
     }
-    
-    render() { 
-        
-        let tbody = showList(this.props.evaluationsListData);
+    render() {
+
+        let tbody = this.showList(this.props.evaluationsListData);
         return (
             <View className="evaluationslist-table">
                 <View className="table-thead">
                     {/* {tableTh} */}
+
                     <View className="table-header-tr-th cell0">
                         <Text className="cell-text">选择</Text>
                     </View>
@@ -66,7 +79,11 @@ class EvaluationsList extends Component {
                 </View>
                 <View className="table-tbody">
                     {/* 你需要在这里传靠椅信息和订单信息  */}
-                    {/* {tbody} */}
+                    {
+                        tbody.map((cur)=>{
+                            return <Tbody order={cur}></Tbody>
+                        })
+                    }
                 </View>
             </View>
         );

@@ -80,7 +80,7 @@ var AtModalAction = (_temp2 = _class = function (_AtComponent) {
   }]);
 
   return AtModalAction;
-}(_component2.default), _class.$$events = [], _class.$$componentPath = "Users/aiyongbao/Documents/GitHub/taro/miniappDemo/node_modules/taro-ui/dist/weapp/components/modal/action/index", _temp2);
+}(_component2.default), _class.$$events = [], _class.$$componentPath = "E:/ASUS/Documents/computer/code/projects/miniappDemo/node_modules/taro-ui/dist/weapp/components/modal/action/index", _temp2);
 
 
 AtModalAction.defaultProps = {

@@ -6,7 +6,7 @@ function _interopDefault(ex) {
   return ex && typeof ex === 'object' && 'default' in ex ? ex['default'] : ex;
 }
 
-var $$observable = _interopDefault(require("../../symbol-observable/lib/index.js"));
+var $$observable = _interopDefault(require("../npm/symbol-observable/lib/index.js"));
 
 /**
  * These are private action types reserved by Redux.

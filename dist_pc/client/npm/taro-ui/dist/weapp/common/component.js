@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -30,38 +29,39 @@ var objectToString = function objectToString(style) {
   }
   return '';
 };
+var AtComponent = /** @class */function () {
+  var AtComponent = function (_Component) {
+    _inherits(AtComponent, _Component);
 
-var AtComponent = function (_Component) {
-  _inherits(AtComponent, _Component);
+    function AtComponent() {
+      _classCallCheck(this, AtComponent);
 
-  function AtComponent() {
-    _classCallCheck(this, AtComponent);
-
-    return _possibleConstructorReturn(this, (AtComponent.__proto__ || Object.getPrototypeOf(AtComponent)).apply(this, arguments));
-  }
-
-  _createClass(AtComponent, [{
-    key: 'mergeStyle',
-
-    /**
-     * 合并 style
-     * @param {Object|String} style1
-     * @param {Object|String} style2
-     * @returns {String}
-     */
-    value: function mergeStyle(style1, style2) {
-      if (style1 && (typeof style1 === 'undefined' ? 'undefined' : _typeof(style1)) === 'object' && style2 && (typeof style2 === 'undefined' ? 'undefined' : _typeof(style2)) === 'object') {
-        return Object.assign({}, style1, style2);
-      }
-      return objectToString(style1) + objectToString(style2);
+      return _possibleConstructorReturn(this, (AtComponent.__proto__ || Object.getPrototypeOf(AtComponent)).apply(this, arguments));
     }
-  }]);
 
+    _createClass(AtComponent, [{
+      key: 'mergeStyle',
+
+      /**
+       * 合并 style
+       * @param {Object|String} style1
+       * @param {Object|String} style2
+       * @returns {String}
+       */
+      value: function mergeStyle(style1, style2) {
+        if (style1 && (typeof style1 === 'undefined' ? 'undefined' : _typeof(style1)) === 'object' && style2 && (typeof style2 === 'undefined' ? 'undefined' : _typeof(style2)) === 'object') {
+          return Object.assign({}, style1, style2);
+        }
+        return objectToString(style1) + objectToString(style2);
+      }
+    }]);
+
+    return AtComponent;
+  }(_index.Component);
+
+  AtComponent.options = {
+    addGlobalClass: true
+  };
   return AtComponent;
-}(_index.Component);
-
+}();
 exports.default = AtComponent;
-
-AtComponent.options = {
-  addGlobalClass: true
-};

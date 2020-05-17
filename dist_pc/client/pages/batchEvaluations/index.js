@@ -10,13 +10,15 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _dec, _class, _class2, _temp2;
+var _class, _temp2; /* eslint-disable comma-dangle */
+/* eslint-disable space-before-function-paren */
+/* eslint-disable linebreak-style */
+/* eslint-disable spaced-comment */
+
 
 var _index = require("../../npm/_tarojs/taro-alipay/index.js");
 
 var _index2 = _interopRequireDefault(_index);
-
-var _index3 = require("../../npm/_tarojs/redux/index.js");
 
 var _action = require("./action.js");
 
@@ -30,7 +32,17 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var propsManager = my.propsManager;
+// @connect((store) => {
+//     return {
+//         // searchVal: store.refundListReducer.searchVal,
+//         // activeTabKey: store.refundListReducer.activeTabKey,
+//         // pageNo: store.refundListReducer.pageNo,
+//         // pageSize: store.refundListReducer.pageSize,
+//         // tradeCounts: store.refundListReducer.tradeCounts,
+//         // list: store.refundListReducer.list,
+//         evaluationsListData: store.evaluationsListData
+//     };
+// })
 
 /**
  * @description 批量评价根 组件 父
@@ -38,17 +50,8 @@ var propsManager = my.propsManager;
  * @class BatchDelete
  * @extends {Component}
  */
-var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
-  return {
-    // searchVal: store.refundListReducer.searchVal,
-    // activeTabKey: store.refundListReducer.activeTabKey,
-    // pageNo: store.refundListReducer.pageNo,
-    // pageSize: store.refundListReducer.pageSize,
-    // tradeCounts: store.refundListReducer.tradeCounts,
-    // list: store.refundListReducer.list,
-    evaluationsListData: store.evaluationsListData
-  };
-}), _dec(_class = (_temp2 = _class2 = function (_BaseComponent) {
+var propsManager = my.propsManager;
+var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
   _inherits(BatchEvaluations, _BaseComponent);
 
   function BatchEvaluations() {
@@ -62,7 +65,7 @@ var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray30", "$compid__54", "$compid__55", "$compid__56", "tabTitle", "promptStatus"], _this.tabClick = function (title) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray3", "$compid__23", "$compid__24", "$compid__25", "tabTitle", "promptStatus"], _this.tabClick = function (title) {
       _this.setState({ tabTitle: title });
     }, _this.promptStatusControl = function (arg) {
       _this.setState({ promptStatus: arg });
@@ -86,9 +89,9 @@ var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
     value: function componentDidMount() {
       //挂载请求订单列表数据  
       (0, _soldGet.soldGet)({
-        // result   {trades,totalResults,has_next}
         callback: function callback(result) {
-          console.log("获取到的订单列表为abc：", result);
+          // console.clear();
+          // console.log("获取到的订单列表为：", result);
           (0, _action.getDataToStore)(result);
         },
         errCallback: function errCallback(err) {
@@ -122,20 +125,20 @@ var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__54"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__23"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__54 = _genCompid2[0],
-          $compid__54 = _genCompid2[1];
+          $prevCompid__23 = _genCompid2[0],
+          $compid__23 = _genCompid2[1];
 
-      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__55"),
+      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__24"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__55 = _genCompid4[0],
-          $compid__55 = _genCompid4[1];
+          $prevCompid__24 = _genCompid4[0],
+          $compid__24 = _genCompid4[1];
 
-      var _genCompid5 = (0, _index.genCompid)(__prefix + "$compid__56"),
+      var _genCompid5 = (0, _index.genCompid)(__prefix + "$compid__25"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__56 = _genCompid6[0],
-          $compid__56 = _genCompid6[1];
+          $prevCompid__25 = _genCompid6[0],
+          $compid__25 = _genCompid6[1];
 
       // console.log("组件拿到了数据！",this.props.evaluationsListData);
 
@@ -153,12 +156,12 @@ var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
         _this2.promptStatusControl(false);
       };
 
-      var loopArray30 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
+      var loopArray3 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
         cur = {
           $original: (0, _index.internal_get_original)(cur)
         };
 
-        var _$indexKey = "eazzz" + __index0;
+        var _$indexKey = "gzzzz" + __index0;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           _this2.tabClick(cur.$original.title);
@@ -171,24 +174,24 @@ var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
       });
       propsManager.set({
         "promptStatusControl": this.promptStatusControl
-      }, $compid__54, $prevCompid__54);
+      }, $compid__23, $prevCompid__23);
       propsManager.set({
         "total": "5",
         "pageSize": "8",
         "shape": "normal",
         "current": "1"
-      }, $compid__55, $prevCompid__55);
+      }, $compid__24, $prevCompid__24);
       promptStatus && propsManager.set({
         "onClose": this.anonymousFunc2,
         "hasFooter": "true",
         "title": "\u8BC4\u4EF7",
         "className": "mydialog-cite"
-      }, $compid__56, $prevCompid__56);
+      }, $compid__25, $prevCompid__25);
       Object.assign(this.__state, {
-        loopArray30: loopArray30,
-        $compid__54: $compid__54,
-        $compid__55: $compid__55,
-        $compid__56: $compid__56
+        loopArray3: loopArray3,
+        $compid__23: $compid__23,
+        $compid__24: $compid__24,
+        $compid__25: $compid__25
       });
       return this.__state;
     }
@@ -218,7 +221,7 @@ var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
   }]);
 
   return BatchEvaluations;
-}(_index.Component), _class2.$$events = ["anonymousFunc0", "anonymousFunc1"], _class2.$$componentPath = "pages/batchEvaluations/index", _temp2)) || _class);
+}(_index.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1"], _class.$$componentPath = "pages/batchEvaluations/index", _temp2);
 exports.default = BatchEvaluations;
 
 Component(require('../../npm/_tarojs/taro-alipay/index.js').default.createComponent(BatchEvaluations));

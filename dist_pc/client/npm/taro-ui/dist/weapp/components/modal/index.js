@@ -156,7 +156,7 @@ var AtModal = (_temp2 = _class = function (_AtComponent) {
   }]);
 
   return AtModal;
-}(_component2.default), _class.$$events = ["handleClickOverlay", "handleCancel", "handleConfirm", "handleTouchMove"], _class.$$componentPath = "Users/aiyongbao/Documents/GitHub/taro/miniappDemo/node_modules/taro-ui/dist/weapp/components/modal/index", _temp2);
+}(_component2.default), _class.$$events = ["handleClickOverlay", "handleCancel", "handleConfirm", "handleTouchMove"], _class.$$componentPath = "E:/ASUS/Documents/computer/code/projects/miniappDemo/node_modules/taro-ui/dist/weapp/components/modal/index", _temp2);
 
 
 AtModal.defaultProps = {

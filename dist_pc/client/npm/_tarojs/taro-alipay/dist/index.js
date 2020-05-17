@@ -2,9 +2,11 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var taro = require("../../taro/index.js");
+var taro = require("../npm/_tarojs/taro/index.js");
 
 function _typeof(obj) {
+  "@babel/helpers - typeof";
+
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function (obj) {
       return typeof obj;
@@ -86,6 +88,19 @@ function _setPrototypeOf(o, p) {
   return _setPrototypeOf(o, p);
 }
 
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
 function _assertThisInitialized(self) {
   if (self === undefined) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -102,24 +117,54 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-
-    return arr2;
-  }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+
+  return arr2;
 }
 
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 /* eslint-disable */
@@ -166,9 +211,7 @@ function shallowEqual(obj1, obj2) {
   return true;
 }
 
-var SimpleMap =
-/*#__PURE__*/
-function () {
+var SimpleMap = /*#__PURE__*/function () {
   function SimpleMap() {
     _classCallCheck(this, SimpleMap);
 
@@ -300,7 +343,7 @@ var nextTick = function nextTick(fn) {
   timerFunc(fn);
 };
 
-var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
 function createCommonjsModule(fn, module) {
   return module = { exports: {} }, fn(module, module.exports), module.exports;
@@ -776,7 +819,7 @@ function getElementById(component, id, type) {
     var childs = component.$component.$childs || {};
     res = childs[id.replace('#', '')] || null;
   } else {
-    var query = my.createSelectorQuery().in(component);
+    var query = my.createSelectorQuery()["in"](component);
     res = query.select(id);
   }
 
@@ -951,7 +994,7 @@ function processEvent(eventHandlerName, obj) {
         });
       }
 
-      realArgs = _toConsumableArray(datasetArgs).concat([event]);
+      realArgs = [].concat(_toConsumableArray(datasetArgs), [event]);
     } else {
       // 匿名函数，会将scope作为第一个参数
       var _scope = null;
@@ -1013,7 +1056,7 @@ function componentTrigger(component, key, args) {
           var childs = component.$childs || {};
           target = childs[ref.id] || null;
         } else {
-          var query = my.createSelectorQuery().in(component.$scope);
+          var query = my.createSelectorQuery()["in"](component.$scope);
           target = query.select("#".concat(ref.id));
         }
 
@@ -1027,7 +1070,7 @@ function componentTrigger(component, key, args) {
   if (key === 'componentWillUnmount') {
     if (component.$scope.props) {
       var compid = component.$scope.props.compid;
-      if (compid) my.propsManager.delete(compid);
+      if (compid) my.propsManager["delete"](compid);
     }
   }
 
@@ -1228,25 +1271,25 @@ function createComponent(ComponentClass, isPage) {
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var b = "function" === typeof Symbol && Symbol.for,
-    c = b ? Symbol.for("react.element") : 60103,
-    d = b ? Symbol.for("react.portal") : 60106,
-    e = b ? Symbol.for("react.fragment") : 60107,
-    f = b ? Symbol.for("react.strict_mode") : 60108,
-    g = b ? Symbol.for("react.profiler") : 60114,
-    h = b ? Symbol.for("react.provider") : 60109,
-    k = b ? Symbol.for("react.context") : 60110,
-    l = b ? Symbol.for("react.async_mode") : 60111,
-    m = b ? Symbol.for("react.concurrent_mode") : 60111,
-    n = b ? Symbol.for("react.forward_ref") : 60112,
-    p = b ? Symbol.for("react.suspense") : 60113,
-    q = b ? Symbol.for("react.suspense_list") : 60120,
-    r = b ? Symbol.for("react.memo") : 60115,
-    t = b ? Symbol.for("react.lazy") : 60116,
-    v = b ? Symbol.for("react.block") : 60121,
-    w = b ? Symbol.for("react.fundamental") : 60117,
-    x = b ? Symbol.for("react.responder") : 60118,
-    y = b ? Symbol.for("react.scope") : 60119;
+var b = "function" === typeof Symbol && Symbol["for"],
+    c = b ? Symbol["for"]("react.element") : 60103,
+    d = b ? Symbol["for"]("react.portal") : 60106,
+    e = b ? Symbol["for"]("react.fragment") : 60107,
+    f = b ? Symbol["for"]("react.strict_mode") : 60108,
+    g = b ? Symbol["for"]("react.profiler") : 60114,
+    h = b ? Symbol["for"]("react.provider") : 60109,
+    k = b ? Symbol["for"]("react.context") : 60110,
+    l = b ? Symbol["for"]("react.async_mode") : 60111,
+    m = b ? Symbol["for"]("react.concurrent_mode") : 60111,
+    n = b ? Symbol["for"]("react.forward_ref") : 60112,
+    p = b ? Symbol["for"]("react.suspense") : 60113,
+    q = b ? Symbol["for"]("react.suspense_list") : 60120,
+    r = b ? Symbol["for"]("react.memo") : 60115,
+    t = b ? Symbol["for"]("react.lazy") : 60116,
+    v = b ? Symbol["for"]("react.block") : 60121,
+    w = b ? Symbol["for"]("react.fundamental") : 60117,
+    x = b ? Symbol["for"]("react.responder") : 60118,
+    y = b ? Symbol["for"]("react.scope") : 60119;
 
 function z(a) {
   if ("object" === _typeof(a) && null !== a) {
@@ -1393,27 +1436,27 @@ var reactIs_development = createCommonjsModule(function (module, exports) {
     (function () {
       // nor polyfill, then a plain number is used for performance.
 
-      var hasSymbol = typeof Symbol === 'function' && Symbol.for;
-      var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
-      var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
-      var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
-      var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
-      var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
-      var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
-      var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+      var hasSymbol = typeof Symbol === 'function' && Symbol["for"];
+      var REACT_ELEMENT_TYPE = hasSymbol ? Symbol["for"]('react.element') : 0xeac7;
+      var REACT_PORTAL_TYPE = hasSymbol ? Symbol["for"]('react.portal') : 0xeaca;
+      var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol["for"]('react.fragment') : 0xeacb;
+      var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol["for"]('react.strict_mode') : 0xeacc;
+      var REACT_PROFILER_TYPE = hasSymbol ? Symbol["for"]('react.profiler') : 0xead2;
+      var REACT_PROVIDER_TYPE = hasSymbol ? Symbol["for"]('react.provider') : 0xeacd;
+      var REACT_CONTEXT_TYPE = hasSymbol ? Symbol["for"]('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
       // (unstable) APIs that have been removed. Can we remove the symbols?
 
-      var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
-      var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
-      var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
-      var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
-      var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
-      var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
-      var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
-      var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
-      var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
-      var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
-      var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
+      var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol["for"]('react.async_mode') : 0xeacf;
+      var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol["for"]('react.concurrent_mode') : 0xeacf;
+      var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol["for"]('react.forward_ref') : 0xead0;
+      var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol["for"]('react.suspense') : 0xead1;
+      var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol["for"]('react.suspense_list') : 0xead8;
+      var REACT_MEMO_TYPE = hasSymbol ? Symbol["for"]('react.memo') : 0xead3;
+      var REACT_LAZY_TYPE = hasSymbol ? Symbol["for"]('react.lazy') : 0xead4;
+      var REACT_BLOCK_TYPE = hasSymbol ? Symbol["for"]('react.block') : 0xead9;
+      var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol["for"]('react.fundamental') : 0xead5;
+      var REACT_RESPONDER_TYPE = hasSymbol ? Symbol["for"]('react.responder') : 0xead6;
+      var REACT_SCOPE_TYPE = hasSymbol ? Symbol["for"]('react.scope') : 0xead7;
 
       function isValidElementType(type) {
         return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
@@ -2787,9 +2830,7 @@ function rerender() {
 var PRELOAD_DATA_KEY$1 = 'preload';
 var COLLECT_CHILDS$1 = 'onTaroCollectChilds';
 
-var BaseComponent =
-/*#__PURE__*/
-function () {
+var BaseComponent = /*#__PURE__*/function () {
   // _createData的时候生成，小程序中通过data.__createData访问
   // this.props,小程序中通过data.__props访问
   // 会在componentDidMount后置为true
@@ -2955,14 +2996,12 @@ function () {
   return BaseComponent;
 }();
 
-var PureComponent =
-/*#__PURE__*/
-function (_Component) {
+var PureComponent = /*#__PURE__*/function (_Component) {
   _inherits(PureComponent, _Component);
 
-  function PureComponent() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(PureComponent);
 
+  function PureComponent() {
     var _this;
 
     _classCallCheck(this, PureComponent);
@@ -2971,9 +3010,9 @@ function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(PureComponent)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "isPureComponent", true);
+    _defineProperty(_assertThisInitialized(_this), "isPureComponent", true);
 
     return _this;
   }
@@ -3041,7 +3080,7 @@ var apiDiff = {
     options: {
       change: [{
         old: 'itemList',
-        new: 'items'
+        "new": 'items'
       }]
     }
   },
@@ -3049,10 +3088,10 @@ var apiDiff = {
     options: {
       change: [{
         old: 'title',
-        new: 'content'
+        "new": 'content'
       }, {
         old: 'icon',
-        new: 'type'
+        "new": 'type'
       }]
     }
   },
@@ -3060,7 +3099,7 @@ var apiDiff = {
     options: {
       change: [{
         old: 'title',
-        new: 'content'
+        "new": 'content'
       }]
     }
   },
@@ -3075,7 +3114,7 @@ var apiDiff = {
     options: {
       change: [{
         old: 'filePath',
-        new: 'url'
+        "new": 'url'
       }]
     }
   },
@@ -3093,7 +3132,7 @@ var apiDiff = {
     options: {
       change: [{
         old: 'filePath',
-        new: 'apFilePath'
+        "new": 'apFilePath'
       }]
     }
   },
@@ -3101,7 +3140,7 @@ var apiDiff = {
     options: {
       change: [{
         old: 'filePath',
-        new: 'apFilePath'
+        "new": 'apFilePath'
       }]
     }
   },
@@ -3109,7 +3148,7 @@ var apiDiff = {
     options: {
       change: [{
         old: 'filePath',
-        new: 'apFilePath'
+        "new": 'apFilePath'
       }]
     }
   },
@@ -3117,7 +3156,7 @@ var apiDiff = {
     options: {
       change: [{
         old: 'tempFilePath',
-        new: 'apFilePath'
+        "new": 'apFilePath'
       }]
     }
   },
@@ -3140,7 +3179,7 @@ var apiDiff = {
     options: {
       change: [{
         old: 'name',
-        new: 'fileName'
+        "new": 'fileName'
       }]
     }
   },
@@ -3152,7 +3191,7 @@ var apiDiff = {
     options: {
       change: [{
         old: 'data',
-        new: 'text'
+        "new": 'text'
       }]
     }
   },
@@ -3160,7 +3199,7 @@ var apiDiff = {
     options: {
       change: [{
         old: 'phoneNumber',
-        new: 'number'
+        "new": 'number'
       }]
     }
   },
@@ -3169,7 +3208,7 @@ var apiDiff = {
     options: {
       change: [{
         old: 'onlyFromCamera',
-        new: 'hideAlbum'
+        "new": 'hideAlbum'
       }],
       set: [{
         key: 'type',
@@ -3183,7 +3222,7 @@ var apiDiff = {
     options: {
       change: [{
         old: 'value',
-        new: 'brightness'
+        "new": 'brightness'
       }]
     }
   }
@@ -3487,7 +3526,7 @@ function processApis(taro$$1) {
         if (key === 'createSelectorQuery') {
           var query = my[key]();
 
-          query.in = function () {
+          query["in"] = function () {
             return query;
           };
 
@@ -3553,7 +3592,7 @@ function generateSpecialApis(api, options) {
 
           if (change) {
             change.forEach(function (changeItem) {
-              options[changeItem.new] = options[changeItem.old];
+              options[changeItem["new"]] = options[changeItem.old];
             });
           }
 
@@ -3584,9 +3623,7 @@ function initNativeApi(taro$$1) {
   taro$$1.pxTransform = pxTransform.bind(taro$$1);
 }
 
-var Manager =
-/*#__PURE__*/
-function () {
+var Manager = /*#__PURE__*/function () {
   function Manager() {
     _classCallCheck(this, Manager);
 
@@ -3605,7 +3642,7 @@ function () {
 
       if (previd) {
         this.observers[compid] = this.observers[previd];
-        this.delete(previd);
+        this["delete"](previd);
       }
 
       var observers = this.observers;

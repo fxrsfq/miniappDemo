@@ -16,6 +16,8 @@
             <view class="table-header-tr-th cell6"><text class="cell-text">操作</text>
             </view>
         </view>
-        <view class="table-tbody"></view>
+        <view class="table-tbody">
+            <tbody a:for="{{loopArray36}}" a:for-item="cur" a:for-index="_anonIdx2" compid="{{cur.$compid__56}}"></tbody>
+        </view>
     </view>
 </block>

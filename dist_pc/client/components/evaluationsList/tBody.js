@@ -43,7 +43,7 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tbody.__proto__ || Object.getPrototypeOf(Tbody)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["orderCode", "imgSrc", "promptStatusControl"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tbody.__proto__ || Object.getPrototypeOf(Tbody)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["oid", "pic_path", "title", "consign_time", "num", "payment", "buyer_nick", "order"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Tbody, [{
@@ -56,25 +56,37 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
   }, {
     key: "_createData",
     value: function _createData() {
-      var _this2 = this;
-
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
 
-      this.anonymousFunc0 = function () {
-        _this2.__props.promptStatusControl(true);
-      };
       //trades：一次交易 对应一个买家  orders：一次交易的订单数
+      console.log("props为：", this.__props.order);
+      var _props$order = this.__props.order,
+          pic_path = _props$order.pic_path,
+          title = _props$order.title,
+          oid = _props$order.oid,
+          consign_time = _props$order.consign_time,
+          num = _props$order.num,
+          payment = _props$order.payment,
+          buyer_nick = _props$order.buyer_nick,
+          promptStatusControl = _props$order.promptStatusControl;
 
-      // const {imgSrc, goodsInformation, orderCode, confirmNumber, quantity, amount, nickName} = {this.props.currentOrder.};
 
+      this.anonymousFunc0 = function () {
+        promptStatusControl(true);
+      };
 
       Object.assign(this.__state, {
-        orderCode: orderCode,
-        imgSrc: imgSrc
+        oid: oid,
+        pic_path: pic_path,
+        title: title,
+        consign_time: consign_time,
+        num: num,
+        payment: payment,
+        buyer_nick: buyer_nick
       });
       return this.__state;
     }
