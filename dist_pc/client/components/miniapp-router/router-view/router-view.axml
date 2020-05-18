@@ -1,3 +1,0 @@
-<view style="height:100%">
-  <slot  name="{{name}}"/>
-</view>

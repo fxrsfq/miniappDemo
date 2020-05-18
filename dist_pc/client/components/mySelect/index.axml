@@ -1,5 +1,0 @@
-<block a:if="{{$taroCompReady}}">
-    <select className="{{anonymousState__temp}}" dataSource="{{showDataSource}}" onChange="onChange" value="{{_value}}" disabled="{{disabled}}" controlled="{{controlled}}" hasClear="{{hasClear}}">
-        <slot></slot>
-    </select>
-</block>
