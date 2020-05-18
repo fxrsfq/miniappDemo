@@ -1,7 +1,7 @@
 <block a:if="{{$taroCompReady}}">
     <view class="table-tbody-tr" a:key="oid">
         <view class="cell0 cells">
-            <checkbox class="check-box"></checkbox>
+            <checkbox class="check-box" checked="{{checked}}" onChange="anonymousFunc0"></checkbox>
         </view>
         <view class="cell1 cells">
             <image src="{{pic_path}}" class="photo"></image><text class="evaluation-customer">{{title}}</text>
@@ -16,7 +16,7 @@
             <view class="blue-box"></view><text>{{buyer_nick}}</text>
         </view>
         <view class="cell6 cells">
-            <button class="evaluation-btu" onTap="anonymousFunc0">评价</button>
+            <button class="evaluation-btu" onTap="anonymousFunc1">评价</button>
         </view>
     </view>
 </block>

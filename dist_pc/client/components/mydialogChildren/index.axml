@@ -21,11 +21,11 @@
                 <view class="evaluation-result evaluation-input-child"><text class="evaluatioon-label">评价结果</text>
                     <view>
                         <radio-group>
-                            <radio></radio>
-                            <radio></radio>
-                            <radio></radio>
+                            <radio value="" checked="false"></radio>
+                            <radio value="" checked="false"></radio>
+                            <radio value="" checked="false"></radio>
                         </radio-group>
-                        <radio></radio>
+                        <radio value="" checked="false"></radio>
                     </view>
                 </view>
                 <view class="evaluation-phrases evaluation-input-child"><text class="evaluatioon-label">选择短语</text>

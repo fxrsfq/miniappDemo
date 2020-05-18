@@ -2,27 +2,27 @@
     <view>
         <view class="batch-evaluations-main">
             <scroll-view class="tabs" enable-flex="true">
-                <view class="tab" onTap="anonymousFunc0" a:key="$original.title" a:for="{{loopArray3}}" a:for-item="cur" a:for-index="__index0" data-e-onTap-so="this" data-e-onTap-a-a="{{cur._$indexKey}}"><text class="{{tabTitle === cur.$original.title ? 'tab-text-click' : 'tab-text'}}">{{cur.$original.title}}</text>
+                <view class="tab" onTap="anonymousFunc0" a:key="$original.title" a:for="{{loopArray32}}" a:for-item="cur" a:for-index="__index0" data-e-onTap-so="this" data-e-onTap-a-a="{{cur._$indexKey}}"><text class="{{tabTitle === cur.$original.title ? 'tab-text-click' : 'tab-text'}}">{{cur.$original.title}}</text>
                 </view>
             </scroll-view>
-            <evaluations-list compid="{{$compid__23}}"></evaluations-list>
+            <evaluations-list compid="{{$compid__64}}"></evaluations-list>
         </view>
         <view class="batch-evaluations-footer">
             <view class="batch-operation">
                 <view class="check-all">
-                    <checkbox class="check-all-checkbox"></checkbox>
+                    <checkbox class="check-all-checkbox" onChange="anonymousFunc1"></checkbox>
                     <view class="check-all-information"><text class="check-all-keys">全选(已选)</text><text class="check-all-quantity">1</text>
                     </view>
                 </view>
-                <button class="batch-evaluate-btu" onTap="anonymousFunc1">批量评价</button>
+                <button class="batch-evaluate-btu" onTap="anonymousFunc2">批量评价</button>
             </view>
             <view>
-                <my-pagination compid="{{$compid__24}}"></my-pagination>
+                <my-pagination compid="{{$compid__65}}"></my-pagination>
             </view>
         </view>
         <view>
             <block a:if="{{promptStatus}}">
-                <my-dialog compid="{{$compid__25}}">
+                <my-dialog compid="{{$compid__66}}">
                     <prompt></prompt>
                 </my-dialog>
             </block>

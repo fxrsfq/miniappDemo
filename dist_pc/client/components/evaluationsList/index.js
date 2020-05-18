@@ -29,20 +29,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var propsManager = my.propsManager;
 
 /**
- * @description 评价列表 List 子
+ * @description 评价列表
  * @author fuQiang
  * @class EvaluationsList
  * @extends {Component}
  */
 var EvaluationsList = (_dec = (0, _index3.connect)(function (store) {
+  console.log("evaluationsList获取到的store为：", store);
   return {
-    // searchVal: store.refundListReducer.searchVal,
-    // activeTabKey: store.refundListReducer.activeTabKey,
-    // pageNo: store.refundListReducer.pageNo,
-    // pageSize: store.refundListReducer.pageSize,
-    // tradeCounts: store.refundListReducer.tradeCounts,
-    // list: store.refundListReducer.list,
-    evaluationsListData: store.toEvaulateReducer.evaluationsListData
+    filterResults: store.toEvaluateReducer.filterResults
   };
 }), _dec(_class = (_temp2 = _class2 = function (_BaseComponent) {
   _inherits(EvaluationsList, _BaseComponent);
@@ -58,27 +53,7 @@ var EvaluationsList = (_dec = (0, _index3.connect)(function (store) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = EvaluationsList.__proto__ || Object.getPrototypeOf(EvaluationsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray36", "tbody", "promptStatusControl", "evaluationsListData"], _this.showList = function (data) {
-      console.clear();
-      console.log("组件拿到了数据！", data);
-      var arr = []; //所有订单数据
-      for (var i = 0; i < data.totalResults; i++) {
-        for (var j = 0; j < data.trades[i].orders.length; j++) {
-          var obj = {
-            buyer_nick: data.trades[i].buyer_nick, //买家昵称
-            pic_path: data.trades[i].orders[j].pic_path, //图像路径
-            title: data.trades[i].orders[j].title, //订单标题
-            oid: data.trades[i].orders[j].oid, //订单号
-            consign_time: data.trades[i].orders[j].consign_time, //确认时间
-            num: data.trades[i].orders[j].num, //数量
-            payment: data.trades[i].orders[j].payment, //实收款
-            promptStatusControl: _this.props.promptStatusControl //弹框函数
-          };
-          arr.push(obj);
-        }
-      }
-      return arr;
-    }, _this.customComponents = ["Tbody"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = EvaluationsList.__proto__ || Object.getPrototypeOf(EvaluationsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray23", "tbody", "filterResults", "promptStatusControl"], _this.customComponents = ["Tbody"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(EvaluationsList, [{
@@ -88,9 +63,6 @@ var EvaluationsList = (_dec = (0, _index3.connect)(function (store) {
 
       this.$$refs = [];
     }
-
-    // 筛选 评价列表数据
-
   }, {
     key: "_createData",
     value: function _createData() {
@@ -100,27 +72,31 @@ var EvaluationsList = (_dec = (0, _index3.connect)(function (store) {
       var __prefix = this.$prefix;
       ;
 
-      var tbody = this.showList(this.__props.evaluationsListData);
-      var loopArray36 = tbody.map(function (cur, _anonIdx) {
+      var tbody = this.__props.filterResults;
+      var promptControl = this.__props.promptStatusControl;
+      console.log("组件拿到了数据为：", tbody);
+
+      var loopArray23 = tbody.map(function (cur, _anonIdx) {
         cur = {
           $original: (0, _index.internal_get_original)(cur)
         };
 
-        var _genCompid = (0, _index.genCompid)(__prefix + "egzzzzzzzz" + _anonIdx, true),
+        var _genCompid = (0, _index.genCompid)(__prefix + "dczzzzzzzz" + _anonIdx, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__56 = _genCompid2[0],
-            $compid__56 = _genCompid2[1];
+            $prevCompid__39 = _genCompid2[0],
+            $compid__39 = _genCompid2[1];
 
         propsManager.set({
-          "order": cur.$original
-        }, $compid__56, $prevCompid__56);
+          "order": cur.$original,
+          "promptStatusControl": promptControl
+        }, $compid__39, $prevCompid__39);
         return {
-          $compid__56: $compid__56,
+          $compid__39: $compid__39,
           $original: cur.$original
         };
       });
       Object.assign(this.__state, {
-        loopArray36: loopArray36,
+        loopArray23: loopArray23,
         tbody: tbody
       });
       return this.__state;

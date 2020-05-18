@@ -12,6 +12,9 @@ import "./index.css";
  * @extends {Component}
  */
 class Prompt extends Component {
+    // constructor(props){
+    //     super(props);
+    // }
     render() {
         return (
             <View class="prompt-container">
@@ -48,11 +51,11 @@ class Prompt extends Component {
                             <Text className="evaluatioon-label">评价结果</Text>
                             <View >
                                 <RadioGroup>
-                                    <Radio></Radio>
-                                    <Radio></Radio>
-                                    <Radio></Radio>
+                                    <Radio value="" checked="false"></Radio>
+                                    <Radio value="" checked="false"></Radio>
+                                    <Radio value="" checked="false"></Radio>
                                 </RadioGroup>
-                                <Radio></Radio>
+                                <Radio value="" checked="false"></Radio>
                             </View>
                         </View>
                         <View className="evaluation-phrases evaluation-input-child">

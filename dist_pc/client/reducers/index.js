@@ -23,5 +23,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = (0, _redux.combineReducers)({
   marketingAdInfoReducer: _reducer.marketingAdInfoReducer,
   refundListReducer: _reducer2.refundListReducer,
-  toEvaulateReducer: _reducer4.default
+  toEvaluateReducer: _reducer4.default
 });

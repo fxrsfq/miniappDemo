@@ -4,57 +4,28 @@ import Tbody from "./tBody";
 import "./index.css";
 import { connect } from '@tarojs/redux';
 @connect((store) => {
+    console.log("evaluationsList获取到的store为：", store);
     return {
-        // searchVal: store.refundListReducer.searchVal,
-        // activeTabKey: store.refundListReducer.activeTabKey,
-        // pageNo: store.refundListReducer.pageNo,
-        // pageSize: store.refundListReducer.pageSize,
-        // tradeCounts: store.refundListReducer.tradeCounts,
-        // list: store.refundListReducer.list,
-        evaluationsListData: store.toEvaulateReducer.evaluationsListData
+        filterResults: store.toEvaluateReducer.filterResults
     };
 })
 
 /**
- * @description 评价列表 List 子
+ * @description 评价列表
  * @author fuQiang
  * @class EvaluationsList
  * @extends {Component}
  */
 class EvaluationsList extends Component {
-
-
-    // 筛选 评价列表数据
-    showList = (data) => {
-        console.clear();
-        console.log("组件拿到了数据！", data);
-        var arr = [];                                                 //所有订单数据
-        for (var i =0; i < data.totalResults; i++) {
-            for(var j =0; j < data.trades[i].orders.length; j++){
-                var obj = {
-                    buyer_nick:data.trades[i].buyer_nick,               //买家昵称
-                    pic_path:data.trades[i].orders[j].pic_path,         //图像路径
-                    title:data.trades[i].orders[j].title,               //订单标题
-                    oid:data.trades[i].orders[j].oid,                   //订单号
-                    consign_time:data.trades[i].orders[j].consign_time,  //确认时间
-                    num:data.trades[i].orders[j].num,                  //数量
-                    payment: data.trades[i].orders[j].payment,                  //实收款
-                    promptStatusControl:this.props.promptStatusControl, //弹框函数
-                };
-                arr.push(obj);
-            }
-            
-        }
-        return arr;
-    }
+    
     render() {
-
-        let tbody = this.showList(this.props.evaluationsListData);
+        let tbody = this.props.filterResults;
+        let promptControl = this.props.promptStatusControl;
+        console.log("组件拿到了数据为：", tbody);
+        
         return (
             <View className="evaluationslist-table">
                 <View className="table-thead">
-                    {/* {tableTh} */}
-
                     <View className="table-header-tr-th cell0">
                         <Text className="cell-text">选择</Text>
                     </View>
@@ -78,10 +49,9 @@ class EvaluationsList extends Component {
                     </View>
                 </View>
                 <View className="table-tbody">
-                    {/* 你需要在这里传靠椅信息和订单信息  */}
                     {
                         tbody.map((cur)=>{
-                            return <Tbody order={cur}></Tbody>
+                            return <Tbody order={cur} promptStatusControl={promptControl}></Tbody>
                         })
                     }
                 </View>

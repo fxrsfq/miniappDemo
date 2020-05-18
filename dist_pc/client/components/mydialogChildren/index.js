@@ -55,6 +55,11 @@ var Prompt = (_temp2 = _class = function (_BaseComponent) {
 
       this.$$refs = [];
     }
+
+    // constructor(props){
+    //     super(props);
+    // }
+
   }, {
     key: "_createData",
     value: function _createData() {

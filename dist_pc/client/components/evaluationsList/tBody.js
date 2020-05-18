@@ -22,11 +22,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-/**
- * @description 评价列表项组件 孙
- * @author fuQiang
- * @class IndexPart
- * @extends {Component}
+/** 
+ * @description 订单列表组件
  */
 var propsManager = my.propsManager;
 var Tbody = (_temp2 = _class = function (_BaseComponent) {
@@ -43,7 +40,7 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tbody.__proto__ || Object.getPrototypeOf(Tbody)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["oid", "pic_path", "title", "consign_time", "num", "payment", "buyer_nick", "order"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tbody.__proto__ || Object.getPrototypeOf(Tbody)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["oid", "checked", "pic_path", "title", "consign_time", "num", "payment", "buyer_nick", "order", "promptStatusControl"], _this.singleSelect = function (id) {}, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Tbody, [{
@@ -53,9 +50,14 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
 
       this.$$refs = [];
     }
+
+    // 单选
+
   }, {
     key: "_createData",
     value: function _createData() {
+      var _this2 = this;
+
       this.__state = arguments[0] || this.state || {};
       this.__props = arguments[1] || this.props || {};
       var __isRunloopRef = arguments[2];
@@ -63,24 +65,30 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
       ;
 
       //trades：一次交易 对应一个买家  orders：一次交易的订单数
-      console.log("props为：", this.__props.order);
+      // console.log("props为：", this.props.order);
       var _props$order = this.__props.order,
+          checked = _props$order.checked,
           pic_path = _props$order.pic_path,
           title = _props$order.title,
           oid = _props$order.oid,
           consign_time = _props$order.consign_time,
           num = _props$order.num,
           payment = _props$order.payment,
-          buyer_nick = _props$order.buyer_nick,
-          promptStatusControl = _props$order.promptStatusControl;
+          buyer_nick = _props$order.buyer_nick;
 
+      var promptStatusControl = this.__props.promptStatusControl;
 
       this.anonymousFunc0 = function () {
+        _this2.singleSelect(oid);
+      };
+
+      this.anonymousFunc1 = function () {
         promptStatusControl(true);
       };
 
       Object.assign(this.__state, {
         oid: oid,
+        checked: checked,
         pic_path: pic_path,
         title: title,
         consign_time: consign_time,
@@ -95,10 +103,15 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
     value: function anonymousFunc0(e) {
       ;
     }
+  }, {
+    key: "anonymousFunc1",
+    value: function anonymousFunc1(e) {
+      ;
+    }
   }]);
 
   return Tbody;
-}(_index.Component), _class.$$events = ["anonymousFunc0"], _class.$$componentPath = "components/evaluationsList/tBody", _temp2);
+}(_index.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1"], _class.$$componentPath = "components/evaluationsList/tBody", _temp2);
 exports.default = Tbody;
 
 Component(require('../../npm/_tarojs/taro-alipay/index.js').default.createComponent(Tbody));

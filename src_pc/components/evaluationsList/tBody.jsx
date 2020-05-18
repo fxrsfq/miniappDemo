@@ -1,21 +1,25 @@
 import { Component } from '@tarojs/taro';
 import { View, Text, Checkbox, Image, Button } from '@tarojs/components';
 
-/**
- * @description 评价列表项组件 孙
- * @author fuQiang
- * @class IndexPart
- * @extends {Component}
+/** 
+ * @description 订单列表组件
  */
 class Tbody extends Component{
+
+    // 单选
+    singleSelect = (id)=>{
+
+    }
+
     render(){
         //trades：一次交易 对应一个买家  orders：一次交易的订单数
-        console.log("props为：", this.props.order);
-        const {pic_path, title, oid, consign_time, num, payment, buyer_nick, promptStatusControl} = this.props.order;
+        // console.log("props为：", this.props.order);
+        const {checked, pic_path, title, oid, consign_time, num, payment, buyer_nick} = this.props.order;
+        const promptStatusControl = this.props.promptStatusControl;
         return (
             <View className="table-tbody-tr" key={oid}>
                 <View className="cell0 cells">
-                    <Checkbox className="check-box"></Checkbox>
+                    <Checkbox className="check-box" checked={checked} onChange={()=>{this.singleSelect(oid)}}></Checkbox>
                 </View>
                 <View className="cell1 cells">
                     <Image src={pic_path} className="photo"></Image>
