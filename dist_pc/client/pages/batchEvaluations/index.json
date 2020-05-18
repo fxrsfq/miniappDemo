@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "evaluations-list": "../../components/evaluationsList/index",
+    "my-pagination": "../../components/myPagination/index",
+    "my-dialog": "../../components/myDialog/index",
+    "prompt": "../../components/mydialogChildren/index"
+  }
+}

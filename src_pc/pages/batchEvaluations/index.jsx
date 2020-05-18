@@ -1,7 +1,3 @@
-/* eslint-disable comma-dangle */
-/* eslint-disable space-before-function-paren */
-/* eslint-disable linebreak-style */
-/* eslint-disable spaced-comment */
 import Taro, { Component } from '@tarojs/taro';
 import { View, Text, ScrollView, Checkbox, Button } from '@tarojs/components';
 import "taro-ui/dist/style/components/tabs.scss";
@@ -11,20 +7,16 @@ import EvaluationsList from "pcComponents/evaluationsList";
 import MyPagination from "pcComponents/myPagination";
 import MyDialog from "pcComponents/myDialog";
 import Prompt from "pcComponents/mydialogChildren";
-import { getDataToStore } from "./action";
+import { getDataToStore, filterState } from "./action";
 import { soldGet } from "tradePublic/tradeDataCenter/api/soldGet";
+@connect((store) => {
+    console.log("index获取的 store 为：", store);
 
-// @connect((store) => {
-//     return {
-//         // searchVal: store.refundListReducer.searchVal,
-//         // activeTabKey: store.refundListReducer.activeTabKey,
-//         // pageNo: store.refundListReducer.pageNo,
-//         // pageSize: store.refundListReducer.pageSize,
-//         // tradeCounts: store.refundListReducer.tradeCounts,
-//         // list: store.refundListReducer.list,
-//         evaluationsListData: store.evaluationsListData
-//     };
-// })
+    return {
+        filterResults: store.toEvaluateReducer.filterResults
+    };
+})
+
 
 /**
  * @description 批量评价根 组件 父
@@ -39,31 +31,24 @@ class BatchEvaluations extends Component {
             tabTitle: "全部",//选项卡样式 关键字,
             promptStatus: false,//弹框状态 true：显示 false：取消
         }
-        // this.tabClick = this.tabClick.bind(this);
-        // this.promptStatusControl = this.promptStatusControl.bind(this);
     }
     componentDidMount() {
         //挂载请求订单列表数据  
         soldGet({
+            status: "TRADE_FINISHED",     //买家确认收货 交易完成 
+            rate_status: "RATE_UNSELLER", //卖家未评
             callback: (result) => {
-                // console.clear();
-                // console.log("获取到的订单列表为：", result);
                 getDataToStore(result);
             },
             errCallback: (err) => {
                 console.error("拉取订单列表异常");
             }
         });
-        // soldGet().then((result)=>{
-
-        //     console.log("获取到的数据为abc：", result);
-        // }, (err)=>{
-        //     console.error("获取订单评价列表失败，异常如下：", err);
-        // });
     }
     // 选项卡样式 切换
     tabClick = (title) => {
         this.setState({ tabTitle: title });
+        filterState(this.props.filterResults, title);
     }
     // 弹出框弹出状态 显示或取消
     promptStatusControl = (arg) => {
@@ -74,7 +59,6 @@ class BatchEvaluations extends Component {
     // } 
 
     render() {
-        // console.log("组件拿到了数据！",this.props.evaluationsListData);
         const { tabTitle, promptStatus } = this.state;
         // 选项卡列表
         const tabList = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map((cur) => {

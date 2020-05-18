@@ -10,8 +10,9 @@ import { View, Text, Checkbox, Image, Button } from '@tarojs/components';
 class Tbody extends Component{
     render(){
         //trades：一次交易 对应一个买家  orders：一次交易的订单数
-        console.log("props为：", this.props.order);
-        const {pic_path, title, oid, consign_time, num, payment, buyer_nick, promptStatusControl} = this.props.order;
+        // console.log("props为：", this.props.order);
+        const {pic_path, title, oid, consign_time, num, payment, buyer_nick} = this.props.order;
+        const promptStatusControl = this.props.promptStatusControl;
         return (
             <View className="table-tbody-tr" key={oid}>
                 <View className="cell0 cells">
