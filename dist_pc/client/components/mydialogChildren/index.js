@@ -18,6 +18,8 @@ var _index2 = _interopRequireDefault(_index);
 
 var _index3 = require("../../npm/_tarojs/redux/index.js");
 
+var _api = require("../../public/tradePublic/autoRate/api.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -53,7 +55,7 @@ var Prompt = (_dec = (0, _index3.connect)(function (store) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Prompt.__proto__ || Object.getPrototypeOf(Prompt)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__140", "batch"], _this.customComponents = ["Select"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Prompt.__proto__ || Object.getPrototypeOf(Prompt)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__157", "batch"], _this.customComponents = ["Select"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Prompt, [{
@@ -77,19 +79,17 @@ var Prompt = (_dec = (0, _index3.connect)(function (store) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__140"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__157"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__140 = _genCompid2[0],
-          $compid__140 = _genCompid2[1];
+          $prevCompid__157 = _genCompid2[0],
+          $compid__157 = _genCompid2[1];
 
-      var anonymousState__temp = ["好", "很好", "非常好", "棒"];
       propsManager.set({
         "className": "evaluation-phrases-select",
-        "dataSource": anonymousState__temp
-      }, $compid__140, $prevCompid__140);
+        "dataSource": _api.DEFAULT_AUTO_RATE_PHRASE
+      }, $compid__157, $prevCompid__157);
       Object.assign(this.__state, {
-        anonymousState__temp: anonymousState__temp,
-        $compid__140: $compid__140
+        $compid__157: $compid__157
       });
       return this.__state;
     }

@@ -2,6 +2,7 @@ import { Component } from '@tarojs/taro';
 import { connect } from '@tarojs/redux';
 import { View, Image, Text, RadioGroup, Radio, Textarea } from '@tarojs/components';
 import Select from "pcComponents/mySelect";
+import {DEFAULT_AUTO_RATE_PHRASE} from "tradePublic/autoRate/api";
 import "taro-ui/dist/style/components/tabs.scss";
 import "./index.css";
 
@@ -74,7 +75,7 @@ class Prompt extends Component {
                         </View>
                         <View className="evaluation-phrases evaluation-input-child">
                             <Text className="evaluatioon-label">选择短语</Text>
-                            <Select className="evaluation-phrases-select" dataSource={["好", "很好", "非常好", "棒"]}></Select>
+                            <Select className="evaluation-phrases-select" dataSource={DEFAULT_AUTO_RATE_PHRASE}></Select>
                             <Text className="evaluation-phrases-options-text">设置评价短语</Text>
                         </View>
                         <View className="evaluation-content evaluation-input-child">
