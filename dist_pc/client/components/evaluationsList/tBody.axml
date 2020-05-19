@@ -16,7 +16,7 @@
             <view class="blue-box"></view><text>{{buyer_nick}}</text>
         </view>
         <view class="cell6 cells">
-            <button class="evaluation-btu" onTap="anonymousFunc1">评价</button>
+            <button class="evaluation-btu" onTap="singleBatch">评价</button>
         </view>
     </view>
 </block>

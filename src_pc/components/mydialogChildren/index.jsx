@@ -1,9 +1,16 @@
 import { Component } from '@tarojs/taro';
+import { connect } from '@tarojs/redux';
 import { View, Image, Text, RadioGroup, Radio, Textarea } from '@tarojs/components';
 import Select from "pcComponents/mySelect";
 import "taro-ui/dist/style/components/tabs.scss";
-
 import "./index.css";
+
+@connect((store) => {
+    return {
+        batch: store.toEvaluateReducer.batch,
+        // currentSingleOrder: store.toEvaluateReducer.currentSingleOrder
+    };
+})
 
 /**
  * @description 弹出框 myDialog 的 children 部分
@@ -19,43 +26,50 @@ class Prompt extends Component {
         return (
             <View class="prompt-container">
                 <View className="prompt-main">
-                    <View className="order-detail">
-                        <Image src="" className="order-detail-photo"></Image>
-                        <View className="order-detail-words">
-                            <Text className="order-detail-words-name mar-bottom">人气WIKEA/维佳框业现代中式异形不规则特价组合相框片墙…</Text>
-                            <View className="order-detail-merchantcode mar-bottom">商家编码&nbsp;{2348972816378}</View>
-                            <View className="order-detail-goods-attributes mar-bottom">
-                                <View className="order-detail-goods-attributes-a">
-                                    <Text className="order-detail-goods-attributes-text">紫色</Text>
-                                    <Text className="order-detail-goods-attributes-text">140CM，尺寸偏小，建议多拍大一号，胖子建议选大一码，切记</Text>
-                                </View >
-                                <Text className="order-detail-goods-attributes-b order-detail-goods-attributes-text">这是第三属性，如果有的话就显示粗来</Text>
-                            </View>
-
-                            <View className="order-detail-amount-information mar-bottom">
-                                <View>
-                                    <Text className="order-detail-amount-aboriginal mar-right">¥109.00</Text>
-                                    <Text className="order-detail-order-quantity">x2</Text>
+                    {
+                        this.props.batch === false && <View className="order-detail">
+                            <Image src="" className="order-detail-photo"></Image>
+                            <View className="order-detail-words">
+                                <Text className="order-detail-words-name mar-bottom">人气WIKEA/维佳框业现代中式异形不规则特价组合相框片墙…</Text>
+                                <View className="order-detail-merchantcode mar-bottom">商家编码&nbsp;{2348972816378}</View>
+                                <View className="order-detail-goods-attributes mar-bottom">
+                                    <View className="order-detail-goods-attributes-a">
+                                        <Text className="order-detail-goods-attributes-text">紫色</Text>
+                                        <Text className="order-detail-goods-attributes-text">140CM，尺寸偏小，建议多拍大一号，胖子建议选大一码，切记</Text>
+                                    </View >
+                                    <Text className="order-detail-goods-attributes-b order-detail-goods-attributes-text">这是第三属性，如果有的话就显示粗来</Text>
                                 </View>
-                                <View>
-                                    <Text className="order-detail-preferential mar-right">惠</Text>
-                                    <Text className="order-detail-preferential-value mar-right">-¥98.99</Text>
-                                    <Text className="order-detail-preferential-change mar-right">改</Text>
-                                    <Text className="order-detail-preferential-change-value">+¥8.99</Text>
+
+                                <View className="order-detail-amount-information mar-bottom">
+                                    <View>
+                                        <Text className="order-detail-amount-aboriginal mar-right">¥109.00</Text>
+                                        <Text className="order-detail-order-quantity">x2</Text>
+                                    </View>
+                                    <View>
+                                        <Text className="order-detail-preferential mar-right">惠</Text>
+                                        <Text className="order-detail-preferential-value mar-right">-¥98.99</Text>
+                                        <Text className="order-detail-preferential-change mar-right">改</Text>
+                                        <Text className="order-detail-preferential-change-value">+¥8.99</Text>
+                                    </View>
                                 </View>
                             </View>
                         </View>
-                    </View>
+                    }
+
                     <View className="evaluation-input">
                         <View className="evaluation-result evaluation-input-child">
                             <Text className="evaluatioon-label">评价结果</Text>
                             <View >
-                                <RadioGroup>
-                                    <Radio value="" checked="false"></Radio>
-                                    <Radio value="" checked="false"></Radio>
-                                    <Radio value="" checked="false"></Radio>
+                                {
+                                    this.props.batch === false && <RadioGroup>
+                                    <Radio value="" checked="false" value="good"></Radio>
+                                    <Radio value="" checked="false" value="neutral"></Radio>
+                                    <Radio value="" checked="false" value="bad"></Radio>
                                 </RadioGroup>
-                                <Radio value="" checked="false"></Radio>
+                                }
+                                {
+                                    this.props.batch === true && <Radio value="good" checked="false"></Radio>
+                                }
                             </View>
                         </View>
                         <View className="evaluation-phrases evaluation-input-child">

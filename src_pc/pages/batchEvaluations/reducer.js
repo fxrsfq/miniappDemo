@@ -6,20 +6,15 @@ let store = {
     evaluationsListData:[],   // 请求到的所有数据
     filterResults:[],         // tab 筛选结果
     selectAll:false,          // 全选状态
+    batch:false,              // 评价状态 true:批量 false:单评
+    currentSingleOrder:null     // 要评价的单宝贝 id
 };
 
-<<<<<<< HEAD
 export function toEvaluateReducer(state = store, action){
     //  在这里处理 action行为
     switch(action.type){
         case "INIT": return {
             ...state,
-=======
-function toEvaluateReducer(state = store, action){
-    //  在这里处理 action行为
-    switch(action.type){
-        case "INIT": return {
->>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
             evaluationsListData:action.originalData,
             filterResults:action.originalData
         };
@@ -35,7 +30,6 @@ function toEvaluateReducer(state = store, action){
             ...state,
             filterResults:action.unrated
         };
-<<<<<<< HEAD
         case "SELECTALL":return {
             ...state,
             filterResults:action.allCheckedChange
@@ -43,14 +37,16 @@ function toEvaluateReducer(state = store, action){
         case "SELECTSINGLE":return {
             ...state,
             filterResults:action.singleCheckedChange
+        };
+        case "BATCH":return {
+            ...state,
+            batch:true
+        };
+        case "SINGLE":return {
+            ...state,
+            batch:false,
+            currentSingleOrder:action.currentSingleOrder
         }
         default:return store ;
-    }
-}
-=======
-        default:return store ;
-    }
-}
-
-export default toEvaluateReducer; 
->>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
+    } 
+} 

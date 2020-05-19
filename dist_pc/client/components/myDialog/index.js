@@ -8,13 +8,15 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-var _class, _temp2;
+var _dec, _class, _class2, _temp2;
 
 var _index = require("../../npm/_tarojs/taro-alipay/index.js");
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = require("../../public/mapp_common/utils/index.js");
+var _index3 = require("../../npm/_tarojs/redux/index.js");
+
+var _index4 = require("../../public/mapp_common/utils/index.js");
 
 var _action = require("../../pages/batchEvaluations/action.js");
 
@@ -28,7 +30,12 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propsManager = my.propsManager;
 
-var MyDialog = (_temp2 = _class = function (_BaseComponent) {
+var MyDialog = (_dec = (0, _index3.connect)(function (store) {
+  return {
+    batch: store.toEvaluateReducer.batch,
+    currentSingleOrder: store.toEvaluateReducer.currentSingleOrder
+  };
+}), _dec(_class = (_temp2 = _class2 = function (_BaseComponent) {
   _inherits(MyDialog, _BaseComponent);
 
   function MyDialog() {
@@ -42,20 +49,28 @@ var MyDialog = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MyDialog.__proto__ || Object.getPrototypeOf(MyDialog)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "title", "closeable", "content", "hasFooter", "cancelText", "hasCancel", "confirmText", "onCancelClose", "onOkClose", "closeOnClickOverlay", "wrapperClassName", "className", "children", "wrapperStyle", "visible"], _this.onCloseClick = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MyDialog.__proto__ || Object.getPrototypeOf(MyDialog)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "title", "closeable", "content", "hasFooter", "cancelText", "hasCancel", "confirmText", "onCancelClose", "batch", "onOkClose", "closeOnClickOverlay", "wrapperClassName", "className", "children", "wrapperStyle", "visible"], _this.onCloseClick = function () {
       _this.props.onClose();
     }, _this.onCancel = function () {
-      (0, _index3.isFunction)(_this.props.onCancel) && _this.props.onCancel();
+      (0, _index4.isFunction)(_this.props.onCancel) && _this.props.onCancel();
       if (_this.props.onCancelClose) {
         _this.onClose();
       }
     }, _this.onOk = function () {
-      (0, _index3.isFunction)(_this.props.onOk) && _this.props.onOk();
+      (0, _index4.isFunction)(_this.props.onOk) && _this.props.onOk();
+
+      if (_this.props.batch === true) {
+        console.log("\n", "batch", "\n");
+        // 在这里发起批量评价的请求
+        (0, _action.toBatchEvaluate)();
+      } else {
+        console.log("\n", "single", "\n");
+        (0, _action.toSingleEvaluate)();
+      }
+
       if (_this.props.onOkClose) {
         _this.onClose();
       }
-      // 在这里发起批量评价的请求
-      (0, _action.toBatchEvaluate)();
     }, _this.onClose = function () {
       _this.props.onClose();
     }, _this.handleClickOverlay = function () {
@@ -103,9 +118,9 @@ var MyDialog = (_temp2 = _class = function (_BaseComponent) {
           hasCancel = _props.hasCancel,
           wrapperStyle = _props.wrapperStyle;
 
-      var anonymousState__temp = (0, _index3.classNames)('at-modal--active my-dialog-wrapper', wrapperClassName);
+      var anonymousState__temp = (0, _index4.classNames)('at-modal--active my-dialog-wrapper', wrapperClassName);
       var anonymousState__temp2 = (0, _index.internal_inline_style)(wrapperStyle);
-      var anonymousState__temp3 = (0, _index3.classNames)('at-modal__container', className, { hidden: !this.__props.visible });
+      var anonymousState__temp3 = (0, _index4.classNames)('at-modal__container', className, { hidden: !this.__props.visible });
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2,
@@ -123,7 +138,7 @@ var MyDialog = (_temp2 = _class = function (_BaseComponent) {
   }]);
 
   return MyDialog;
-}(_index.Component), _class.$$events = ["handleClickOverlay", "onCloseClick", "onCancel", "onOk"], _class.$$componentPath = "components/myDialog/index", _temp2);
+}(_index.Component), _class2.$$events = ["handleClickOverlay", "onCloseClick", "onCancel", "onOk"], _class2.$$componentPath = "components/myDialog/index", _temp2)) || _class);
 
 
 MyDialog.defaultProps = {
@@ -137,9 +152,9 @@ MyDialog.defaultProps = {
   title: null,
   children: null, //元素  and 组件
   hasFooter: false, //footer显示
-  onClose: _index3.NOOP,
-  onCancel: _index3.NOOP,
-  onOk: _index3.NOOP, //点击确定的回调函数 
+  onClose: _index4.NOOP,
+  onCancel: _index4.NOOP,
+  onOk: _index4.NOOP, //点击确定的回调函数 
   hasCancel: true,
   closeable: true,
   onCancelClose: true,

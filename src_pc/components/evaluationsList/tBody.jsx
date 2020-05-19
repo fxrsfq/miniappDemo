@@ -1,13 +1,12 @@
 import { Component } from '@tarojs/taro';
 import { View, Text, Checkbox, Image, Button } from '@tarojs/components';
-import {toSelect, toSingleEvaluate} from "pcPages/batchEvaluations/action";
+import {toSelect, toSingleEvaluate, changeBatch} from "pcPages/batchEvaluations/action";
 
 /** 
  * @description 订单列表组件
  */
 class Tbody extends Component{
 
-<<<<<<< HEAD
     /**
      * @description   单选
      * @memberof Tbody
@@ -22,36 +21,25 @@ class Tbody extends Component{
      * @memberof Tbody
      * @param obj 订单id  {"tid":tid,"oid":oid}
      */
-    singleBatch = (tid, oid)=>{
-        promptStatusControl(true);
+    singleBatch = ()=>{
         // 这个方法应该在弹框中使用
         // toSingleEvaluate(tid, oid);
-=======
-    // 单选
-    singleSelect = (id)=>{
-
->>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
+        const {tid,oid} =this.props.order;
+        console.log("singleBatch 实参 obj 为：",{tid,oid} );
+        changeBatch("single", {tid,oid});
+        this.props.promptStatusControl(true);
     }
 
     render(){
         //trades：一次交易 对应一个买家  orders：一次交易的订单数
-<<<<<<< HEAD
         // console.clear();
-        // console.log("tbody props为：", this.props.order);
+        // console.log("tbody order为：", this.props.order);
         const {checked, pic_path, title, tid, oid, consign_time, num, payment, buyer_nick} = this.props.order;
-=======
-        // console.log("props为：", this.props.order);
-        const {checked, pic_path, title, oid, consign_time, num, payment, buyer_nick} = this.props.order;
->>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
-        const promptStatusControl = this.props.promptStatusControl;
+        console.log("tid：",tid,"oid：", oid);
         return (
             <View className="table-tbody-tr" key={oid}>
                 <View className="cell0 cells">
-<<<<<<< HEAD
                     <Checkbox className="check-box" checked={checked} onChange={()=>{this.singleSelect("single")}}></Checkbox>
-=======
-                    <Checkbox className="check-box" checked={checked} onChange={()=>{this.singleSelect(oid)}}></Checkbox>
->>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
                 </View>
                 <View className="cell1 cells">
                     <Image src={pic_path} className="photo"></Image>
@@ -72,7 +60,7 @@ class Tbody extends Component{
                     <Text>{buyer_nick}</Text>
                 </View>
                 <View className="cell6 cells">
-                    <Button className="evaluation-btu" onClick={()=>{singleBatch(tid,oid)}}>评价</Button>
+                    <Button className="evaluation-btu" onClick={this.singleBatch}>评价</Button>
                 </View>
             </View>
         );

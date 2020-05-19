@@ -17,11 +17,7 @@
             </view>
         </view>
         <view class="table-tbody">
-<<<<<<< HEAD
-            <tbody a:for="{{loopArray43}}" a:for-item="item" a:for-index="_anonIdx2" compid="{{item.$compid__73}}"></tbody>
-=======
-            <tbody a:for="{{loopArray23}}" a:for-item="cur" a:for-index="_anonIdx2" compid="{{cur.$compid__39}}"></tbody>
->>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
+            <tbody a:for="{{loopArray59}}" a:for-item="item" a:for-index="_anonIdx2" compid="{{item.$compid__115}}"></tbody>
         </view>
     </view>
 </block>

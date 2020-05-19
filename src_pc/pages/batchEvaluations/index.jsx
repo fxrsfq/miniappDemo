@@ -7,24 +7,14 @@ import EvaluationsList from "pcComponents/evaluationsList";
 import MyPagination from "pcComponents/myPagination";
 import MyDialog from "pcComponents/myDialog";
 import Prompt from "pcComponents/mydialogChildren";
-<<<<<<< HEAD
-import { getDataToStore, filterState, toSelect} from "./action";
-=======
-import { getDataToStore, filterState, toSelect } from "./action";
->>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
+import { getDataToStore, filterState, toSelect, changeBatch} from "./action";
 import { soldGet } from "tradePublic/tradeDataCenter/api/soldGet";
 @connect((store) => {
-    console.log("index获取的 store 为：", store);
-
     return {
         filterResults: store.toEvaluateReducer.filterResults
     };
 })
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
 /**
  * @description 批量评价根 组件 父
  * @author fuQiang
@@ -55,15 +45,12 @@ class BatchEvaluations extends Component {
     // 选项卡样式 切换
     tabClick = (title) => {
         this.setState({ tabTitle: title });
-<<<<<<< HEAD
         filterState(title);
     }
     //批量评价对话框 弹出
     toBatchEvaluation = ()=>{
+        changeBatch("batch");
         this.promptStatusControl(true);
-=======
-        filterState(this.props.filterResults, title);
->>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
     }
     // 弹出框弹出状态 显示或取消
     promptStatusControl = (arg) => {
@@ -73,11 +60,6 @@ class BatchEvaluations extends Component {
     selectAll = ()=>{
         toSelect("all");
     } 
-<<<<<<< HEAD
-=======
-    
-
->>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
     render() {
         const { tabTitle, promptStatus } = this.state;
         // 选项卡列表
@@ -103,11 +85,7 @@ class BatchEvaluations extends Component {
                     {/* 全选 表单*/}
                     <View className='batch-operation'>
                         <View className='check-all'>
-<<<<<<< HEAD
                             <Checkbox className='check-all-checkbox' onChange={()=>{this.selectAll()}}></Checkbox>
-=======
-                            <Checkbox className='check-all-checkbox' onChange={()=>{selectAll()}}></Checkbox>
->>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
                             <View className='check-all-information'>
                                 <Text className='check-all-keys'>全选(已选)</Text>
                                 <Text className='check-all-quantity'>1</Text>
@@ -122,7 +100,7 @@ class BatchEvaluations extends Component {
                 </View>
                 {/* 批量评价 || 单宝贝评价 弹出框 */}
                 <View>
-                    {promptStatus && <MyDialog onClose={() => { this.promptStatusControl(false) }} hasFooter='true' title='评价' className='mydialog-cite'>
+                    {promptStatus && <MyDialog onClose={() => { this.promptStatusControl(false) }} hasFooter="true" title='评价' className='mydialog-cite'>
                         <Prompt></Prompt>
                     </MyDialog>}
                 </View>

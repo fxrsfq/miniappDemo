@@ -1,9 +1,15 @@
 import Taro, { Component } from '@tarojs/taro';
+import { connect } from '@tarojs/redux';
 import { Button, Text, View } from '@tarojs/components';
 import { classNames, isFunction, NOOP } from "mapp_common/utils";
-import { toBatchEvaluate } from "pcPages/batchEvaluations/action";
-
+import { toBatchEvaluate, toSingleEvaluate } from "pcPages/batchEvaluations/action";
 import './index.scss';
+@connect((store) => {
+    return {
+        batch:store.toEvaluateReducer.batch,
+        currentSingleOrder: store.toEvaluateReducer.currentSingleOrder
+    };
+})
 
 class MyDialog extends Component {
     // 点 x
@@ -22,11 +28,20 @@ class MyDialog extends Component {
     //  点 确认
     onOk = () => {
         isFunction(this.props.onOk) && this.props.onOk();
+        
+        if(this.props.batch === true){
+            console.log("\n","batch", "\n");
+            // 在这里发起批量评价的请求
+           toBatchEvaluate();
+        }else{
+            console.log("\n","single", "\n");
+            toSingleEvaluate();
+        }
+
         if (this.props.onOkClose) {
             this.onClose();
         }
-         // 在这里发起批量评价的请求
-         toBatchEvaluate();
+         
     };
 
     // 点 取消
