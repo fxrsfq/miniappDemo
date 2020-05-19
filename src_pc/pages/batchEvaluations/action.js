@@ -25,8 +25,12 @@ export const getState = () => {
  * @param {*} data  数据的上一次筛选结果
  * @param {*} tabStr 选项卡字符串，即筛选标志
  */
+<<<<<<< HEAD
 export function filterState(tabStr) {
     let data = getState().toEvaluateReducer.filterResults;
+=======
+export function filterState(data, tabStr) {
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
     let arr = []; //买家未评订单
     if (tabStr === "买家未评") {
         arr = data.filter((item) => {
@@ -56,15 +60,22 @@ export function filterState(tabStr) {
 }
 
 /**
+<<<<<<< HEAD
  * @description 初始化redux数据 
+=======
+ * @description 选项卡的分类数据筛选  
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
  * @author fuQiang
  * @export
  * @param {*} data 选项卡筛选的分类数据：全部、买家已评、买家未评
  * @param {*} tabStr 选项卡字符串：全部、买家已评、买家未评
  */
 export function getDataToStore(data) {
+<<<<<<< HEAD
     console.clear();
     console.log("原始数据为：", data);
+=======
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
     let arr = []; //订单的筛选结果                                               
     for (var i = 0; i < data.totalResults; i++) {
         for (var j = 0; j < data.trades[i].orders.length; j++) {
@@ -74,7 +85,10 @@ export function getDataToStore(data) {
                 buyer_nick: data.trades[i].buyer_nick,                // 买家昵称
                 pic_path: data.trades[i].orders[j].pic_path,          // 图像路径
                 title: data.trades[i].orders[j].title,                // 订单标题
+<<<<<<< HEAD
                 tid:data.trades[i].tid,                               // 交易号 
+=======
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
                 oid: data.trades[i].orders[j].oid,                    // 订单号
                 consign_time: data.trades[i].orders[j].consign_time,  // 确认时间
                 num: data.trades[i].orders[j].num,                    // 数量
@@ -91,11 +105,20 @@ export function getDataToStore(data) {
 }
 
 /** 
+<<<<<<< HEAD
  * @description 单宝贝评价
+=======
+ * @description
+ * 单宝贝评价 || 批量评价
+ * 1、将action 封装为一个方法，等待事件被触发 回调
+ * 2、组件生命周期请求数据，然后调用 action 的方法，action携带数据。 在action中 dispatch(action)，reducer被触发
+ * 3、将请求到的数据放到 action 中传递给 reducer,然后 reducer 来修改 store
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
  * @author fuQiang
  * @param id 评价类型：单宝贝oid
  * @returns action 不同实参返回携带不同数据的 action
  */
+<<<<<<< HEAD
 export function toSingleEvaluate(tid, oid) {
     let data = getState().toEvaluateReducer.filterResults;
     for(var i=0; i<data.length; i++){
@@ -119,6 +142,10 @@ export function toSingleEvaluate(tid, oid) {
     }
 
 }
+=======
+export function toEvaluate(evaluationType) {
+    let action = 0;
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
 
 /**
  * @description 批量评价
@@ -154,6 +181,7 @@ export function toBatchEvaluate(){
 /**
  * @description 选择
  * @param arg 全选/单选标志
+<<<<<<< HEAD
  * @param data 列表数组
  */
 export function toSelect(arg){
@@ -179,6 +207,18 @@ export function toSelect(arg){
         dispatch({
             type:"SINGLE",
             singleCheckedChange:data
+=======
+ */
+export function toSelect(arg){
+    if (arg === "all") {
+        dispatch({
+            type:"SELECTALL"
+        });
+    } else {
+        dispatch({
+            type:"SINGLE",
+            // 这里携带oid
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
         });
     }
   

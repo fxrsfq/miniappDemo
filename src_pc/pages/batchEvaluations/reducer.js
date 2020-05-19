@@ -8,11 +8,18 @@ let store = {
     selectAll:false,          // 全选状态
 };
 
+<<<<<<< HEAD
 export function toEvaluateReducer(state = store, action){
     //  在这里处理 action行为
     switch(action.type){
         case "INIT": return {
             ...state,
+=======
+function toEvaluateReducer(state = store, action){
+    //  在这里处理 action行为
+    switch(action.type){
+        case "INIT": return {
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
             evaluationsListData:action.originalData,
             filterResults:action.originalData
         };
@@ -28,6 +35,7 @@ export function toEvaluateReducer(state = store, action){
             ...state,
             filterResults:action.unrated
         };
+<<<<<<< HEAD
         case "SELECTALL":return {
             ...state,
             filterResults:action.allCheckedChange
@@ -39,3 +47,10 @@ export function toEvaluateReducer(state = store, action){
         default:return store ;
     }
 }
+=======
+        default:return store ;
+    }
+}
+
+export default toEvaluateReducer; 
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d

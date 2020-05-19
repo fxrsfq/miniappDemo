@@ -19,5 +19,9 @@ var _reducer3 = require("../pages/batchEvaluations/reducer.js");
 exports.default = (0, _redux.combineReducers)({
   marketingAdInfoReducer: _reducer.marketingAdInfoReducer,
   refundListReducer: _reducer2.refundListReducer,
+<<<<<<< HEAD
   toEvaluateReducer: _reducer3.toEvaluateReducer
+=======
+  toEvaluateReducer: _reducer4.default
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
 });

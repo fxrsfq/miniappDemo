@@ -4,7 +4,11 @@ import Tbody from "./tBody";
 import "./index.css";
 import { connect } from '@tarojs/redux';
 @connect((store) => {
+<<<<<<< HEAD
     // console.log("evaluationsList获取到的store为：", store);
+=======
+    console.log("evaluationsList获取到的store为：", store);
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
     return {
         filterResults: store.toEvaluateReducer.filterResults
     };
@@ -19,10 +23,17 @@ import { connect } from '@tarojs/redux';
 class EvaluationsList extends Component {
     
     render() {
+<<<<<<< HEAD
         // console.clear();
         const {filterResults, promptStatusControl} = this.props;
         console.log("列表渲染的数组为：", this.props.filterResults);
          
+=======
+        let tbody = this.props.filterResults;
+        let promptControl = this.props.promptStatusControl;
+        console.log("组件拿到了数据为：", tbody);
+        
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
         return (
             <View className="evaluationslist-table">
                 <View className="table-thead">
@@ -50,8 +61,13 @@ class EvaluationsList extends Component {
                 </View>
                 <View className="table-tbody">
                     {
+<<<<<<< HEAD
                         filterResults.map((item)=>{
                             return <Tbody order={item} promptStatusControl={promptStatusControl}></Tbody>
+=======
+                        tbody.map((cur)=>{
+                            return <Tbody order={cur} promptStatusControl={promptControl}></Tbody>
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
                         })
                     }
                 </View>

@@ -10,11 +10,17 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
+<<<<<<< HEAD
 var _class, _temp2;
+=======
+var _dec, _class, _class2, _temp2;
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
 
 var _index = require("../../npm/_tarojs/taro-alipay/index.js");
 
 var _index2 = _interopRequireDefault(_index);
+
+var _index3 = require("../../npm/_tarojs/redux/index.js");
 
 var _action = require("./action.js");
 
@@ -28,14 +34,24 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+<<<<<<< HEAD
+=======
+var propsManager = my.propsManager;
+
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
 /**
  * @description 批量评价根 组件 父
  * @author fuQiang
  * @class BatchDelete
  * @extends {Component}
  */
-var propsManager = my.propsManager;
-var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
+var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
+  console.log("index获取的 store 为：", store);
+
+  return {
+    filterResults: store.toEvaluateReducer.filterResults
+  };
+}), _dec(_class = (_temp2 = _class2 = function (_BaseComponent) {
   _inherits(BatchEvaluations, _BaseComponent);
 
   function BatchEvaluations() {
@@ -49,11 +65,17 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
+<<<<<<< HEAD
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray55", "$compid__107", "$compid__108", "$compid__109", "tabTitle", "promptStatus"], _this.tabClick = function (title) {
       _this.setState({ tabTitle: title });
       (0, _action.filterState)(title);
     }, _this.toBatchEvaluation = function () {
       _this.promptStatusControl(true);
+=======
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray32", "$compid__64", "$compid__65", "$compid__66", "tabTitle", "promptStatus", "filterResults"], _this.tabClick = function (title) {
+      _this.setState({ tabTitle: title });
+      (0, _action.filterState)(_this.props.filterResults, title);
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
     }, _this.promptStatusControl = function (arg) {
       _this.setState({ promptStatus: arg });
     }, _this.selectAll = function () {
@@ -90,8 +112,11 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
 
     //批量评价对话框 弹出
 
+<<<<<<< HEAD
     // 弹出框弹出状态 显示或取消
 
+=======
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
     // 全选 反选
 
   }, {
@@ -105,6 +130,7 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       var __prefix = this.$prefix;
       ;
 
+<<<<<<< HEAD
       var _genCompid = (0, _index.genCompid)(__prefix + "$compid__107"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
           $prevCompid__107 = _genCompid2[0],
@@ -119,14 +145,35 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
           _genCompid6 = _slicedToArray(_genCompid5, 2),
           $prevCompid__109 = _genCompid6[0],
           $compid__109 = _genCompid6[1];
+=======
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__64"),
+          _genCompid2 = _slicedToArray(_genCompid, 2),
+          $prevCompid__64 = _genCompid2[0],
+          $compid__64 = _genCompid2[1];
+
+      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__65"),
+          _genCompid4 = _slicedToArray(_genCompid3, 2),
+          $prevCompid__65 = _genCompid4[0],
+          $compid__65 = _genCompid4[1];
+
+      var _genCompid5 = (0, _index.genCompid)(__prefix + "$compid__66"),
+          _genCompid6 = _slicedToArray(_genCompid5, 2),
+          $prevCompid__66 = _genCompid6[0],
+          $compid__66 = _genCompid6[1];
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
 
       var _state = this.__state,
           tabTitle = _state.tabTitle,
           promptStatus = _state.promptStatus;
       // 选项卡列表
 
+<<<<<<< HEAD
       var anonymousState__temp = function anonymousState__temp() {
         _this2.promptStatusControl(true);
+=======
+      this.anonymousFunc1 = function () {
+        selectAll();
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
       };
 
       this.anonymousFunc1 = function () {
@@ -134,15 +181,27 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
       };
 
       this.anonymousFunc2 = function () {
+        _this2.promptStatusControl(true);
+      };
+
+      this.anonymousFunc3 = function () {
         _this2.promptStatusControl(false);
       };
 
+<<<<<<< HEAD
       var loopArray55 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
+=======
+      var loopArray32 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
         cur = {
           $original: (0, _index.internal_get_original)(cur)
         };
 
+<<<<<<< HEAD
         var _$indexKey = "gfzzz" + __index0;
+=======
+        var _$indexKey = "eczzz" + __index0;
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           _this2.tabClick(cur.$original.title);
@@ -154,19 +213,29 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
         };
       });
       propsManager.set({
+<<<<<<< HEAD
         "promptStatusControl": anonymousState__temp
       }, $compid__107, $prevCompid__107);
+=======
+        "promptStatusControl": this.promptStatusControl
+      }, $compid__64, $prevCompid__64);
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
       propsManager.set({
         "total": "5",
         "pageSize": "8",
         "shape": "normal",
         "current": "1"
+<<<<<<< HEAD
       }, $compid__108, $prevCompid__108);
+=======
+      }, $compid__65, $prevCompid__65);
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
       promptStatus && propsManager.set({
-        "onClose": this.anonymousFunc2,
+        "onClose": this.anonymousFunc3,
         "hasFooter": "true",
         "title": "\u8BC4\u4EF7",
         "className": "mydialog-cite"
+<<<<<<< HEAD
       }, $compid__109, $prevCompid__109);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
@@ -174,6 +243,14 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
         $compid__107: $compid__107,
         $compid__108: $compid__108,
         $compid__109: $compid__109
+=======
+      }, $compid__66, $prevCompid__66);
+      Object.assign(this.__state, {
+        loopArray32: loopArray32,
+        $compid__64: $compid__64,
+        $compid__65: $compid__65,
+        $compid__66: $compid__66
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
       });
       return this.__state;
     }
@@ -200,10 +277,19 @@ var BatchEvaluations = (_temp2 = _class = function (_BaseComponent) {
     value: function anonymousFunc2(e) {
       ;
     }
+  }, {
+    key: "anonymousFunc3",
+    value: function anonymousFunc3(e) {
+      ;
+    }
   }]);
 
   return BatchEvaluations;
+<<<<<<< HEAD
 }(_index.Component), _class.$$events = ["anonymousFunc0", "anonymousFunc1", "toBatchEvaluation"], _class.$$componentPath = "pages/batchEvaluations/index", _temp2);
+=======
+}(_index.Component), _class2.$$events = ["anonymousFunc0", "anonymousFunc1", "anonymousFunc2"], _class2.$$componentPath = "pages/batchEvaluations/index", _temp2)) || _class);
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
 exports.default = BatchEvaluations;
 
 Component(require('../../npm/_tarojs/taro-alipay/index.js').default.createComponent(BatchEvaluations));

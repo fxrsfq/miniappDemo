@@ -2,10 +2,17 @@
     <view>
         <view class="batch-evaluations-main">
             <scroll-view class="tabs" enable-flex="true">
+<<<<<<< HEAD
                 <view class="tab" onTap="anonymousFunc0" a:key="$original.title" a:for="{{loopArray55}}" a:for-item="cur" a:for-index="__index0" data-e-onTap-so="this" data-e-onTap-a-a="{{cur._$indexKey}}"><text class="{{tabTitle === cur.$original.title ? 'tab-text-click' : 'tab-text'}}">{{cur.$original.title}}</text>
                 </view>
             </scroll-view>
             <evaluations-list compid="{{$compid__107}}"></evaluations-list>
+=======
+                <view class="tab" onTap="anonymousFunc0" a:key="$original.title" a:for="{{loopArray32}}" a:for-item="cur" a:for-index="__index0" data-e-onTap-so="this" data-e-onTap-a-a="{{cur._$indexKey}}"><text class="{{tabTitle === cur.$original.title ? 'tab-text-click' : 'tab-text'}}">{{cur.$original.title}}</text>
+                </view>
+            </scroll-view>
+            <evaluations-list compid="{{$compid__64}}"></evaluations-list>
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
         </view>
         <view class="batch-evaluations-footer">
             <view class="batch-operation">
@@ -14,15 +21,26 @@
                     <view class="check-all-information"><text class="check-all-keys">全选(已选)</text><text class="check-all-quantity">1</text>
                     </view>
                 </view>
+<<<<<<< HEAD
                 <button class="batch-evaluate-btu" onTap="toBatchEvaluation">批量评价</button>
             </view>
             <view>
                 <my-pagination compid="{{$compid__108}}"></my-pagination>
+=======
+                <button class="batch-evaluate-btu" onTap="anonymousFunc2">批量评价</button>
+            </view>
+            <view>
+                <my-pagination compid="{{$compid__65}}"></my-pagination>
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
             </view>
         </view>
         <view>
             <block a:if="{{promptStatus}}">
+<<<<<<< HEAD
                 <my-dialog compid="{{$compid__109}}">
+=======
+                <my-dialog compid="{{$compid__66}}">
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
                     <prompt></prompt>
                 </my-dialog>
             </block>

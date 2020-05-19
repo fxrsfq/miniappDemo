@@ -42,6 +42,7 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
+<<<<<<< HEAD
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tbody.__proto__ || Object.getPrototypeOf(Tbody)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["oid", "checked", "pic_path", "title", "consign_time", "num", "payment", "buyer_nick", "order", "promptStatusControl"], _this.singleSelect = function (selectType) {
       (0, _action.toSelect)(selectType);
     }, _this.singleBatch = function (tid, oid) {
@@ -49,6 +50,9 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
       // 这个方法应该在弹框中使用
       // toSingleEvaluate(tid, oid);
     }, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+=======
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Tbody.__proto__ || Object.getPrototypeOf(Tbody)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["oid", "checked", "pic_path", "title", "consign_time", "num", "payment", "buyer_nick", "order", "promptStatusControl"], _this.singleSelect = function (id) {}, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
   }
 
   _createClass(Tbody, [{
@@ -59,6 +63,7 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
       this.$$refs = [];
     }
 
+<<<<<<< HEAD
     /**
      * @description   单选
      * @memberof Tbody
@@ -71,6 +76,9 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
      * @memberof Tbody
      * @param obj 订单id  {"tid":tid,"oid":oid}
      */
+=======
+    // 单选
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
 
   }, {
     key: "_createData",
@@ -84,8 +92,12 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
       ;
 
       //trades：一次交易 对应一个买家  orders：一次交易的订单数
+<<<<<<< HEAD
       // console.clear();
       // console.log("tbody props为：", this.props.order);
+=======
+      // console.log("props为：", this.props.order);
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
       var _props$order = this.__props.order,
           checked = _props$order.checked,
           pic_path = _props$order.pic_path,
@@ -100,11 +112,19 @@ var Tbody = (_temp2 = _class = function (_BaseComponent) {
       var promptStatusControl = this.__props.promptStatusControl;
 
       this.anonymousFunc0 = function () {
+<<<<<<< HEAD
         _this2.singleSelect("single");
       };
 
       this.anonymousFunc1 = function () {
         singleBatch(tid, oid);
+=======
+        _this2.singleSelect(oid);
+      };
+
+      this.anonymousFunc1 = function () {
+        promptStatusControl(true);
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
       };
 
       Object.assign(this.__state, {

@@ -1,7 +1,11 @@
 import { combineReducers } from 'redux';
 import { marketingAdInfoReducer } from "mapp_common/marketing/reducer";
 import { refundListReducer } from "pcPages/refundManagement/reducer";
+<<<<<<< HEAD
 import { toEvaluateReducer } from "pcPages/batchEvaluations/reducer";
+=======
+import toEvaluateReducer from "pcPages/batchEvaluations/reducer";
+>>>>>>> 94088b6045bdec216fa76a5dbf4681a91bcb242d
 
  /** 
   * 合并  reducer
