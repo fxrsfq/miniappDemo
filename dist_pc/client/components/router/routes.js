@@ -12,18 +12,21 @@ var routes = exports.routes = [{
   name: '订单管理',
   path: '/tradeManagement',
   abstract: true,
-  children: [{
-    name: '退款管理',
-    default: true,
-    component: 'refundManagement',
-    path: '/refundManagement',
-    icon: 'iconfont-tuikuanguanli'
+  children: [
+  // {
+  //     name: '退款管理',
+  //     default: true,
+  //     component: 'refundManagement',
+  //     path: '/refundManagement',
+  //     icon: 'iconfont-tuikuanguanli',
 
-  }, {
-    name: '批量删除',
+  // },
+  {
+    name: '批量评价',
+    default: true,
     component: 'batchEvaluations', //目录名 映射其下的index.jsx
     path: '/batchEvaluations',
     icon: 'iconfont-tuikuanguanli'
   }]
 }];
-var defaultPath = exports.defaultPath = '/tradeManagement/refundManagement';
+var defaultPath = exports.defaultPath = '/tradeManagement/batchEvaluations';

@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { marketingAdInfoReducer } from "mapp_common/marketing/reducer";
 import { refundListReducer } from "pcPages/refundManagement/reducer";
-import toEvaluateReducer from "pcPages/batchEvaluations/reducer";
+import { toEvaluateReducer } from "pcPages/batchEvaluations/reducer";
 
  /** 
   * 合并  reducer

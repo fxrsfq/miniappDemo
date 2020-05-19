@@ -9,16 +9,17 @@ export const routes = [
         path: '/tradeManagement',
         abstract: true,
         children: [
-            {
-                name: '退款管理',
-                default: true,
-                component: 'refundManagement',
-                path: '/refundManagement',
-                icon: 'iconfont-tuikuanguanli',
+            // {
+            //     name: '退款管理',
+            //     default: true,
+            //     component: 'refundManagement',
+            //     path: '/refundManagement',
+            //     icon: 'iconfont-tuikuanguanli',
 
-            },
+            // },
             {
-                name: '批量删除',
+                name: '批量评价',
+                default:true,
                 component: 'batchEvaluations',//目录名 映射其下的index.jsx
                 path: '/batchEvaluations',
                 icon: 'iconfont-tuikuanguanli',
@@ -26,4 +27,4 @@ export const routes = [
         ],
     }
 ];
-export const defaultPath = '/tradeManagement/refundManagement';
+export const defaultPath = '/tradeManagement/batchEvaluations';

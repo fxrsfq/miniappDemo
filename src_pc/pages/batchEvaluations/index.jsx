@@ -7,16 +7,8 @@ import EvaluationsList from "pcComponents/evaluationsList";
 import MyPagination from "pcComponents/myPagination";
 import MyDialog from "pcComponents/myDialog";
 import Prompt from "pcComponents/mydialogChildren";
-import { getDataToStore, filterState } from "./action";
+import { getDataToStore, filterState, toSelect} from "./action";
 import { soldGet } from "tradePublic/tradeDataCenter/api/soldGet";
-@connect((store) => {
-    console.log("index获取的 store 为：", store);
-
-    return {
-        filterResults: store.toEvaluateReducer.filterResults
-    };
-})
-
 
 /**
  * @description 批量评价根 组件 父
@@ -48,16 +40,20 @@ class BatchEvaluations extends Component {
     // 选项卡样式 切换
     tabClick = (title) => {
         this.setState({ tabTitle: title });
-        filterState(this.props.filterResults, title);
+        filterState(title);
+    }
+    //批量评价对话框 弹出
+    toBatchEvaluation = ()=>{
+        this.promptStatusControl(true);
     }
     // 弹出框弹出状态 显示或取消
     promptStatusControl = (arg) => {
         this.setState({ promptStatus: arg });
     }
     // 全选 反选
-    // toSelect = ()=>{
-    // } 
-
+    selectAll = ()=>{
+        toSelect("all");
+    } 
     render() {
         const { tabTitle, promptStatus } = this.state;
         // 选项卡列表
@@ -77,19 +73,19 @@ class BatchEvaluations extends Component {
                     </ScrollView>
 
                     {/* 评价列表 列表渲染 */}
-                    <EvaluationsList promptStatusControl={this.promptStatusControl}></EvaluationsList>
+                    <EvaluationsList promptStatusControl={()=>{this.promptStatusControl(true)}}></EvaluationsList>
                 </View>
                 <View className='batch-evaluations-footer'>
                     {/* 全选 表单*/}
                     <View className='batch-operation'>
                         <View className='check-all'>
-                            <Checkbox className='check-all-checkbox'></Checkbox>
+                            <Checkbox className='check-all-checkbox' onChange={()=>{this.selectAll()}}></Checkbox>
                             <View className='check-all-information'>
                                 <Text className='check-all-keys'>全选(已选)</Text>
                                 <Text className='check-all-quantity'>1</Text>
                             </View>
                         </View>
-                        <Button className='batch-evaluate-btu' onClick={() => { this.promptStatusControl(true) }}>批量评价</Button>
+                        <Button className='batch-evaluate-btu' onClick={this.toBatchEvaluation}>批量评价</Button>
                     </View>
                     {/*  分页按钮 list */}
                     <View>

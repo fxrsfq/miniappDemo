@@ -6,13 +6,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+exports.toEvaluateReducer = toEvaluateReducer;
 //reducer  评价的 reducer
 //在创建createStore(reducer)的时候，combineReducers(...reducer)已经将 reducer和 store 关联起来了
 //在store.dispatch(action)时，action便与 reducer 关联了
 
 var store = {
-  evaluationsListData: [], //请求到的所有数据
-  filterResults: [] // tab 筛选结果
+  evaluationsListData: [], // 请求到的所有数据
+  filterResults: [], // tab 筛选结果
+  selectAll: false // 全选状态
 };
 
 function toEvaluateReducer() {
@@ -22,10 +24,10 @@ function toEvaluateReducer() {
   //  在这里处理 action行为
   switch (action.type) {
     case "INIT":
-      return {
+      return _extends({}, state, {
         evaluationsListData: action.originalData,
         filterResults: action.originalData
-      };
+      });
     case "ALL":
       return _extends({}, state, {
         filterResults: state.evaluationsListData
@@ -38,9 +40,15 @@ function toEvaluateReducer() {
       return _extends({}, state, {
         filterResults: action.unrated
       });
+    case "SELECTALL":
+      return _extends({}, state, {
+        filterResults: action.allCheckedChange
+      });
+    case "SELECTSINGLE":
+      return _extends({}, state, {
+        filterResults: action.singleCheckedChange
+      });
     default:
       return store;
   }
 }
-
-exports.default = toEvaluateReducer;

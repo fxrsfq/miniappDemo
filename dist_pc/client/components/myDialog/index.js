@@ -16,6 +16,8 @@ var _index2 = _interopRequireDefault(_index);
 
 var _index3 = require("../../public/mapp_common/utils/index.js");
 
+var _action = require("../../pages/batchEvaluations/action.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -52,6 +54,8 @@ var MyDialog = (_temp2 = _class = function (_BaseComponent) {
       if (_this.props.onOkClose) {
         _this.onClose();
       }
+      // 在这里发起批量评价的请求
+      (0, _action.toBatchEvaluate)();
     }, _this.onClose = function () {
       _this.props.onClose();
     }, _this.handleClickOverlay = function () {
@@ -65,6 +69,7 @@ var MyDialog = (_temp2 = _class = function (_BaseComponent) {
     key: "_constructor",
     value: function _constructor(props) {
       _get(MyDialog.prototype.__proto__ || Object.getPrototypeOf(MyDialog.prototype), "_constructor", this).call(this, props);
+
       this.$$refs = [];
     }
 

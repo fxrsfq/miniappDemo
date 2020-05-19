@@ -3,14 +3,16 @@
 //在store.dispatch(action)时，action便与 reducer 关联了
 
 let store = {
-    evaluationsListData:[],   //请求到的所有数据
+    evaluationsListData:[],   // 请求到的所有数据
     filterResults:[],         // tab 筛选结果
+    selectAll:false,          // 全选状态
 };
 
-function toEvaluateReducer(state = store, action){
+export function toEvaluateReducer(state = store, action){
     //  在这里处理 action行为
     switch(action.type){
         case "INIT": return {
+            ...state,
             evaluationsListData:action.originalData,
             filterResults:action.originalData
         };
@@ -26,8 +28,14 @@ function toEvaluateReducer(state = store, action){
             ...state,
             filterResults:action.unrated
         };
+        case "SELECTALL":return {
+            ...state,
+            filterResults:action.allCheckedChange
+        };
+        case "SELECTSINGLE":return {
+            ...state,
+            filterResults:action.singleCheckedChange
+        }
         default:return store ;
     }
 }
-
-export default toEvaluateReducer; 

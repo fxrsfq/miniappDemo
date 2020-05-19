@@ -35,7 +35,7 @@ var propsManager = my.propsManager;
  * @extends {Component}
  */
 var EvaluationsList = (_dec = (0, _index3.connect)(function (store) {
-  console.log("evaluationsList获取到的store为：", store);
+  // console.log("evaluationsList获取到的store为：", store);
   return {
     filterResults: store.toEvaluateReducer.filterResults
   };
@@ -53,7 +53,7 @@ var EvaluationsList = (_dec = (0, _index3.connect)(function (store) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = EvaluationsList.__proto__ || Object.getPrototypeOf(EvaluationsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray46", "tbody", "filterResults", "promptStatusControl"], _this.customComponents = ["Tbody"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = EvaluationsList.__proto__ || Object.getPrototypeOf(EvaluationsList)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray43", "filterResults", "promptStatusControl"], _this.customComponents = ["Tbody"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(EvaluationsList, [{
@@ -72,32 +72,35 @@ var EvaluationsList = (_dec = (0, _index3.connect)(function (store) {
       var __prefix = this.$prefix;
       ;
 
-      var tbody = this.__props.filterResults;
-      var promptControl = this.__props.promptStatusControl;
-      console.log("组件拿到了数据为：", tbody);
+      // console.clear();
+      var _props = this.__props,
+          filterResults = _props.filterResults,
+          promptStatusControl = _props.promptStatusControl;
 
-      var loopArray46 = tbody.map(function (cur, _anonIdx) {
-        cur = {
-          $original: (0, _index.internal_get_original)(cur)
+      console.log("列表渲染的数组为：", this.__props.filterResults);
+
+      var loopArray43 = filterResults.map(function (item, _anonIdx) {
+        item = {
+          $original: (0, _index.internal_get_original)(item)
         };
 
-        var _genCompid = (0, _index.genCompid)(__prefix + "fgzzzzzzzz" + _anonIdx, true),
+        var _genCompid = (0, _index.genCompid)(__prefix + "fdzzzzzzzz" + _anonIdx, true),
             _genCompid2 = _slicedToArray(_genCompid, 2),
-            $prevCompid__92 = _genCompid2[0],
-            $compid__92 = _genCompid2[1];
+            $prevCompid__73 = _genCompid2[0],
+            $compid__73 = _genCompid2[1];
 
         propsManager.set({
-          "order": cur.$original,
-          "promptStatusControl": promptControl
-        }, $compid__92, $prevCompid__92);
+          "order": item.$original,
+          "promptStatusControl": promptStatusControl
+        }, $compid__73, $prevCompid__73);
         return {
-          $compid__92: $compid__92,
-          $original: cur.$original
+          $compid__73: $compid__73,
+          $original: item.$original
         };
       });
       Object.assign(this.__state, {
-        loopArray46: loopArray46,
-        tbody: tbody
+        loopArray43: loopArray43,
+        filterResults: filterResults
       });
       return this.__state;
     }

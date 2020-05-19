@@ -17,7 +17,7 @@
             </view>
         </view>
         <view class="table-tbody">
-            <tbody a:for="{{loopArray46}}" a:for-item="cur" a:for-index="_anonIdx2" compid="{{cur.$compid__92}}"></tbody>
+            <tbody a:for="{{loopArray43}}" a:for-item="item" a:for-index="_anonIdx2" compid="{{item.$compid__73}}"></tbody>
         </view>
     </view>
 </block>

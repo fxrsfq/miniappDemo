@@ -1,14 +1,11 @@
 import Taro, { Component } from '@tarojs/taro';
 import { Button, Text, View } from '@tarojs/components';
 import { classNames, isFunction, NOOP } from "mapp_common/utils";
+import { toBatchEvaluate } from "pcPages/batchEvaluations/action";
 
 import './index.scss';
 
 class MyDialog extends Component {
-    constructor (props) {
-        super(props);
-    }
-
     // 点 x
     onCloseClick = () => {
         this.props.onClose();
@@ -19,6 +16,7 @@ class MyDialog extends Component {
         if (this.props.onCancelClose) {
             this.onClose();
         }
+
     };
 
     //  点 确认
@@ -27,6 +25,8 @@ class MyDialog extends Component {
         if (this.props.onOkClose) {
             this.onClose();
         }
+         // 在这里发起批量评价的请求
+         toBatchEvaluate();
     };
 
     // 点 取消

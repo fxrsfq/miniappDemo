@@ -60,7 +60,7 @@ class Prompt extends Component {
                         </View>
                         <View className="evaluation-phrases evaluation-input-child">
                             <Text className="evaluatioon-label">选择短语</Text>
-                            <Select className="evaluation-phrases-select" dataSource={["好","很好","非常好","棒"]}></Select>
+                            <Select className="evaluation-phrases-select" dataSource={["好", "很好", "非常好", "棒"]}></Select>
                             <Text className="evaluation-phrases-options-text">设置评价短语</Text>
                         </View>
                         <View className="evaluation-content evaluation-input-child">

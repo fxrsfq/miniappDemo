@@ -234,11 +234,11 @@ class Index extends Component {
                         
                         <View className='content'>
                             <router-view>
-                                {/* <View slot='tradeList'>紧张施工中...</View> */}
+                                <View slot='tradeList'>紧张施工中...</View>
                                 <View slot='refundManagement'><RefundManagement /></View>
                                 {/* 在这里添加新的内容组件视图的引用 slot为路由组件视图的path 相当于route的path*/}
                                 <View slot='batchEvaluations'><BatchEvaluations /></View>
-                                {/* <View slot='test'><Test /></View> */}
+                                <View slot='test'><Test /></View>
                             </router-view>
                         </View>
                     </View>
