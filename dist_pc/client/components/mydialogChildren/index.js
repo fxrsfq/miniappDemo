@@ -38,7 +38,8 @@ var propsManager = my.propsManager;
  */
 var Prompt = (_dec = (0, _index3.connect)(function (store) {
   return {
-    batch: store.toEvaluateReducer.batch
+    batch: store.toEvaluateReducer.batch,
+    currentOrder: store.toEvaluateReducer.currentOrder //要评价的宝贝信息
   };
 }), _dec(_class = (_temp2 = _class2 = function (_BaseComponent) {
   _inherits(Prompt, _BaseComponent);
@@ -54,7 +55,7 @@ var Prompt = (_dec = (0, _index3.connect)(function (store) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Prompt.__proto__ || Object.getPrototypeOf(Prompt)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__159", "batch"], _this.customComponents = ["Select"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Prompt.__proto__ || Object.getPrototypeOf(Prompt)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__174", "batch", "currentOrder"], _this.customComponents = ["Select"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Prompt, [{
@@ -73,17 +74,23 @@ var Prompt = (_dec = (0, _index3.connect)(function (store) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__159"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__174"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__159 = _genCompid2[0],
-          $compid__159 = _genCompid2[1];
+          $prevCompid__174 = _genCompid2[0],
+          $compid__174 = _genCompid2[1];
+
+      var _props = this.__props,
+          batch = _props.batch,
+          currentOrder = _props.currentOrder;
 
       propsManager.set({
         "className": "evaluation-phrases-select",
         "dataSource": _api.DEFAULT_AUTO_RATE_PHRASE
-      }, $compid__159, $prevCompid__159);
+      }, $compid__174, $prevCompid__174);
       Object.assign(this.__state, {
-        $compid__159: $compid__159
+        $compid__174: $compid__174,
+        batch: batch,
+        currentOrder: currentOrder
       });
       return this.__state;
     }

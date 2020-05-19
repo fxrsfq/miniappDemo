@@ -69,16 +69,16 @@ export function getDataToStore(data) {
     for (var i = 0; i < data.totalResults; i++) {
         for (var j = 0; j < data.trades[i].orders.length; j++) {
             var obj = {
-                checked: false, //选中状态
-                buyer_rate: data.trades[i].buyer_rate, // 买家评价状态
-                buyer_nick: data.trades[i].buyer_nick, // 买家昵称
-                pic_path: data.trades[i].orders[j].pic_path, // 图像路径
-                title: data.trades[i].orders[j].title, // 订单标题
-                tid: data.trades[i].tid, // 交易号 
-                oid: data.trades[i].orders[j].oid, // 订单号
+                checked: false,                                      //选中状态
+                buyer_rate: data.trades[i].buyer_rate,               // 买家评价状态
+                buyer_nick: data.trades[i].buyer_nick,               // 买家昵称
+                pic_path: data.trades[i].orders[j].pic_path,         // 图像路径
+                title: data.trades[i].orders[j].title,               // 订单标题
+                tid: data.trades[i].tid,                             // 交易号 
+                oid: data.trades[i].orders[j].oid,                   // 订单号
                 consign_time: data.trades[i].orders[j].consign_time, // 确认时间
-                num: data.trades[i].orders[j].num, // 数量
-                payment: data.trades[i].orders[j].payment, // 实收款
+                num: data.trades[i].orders[j].num,                   // 数量
+                payment: data.trades[i].orders[j].payment,           // 实收款
             };
             arr.push(obj);
         }
@@ -92,6 +92,8 @@ export function getDataToStore(data) {
 
 /**
  * @description 修改弹出框的显示部分标志
+ * @param sign 评价类型标志  
+ * @param obj 单宝贝评价时的宝贝id
  */
 export function changeBatch(sign, obj) {
     //这里接受的 obj 不正确
@@ -102,10 +104,23 @@ export function changeBatch(sign, obj) {
             currentSingleOrder:obj
         });
     } else {
-        //修改 组件显示区域的标志为  批量评价 
-        dispatch({
-            type: "BATCH"
+        let num = 0;
+        let data = getState().filterResults;
+        data.forEach((item)=>{
+            if(item.checked === true){
+                num++;
+            }
         });
+        if(num === 0){
+            alert("没有任何选中项！");
+            return ;
+        }else{
+            //修改 组件显示区域的标志为  批量评价 
+            dispatch({
+                type: "BATCH"
+            });
+        }
+        
     }
 }
 
@@ -170,7 +185,7 @@ export function toBatchEvaluate() {
  */
 export function toSelect(arg, oid) {
     let data = getState().toEvaluateReducer.filterResults;
-    
+    let currrentOrderInformation = null;
     if (arg === "all") {
         for (var i = 0; i < data.length; i++) {
             data[i].checked = !data[i].checked;
@@ -183,6 +198,7 @@ export function toSelect(arg, oid) {
         for (var i = 0; i < data.length; i++) {
             if (data[i].oid === oid) {
                 data[i].checked = !data[i].checked;
+                currrentOrderInformation = data[i];
                 break;
             } else {
                 continue;
@@ -190,9 +206,8 @@ export function toSelect(arg, oid) {
         }
         dispatch({
             type: "SELECTSINGLE",
-            singleCheckedChange: data
+            singleCheckedChange: data,
+            currentOrder:currrentOrderInformation
         });
     }
-
-
 }

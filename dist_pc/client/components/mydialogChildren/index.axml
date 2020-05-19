@@ -3,8 +3,8 @@
         <view class="prompt-main">
             <block a:if="{{batch === false}}">
                 <view class="order-detail">
-                    <image src="" class="order-detail-photo"></image>
-                    <view class="order-detail-words"><text class="order-detail-words-name mar-bottom">人气WIKEA/维佳框业现代中式异形不规则特价组合相框片墙…</text>
+                    <image src="{{currentOrder.pic_path}}" class="order-detail-photo"></image>
+                    <view class="order-detail-words"><text class="order-detail-words-name mar-bottom">{{cur.title}}</text>
                         <view class="order-detail-merchantcode mar-bottom">商家编码&nbsp;{{2348972816378}}</view>
                         <view class="order-detail-goods-attributes mar-bottom">
                             <view class="order-detail-goods-attributes-a"><text class="order-detail-goods-attributes-text">紫色</text><text class="order-detail-goods-attributes-text">140CM，尺寸偏小，建议多拍大一号，胖子建议选大一码，切记</text>
@@ -24,18 +24,18 @@
                     <view>
                         <block a:if="{{batch === false}}">
                             <radio-group>
-                                <radio value="good" checked="false"></radio>
-                                <radio value="neutral" checked="false"></radio>
-                                <radio value="bad" checked="false"></radio>
+                                <radio value="good"></radio>
+                                <radio value="neutral"></radio>
+                                <radio value="bad"></radio>
                             </radio-group>
                         </block>
                         <block a:if="{{batch === true}}">
-                            <radio value="good" checked="false"></radio>
+                            <radio value="good"></radio>
                         </block>
                     </view>
                 </view>
                 <view class="evaluation-phrases evaluation-input-child"><text class="evaluatioon-label">选择短语</text>
-                    <select compid="{{$compid__159}}"></select><text class="evaluation-phrases-options-text">设置评价短语</text>
+                    <select compid="{{$compid__174}}"></select><text class="evaluation-phrases-options-text">设置评价短语</text>
                 </view>
                 <view class="evaluation-content evaluation-input-child"><text class="evaluatioon-label evaluation-content-label">评价内容</text>
                     <textarea class="evaluation-content-textarea" placeholder="请输入评价内容"></textarea>

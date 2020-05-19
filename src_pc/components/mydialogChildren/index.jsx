@@ -9,6 +9,7 @@ import "./index.css";
 @connect((store) => {
     return {
         batch: store.toEvaluateReducer.batch,
+        currentOrder:store.toEvaluateReducer.currentOrder,//要评价的宝贝信息
     };
 })
 
@@ -20,14 +21,15 @@ import "./index.css";
  */
 class Prompt extends Component {
     render() {
+        const {batch, currentOrder} = this.props;
         return (
             <View class="prompt-container">
                 <View className="prompt-main">
                     {
-                        this.props.batch === false && <View className="order-detail">
-                            <Image src="" className="order-detail-photo"></Image>
+                        batch === false && <View className="order-detail">
+                            <Image src={currentOrder.pic_path} className="order-detail-photo"></Image>
                             <View className="order-detail-words">
-                                <Text className="order-detail-words-name mar-bottom">人气WIKEA/维佳框业现代中式异形不规则特价组合相框片墙…</Text>
+                                <Text className="order-detail-words-name mar-bottom">{cur.title}</Text>
                                 <View className="order-detail-merchantcode mar-bottom">商家编码&nbsp;{2348972816378}</View>
                                 <View className="order-detail-goods-attributes mar-bottom">
                                     <View className="order-detail-goods-attributes-a">
@@ -58,14 +60,14 @@ class Prompt extends Component {
                             <Text className="evaluatioon-label">评价结果</Text>
                             <View >
                                 {
-                                    this.props.batch === false && <RadioGroup>
-                                    <Radio value="" checked="false" value="good"></Radio>
-                                    <Radio value="" checked="false" value="neutral"></Radio>
-                                    <Radio value="" checked="false" value="bad"></Radio>
+                                    batch === false && <RadioGroup>
+                                    <Radio value=""  value="good"></Radio>
+                                    <Radio value=""  value="neutral"></Radio>
+                                    <Radio value=""  value="bad"></Radio>
                                 </RadioGroup>
                                 }
                                 {
-                                    this.props.batch === true && <Radio value="good" checked="false"></Radio>
+                                    batch === true && <Radio value="good"></Radio>
                                 }
                             </View>
                         </View>

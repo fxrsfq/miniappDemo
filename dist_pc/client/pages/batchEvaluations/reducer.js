@@ -16,7 +16,8 @@ var store = {
   filterResults: [], // tab 筛选结果
   selectAll: false, // 全选状态
   batch: false, // 评价状态 true:批量 false:单评
-  currentSingleOrder: null // 要评价的单宝贝 id
+  currentSingleOrder: null, // 要评价的单宝贝 id
+  currentOrder: null // 要评价单宝贝
 };
 
 function toEvaluateReducer() {

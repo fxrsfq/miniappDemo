@@ -188,7 +188,7 @@ function toBatchEvaluate() {
  */
 function toSelect(arg, oid) {
   var data = getState().toEvaluateReducer.filterResults;
-
+  var currrentOrderInformation = null;
   if (arg === "all") {
     for (var i = 0; i < data.length; i++) {
       data[i].checked = !data[i].checked;
@@ -201,6 +201,7 @@ function toSelect(arg, oid) {
     for (var i = 0; i < data.length; i++) {
       if (data[i].oid === oid) {
         data[i].checked = !data[i].checked;
+        currrentOrderInformation = data[i];
         break;
       } else {
         continue;
@@ -208,7 +209,8 @@ function toSelect(arg, oid) {
     }
     dispatch({
       type: "SELECTSINGLE",
-      singleCheckedChange: data
+      singleCheckedChange: data,
+      currentOrder: currrentOrderInformation
     });
   }
 }
