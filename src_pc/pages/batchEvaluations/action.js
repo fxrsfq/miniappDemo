@@ -189,7 +189,7 @@ export function toSelect(arg, oid) {
             }
         }
         dispatch({
-            type: "SINGLE",
+            type: "SELECTSINGLE",
             singleCheckedChange: data
         });
     }
