@@ -9,7 +9,6 @@ import "./index.css";
 @connect((store) => {
     return {
         batch: store.toEvaluateReducer.batch,
-        // currentSingleOrder: store.toEvaluateReducer.currentSingleOrder
     };
 })
 
@@ -20,9 +19,6 @@ import "./index.css";
  * @extends {Component}
  */
 class Prompt extends Component {
-    // constructor(props){
-    //     super(props);
-    // }
     render() {
         return (
             <View class="prompt-container">

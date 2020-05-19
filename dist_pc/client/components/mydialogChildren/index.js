@@ -39,7 +39,6 @@ var propsManager = my.propsManager;
 var Prompt = (_dec = (0, _index3.connect)(function (store) {
   return {
     batch: store.toEvaluateReducer.batch
-    // currentSingleOrder: store.toEvaluateReducer.currentSingleOrder
   };
 }), _dec(_class = (_temp2 = _class2 = function (_BaseComponent) {
   _inherits(Prompt, _BaseComponent);
@@ -55,7 +54,7 @@ var Prompt = (_dec = (0, _index3.connect)(function (store) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Prompt.__proto__ || Object.getPrototypeOf(Prompt)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__157", "batch"], _this.customComponents = ["Select"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Prompt.__proto__ || Object.getPrototypeOf(Prompt)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__159", "batch"], _this.customComponents = ["Select"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Prompt, [{
@@ -65,11 +64,6 @@ var Prompt = (_dec = (0, _index3.connect)(function (store) {
 
       this.$$refs = [];
     }
-
-    // constructor(props){
-    //     super(props);
-    // }
-
   }, {
     key: "_createData",
     value: function _createData() {
@@ -79,17 +73,17 @@ var Prompt = (_dec = (0, _index3.connect)(function (store) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__157"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__159"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__157 = _genCompid2[0],
-          $compid__157 = _genCompid2[1];
+          $prevCompid__159 = _genCompid2[0],
+          $compid__159 = _genCompid2[1];
 
       propsManager.set({
         "className": "evaluation-phrases-select",
         "dataSource": _api.DEFAULT_AUTO_RATE_PHRASE
-      }, $compid__157, $prevCompid__157);
+      }, $compid__159, $prevCompid__159);
       Object.assign(this.__state, {
-        $compid__157: $compid__157
+        $compid__159: $compid__159
       });
       return this.__state;
     }

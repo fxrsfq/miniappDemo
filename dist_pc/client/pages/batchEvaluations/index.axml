@@ -2,27 +2,27 @@
     <view>
         <view class="batch-evaluations-main">
             <scroll-view class="tabs" enable-flex="true">
-                <view class="tab" onTap="anonymousFunc0" a:key="$original.title" a:for="{{loopArray68}}" a:for-item="cur" a:for-index="__index0" data-e-onTap-so="this" data-e-onTap-a-a="{{cur._$indexKey}}"><text class="{{tabTitle === cur.$original.title ? 'tab-text-click' : 'tab-text'}}">{{cur.$original.title}}</text>
+                <view class="tab" onTap="anonymousFunc0" a:key="$original.title" a:for="{{loopArray70}}" a:for-item="cur" a:for-index="__index0" data-e-onTap-so="this" data-e-onTap-a-a="{{cur._$indexKey}}"><text class="{{tabTitle === cur.$original.title ? 'tab-text-click' : 'tab-text'}}">{{cur.$original.title}}</text>
                 </view>
             </scroll-view>
-            <evaluations-list compid="{{$compid__153}}"></evaluations-list>
+            <evaluations-list compid="{{$compid__163}}"></evaluations-list>
         </view>
         <view class="batch-evaluations-footer">
             <view class="batch-operation">
                 <view class="check-all">
-                    <checkbox class="check-all-checkbox" onChange="anonymousFunc1"></checkbox>
+                    <checkbox class="check-all-checkbox" onChange="selectAll"></checkbox>
                     <view class="check-all-information"><text class="check-all-keys">全选(已选)</text><text class="check-all-quantity">1</text>
                     </view>
                 </view>
                 <button class="batch-evaluate-btu" onTap="toBatchEvaluation">批量评价</button>
             </view>
             <view>
-                <my-pagination compid="{{$compid__154}}"></my-pagination>
+                <my-pagination compid="{{$compid__164}}"></my-pagination>
             </view>
         </view>
         <view>
             <block a:if="{{promptStatus}}">
-                <my-dialog compid="{{$compid__155}}">
+                <my-dialog compid="{{$compid__165}}">
                     <prompt></prompt>
                 </my-dialog>
             </block>

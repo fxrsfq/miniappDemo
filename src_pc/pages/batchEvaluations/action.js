@@ -167,9 +167,8 @@ export function toBatchEvaluate() {
 /**
  * @description 选择
  * @param arg 全选/单选标志
- * @param data 列表数组
  */
-export function toSelect(arg) {
+export function toSelect(arg, oid) {
     let data = getState().toEvaluateReducer.filterResults;
     
     if (arg === "all") {

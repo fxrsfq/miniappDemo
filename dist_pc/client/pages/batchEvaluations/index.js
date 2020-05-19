@@ -56,7 +56,7 @@ var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray68", "$compid__153", "$compid__154", "$compid__155", "tabTitle", "promptStatus"], _this.tabClick = function (title) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BatchEvaluations.__proto__ || Object.getPrototypeOf(BatchEvaluations)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray70", "$compid__163", "$compid__164", "$compid__165", "tabTitle", "promptStatus"], _this.tabClick = function (title) {
       _this.setState({ tabTitle: title });
       (0, _action.filterState)(title);
     }, _this.toBatchEvaluation = function () {
@@ -113,20 +113,20 @@ var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
       var __prefix = this.$prefix;
       ;
 
-      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__153"),
+      var _genCompid = (0, _index.genCompid)(__prefix + "$compid__163"),
           _genCompid2 = _slicedToArray(_genCompid, 2),
-          $prevCompid__153 = _genCompid2[0],
-          $compid__153 = _genCompid2[1];
+          $prevCompid__163 = _genCompid2[0],
+          $compid__163 = _genCompid2[1];
 
-      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__154"),
+      var _genCompid3 = (0, _index.genCompid)(__prefix + "$compid__164"),
           _genCompid4 = _slicedToArray(_genCompid3, 2),
-          $prevCompid__154 = _genCompid4[0],
-          $compid__154 = _genCompid4[1];
+          $prevCompid__164 = _genCompid4[0],
+          $compid__164 = _genCompid4[1];
 
-      var _genCompid5 = (0, _index.genCompid)(__prefix + "$compid__155"),
+      var _genCompid5 = (0, _index.genCompid)(__prefix + "$compid__165"),
           _genCompid6 = _slicedToArray(_genCompid5, 2),
-          $prevCompid__155 = _genCompid6[0],
-          $compid__155 = _genCompid6[1];
+          $prevCompid__165 = _genCompid6[0],
+          $compid__165 = _genCompid6[1];
 
       var _state = this.__state,
           tabTitle = _state.tabTitle,
@@ -138,19 +138,15 @@ var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
       };
 
       this.anonymousFunc1 = function () {
-        _this2.selectAll();
-      };
-
-      this.anonymousFunc2 = function () {
         _this2.promptStatusControl(false);
       };
 
-      var loopArray68 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
+      var loopArray70 = [{ title: '全部' }, { title: '买家已评' }, { title: '买家未评' }].map(function (cur, __index0) {
         cur = {
           $original: (0, _index.internal_get_original)(cur)
         };
 
-        var _$indexKey = "hizzz" + __index0;
+        var _$indexKey = "iazzz" + __index0;
 
         _this2.anonymousFunc0Map[_$indexKey] = function () {
           _this2.tabClick(cur.$original.title);
@@ -163,25 +159,25 @@ var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
       });
       propsManager.set({
         "promptStatusControl": anonymousState__temp
-      }, $compid__153, $prevCompid__153);
+      }, $compid__163, $prevCompid__163);
       propsManager.set({
         "total": "5",
         "pageSize": "8",
         "shape": "normal",
         "current": "1"
-      }, $compid__154, $prevCompid__154);
+      }, $compid__164, $prevCompid__164);
       promptStatus && propsManager.set({
-        "onClose": this.anonymousFunc2,
+        "onClose": this.anonymousFunc1,
         "hasFooter": "true",
         "title": "\u8BC4\u4EF7",
         "className": "mydialog-cite"
-      }, $compid__155, $prevCompid__155);
+      }, $compid__165, $prevCompid__165);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        loopArray68: loopArray68,
-        $compid__153: $compid__153,
-        $compid__154: $compid__154,
-        $compid__155: $compid__155
+        loopArray70: loopArray70,
+        $compid__163: $compid__163,
+        $compid__164: $compid__164,
+        $compid__165: $compid__165
       });
       return this.__state;
     }
@@ -203,15 +199,10 @@ var BatchEvaluations = (_dec = (0, _index3.connect)(function (store) {
     value: function anonymousFunc1(e) {
       ;
     }
-  }, {
-    key: "anonymousFunc2",
-    value: function anonymousFunc2(e) {
-      ;
-    }
   }]);
 
   return BatchEvaluations;
-}(_index.Component), _class2.$$events = ["anonymousFunc0", "anonymousFunc1", "toBatchEvaluation"], _class2.$$componentPath = "pages/batchEvaluations/index", _temp2)) || _class);
+}(_index.Component), _class2.$$events = ["anonymousFunc0", "selectAll", "toBatchEvaluation"], _class2.$$componentPath = "pages/batchEvaluations/index", _temp2)) || _class);
 exports.default = BatchEvaluations;
 
 Component(require('../../npm/_tarojs/taro-alipay/index.js').default.createComponent(BatchEvaluations));

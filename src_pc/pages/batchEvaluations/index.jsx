@@ -85,7 +85,7 @@ class BatchEvaluations extends Component {
                     {/* 全选 表单*/}
                     <View className='batch-operation'>
                         <View className='check-all'>
-                            <Checkbox className='check-all-checkbox' onChange={()=>{this.selectAll()}}></Checkbox>
+                            <Checkbox className='check-all-checkbox' onChange={this.selectAll}></Checkbox>
                             <View className='check-all-information'>
                                 <Text className='check-all-keys'>全选(已选)</Text>
                                 <Text className='check-all-quantity'>1</Text>
@@ -98,7 +98,7 @@ class BatchEvaluations extends Component {
                         <MyPagination total='5' pageSize='8' shape='normal' current='1'></MyPagination>
                     </View>
                 </View>
-                {/* 批量评价 || 单宝贝评价 弹出框 */}
+                {/* 评价 弹出框 */}
                 <View>
                     {promptStatus && <MyDialog onClose={() => { this.promptStatusControl(false) }} hasFooter="true" title='评价' className='mydialog-cite'>
                         <Prompt></Prompt>

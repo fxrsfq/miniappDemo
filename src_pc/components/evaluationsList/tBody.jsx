@@ -12,8 +12,8 @@ class Tbody extends Component{
      * @memberof Tbody
      * @param selectType String 选择类型: single
      */
-    singleSelect = (selectType)=>{
-        toSelect(selectType);
+    singleSelect = (selectType, oid)=>{
+        toSelect(selectType, oid);
     }
 
     /**
@@ -32,14 +32,12 @@ class Tbody extends Component{
 
     render(){
         //trades：一次交易 对应一个买家  orders：一次交易的订单数
-        // console.clear();
-        // console.log("tbody order为：", this.props.order);
         const {checked, pic_path, title, tid, oid, consign_time, num, payment, buyer_nick} = this.props.order;
-        console.log("tid：",tid,"oid：", oid);
+        // console.log("tid：",tid,"oid：", oid);
         return (
             <View className="table-tbody-tr" key={oid}>
                 <View className="cell0 cells">
-                    <Checkbox className="check-box" checked={checked} onChange={()=>{this.singleSelect("single")}}></Checkbox>
+                    <Checkbox className="check-box" checked={checked} onChange={()=>{this.singleSelect("single", oid)}}></Checkbox>
                 </View>
                 <View className="cell1 cells">
                     <Image src={pic_path} className="photo"></Image>

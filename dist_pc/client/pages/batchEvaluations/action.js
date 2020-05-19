@@ -185,9 +185,8 @@ function toBatchEvaluate() {
 /**
  * @description 选择
  * @param arg 全选/单选标志
- * @param data 列表数组
  */
-function toSelect(arg) {
+function toSelect(arg, oid) {
   var data = getState().toEvaluateReducer.filterResults;
 
   if (arg === "all") {
